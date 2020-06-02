@@ -3,15 +3,15 @@
  */
 package oliv.form.xtext.ui.quickfix;
 
-import org.eclipse.jface.text.BadLocationException;
-import org.eclipse.xtext.ui.editor.model.IXtextDocument;
-import org.eclipse.xtext.ui.editor.model.edit.IModification;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.ui.editor.model.edit.IModificationContext;
+import org.eclipse.xtext.ui.editor.model.edit.ISemanticModification;
 import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider;
 import org.eclipse.xtext.ui.editor.quickfix.Fix;
 import org.eclipse.xtext.ui.editor.quickfix.IssueResolutionAcceptor;
 import org.eclipse.xtext.validation.Issue;
 
+import oliv.form.xtext.dsl.VariableDirect;
 import oliv.form.xtext.validation.DslValidator;
 
 /**
@@ -34,14 +34,24 @@ public class DslQuickfixProvider extends DefaultQuickfixProvider {
 	
 	@Fix(DslValidator.MIN_SUP_MAX)
 	public void inverseMinMax(final Issue issue, IssueResolutionAcceptor acceptor) {
-		acceptor.accept(issue, "Inverser le min et le max", "Inverse min max", "upcase.png", new IModification() {
-			public void apply(IModificationContext context) throws BadLocationException {
-				IXtextDocument xtextDocument = context.getXtextDocument();
-				String nouveauMax = issue.getData()[1];
-				String nouveauMin = issue.getData()[0];
-				xtextDocument.replace(issue.getOffset(), issue.getLength(), nouveauMax);
-			}
-		});
+		acceptor.accept(issue, "Inverser le min et le max", "Inverse min max", "upcase.png",
+//			public void apply(IModificationContext context) throws BadLocationException {
+//				IXtextDocument xtextDocument = context.getXtextDocument();
+//				String nouveauMax = issue.getData()[1];
+//				String nouveauMin = issue.getData()[0];
+//				xtextDocument.replace(issue.getOffset(), issue.getLength(), nouveauMax);
+//			}
+			new ISemanticModification() {
+				
+				@Override
+				public void apply(EObject element, IModificationContext context) throws Exception {
+					double alphaold=((VariableDirect)element).getAlpha();	
+					((VariableDirect)element).setAlpha(((VariableDirect)element).getBeta());
+					((VariableDirect)element).setBeta(alphaold);
+				}
+			});
+		
+		
 	}
 
 }

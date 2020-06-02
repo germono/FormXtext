@@ -31,7 +31,7 @@ public class DslValidator extends AbstractDslValidator {
 		if (greeting.getAlpha()<greeting.getBeta()) {
 			warning("Le maximum doit être plus grand que le minimum",
 					DslPackage.Literals.VARIABLE_DIRECT__ALPHA,
-					MIN_SUP_MAX,greeting.getAlpha()+"",greeting.getBeta()+"");
+					MIN_SUP_MAX);
 		}
 	}
 }
