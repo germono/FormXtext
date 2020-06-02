@@ -17,357 +17,339 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see oliv.form.xtext.dsl.DslPackage
+ * @see oliv.form.xtext.dsl.MDslPackage
  * @generated
  */
 public class DslAdapterFactory extends AdapterFactoryImpl
 {
   /**
-   * The cached model package.
-   * <!-- begin-user-doc -->
+	 * The cached model package.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  protected static DslPackage modelPackage;
+	 * @generated
+	 */
+  protected static MDslPackage modelPackage;
 
   /**
-   * Creates an instance of the adapter factory.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the adapter factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public DslAdapterFactory()
   {
-    if (modelPackage == null)
-    {
-      modelPackage = DslPackage.eINSTANCE;
-    }
-  }
+		if (modelPackage == null) {
+			modelPackage = MDslPackage.eINSTANCE;
+		}
+	}
 
   /**
-   * Returns whether this factory is applicable for the type of the object.
-   * <!-- begin-user-doc -->
+	 * Returns whether this factory is applicable for the type of the object.
+	 * <!-- begin-user-doc -->
    * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
    * <!-- end-user-doc -->
-   * @return whether this factory is applicable for the type of the object.
-   * @generated
-   */
+	 * @return whether this factory is applicable for the type of the object.
+	 * @generated
+	 */
   @Override
   public boolean isFactoryForType(Object object)
   {
-    if (object == modelPackage)
-    {
-      return true;
-    }
-    if (object instanceof EObject)
-    {
-      return ((EObject)object).eClass().getEPackage() == modelPackage;
-    }
-    return false;
-  }
+		if (object == modelPackage) {
+			return true;
+		}
+		if (object instanceof EObject) {
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
+		}
+		return false;
+	}
 
   /**
-   * The switch that delegates to the <code>createXXX</code> methods.
-   * <!-- begin-user-doc -->
+	 * The switch that delegates to the <code>createXXX</code> methods.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected DslSwitch<Adapter> modelSwitch =
-    new DslSwitch<Adapter>()
-    {
-      @Override
-      public Adapter caseModel(Model object)
-      {
-        return createModelAdapter();
-      }
-      @Override
-      public Adapter caseTruc(Truc object)
-      {
-        return createTrucAdapter();
-      }
-      @Override
-      public Adapter caseAutre(Autre object)
-      {
-        return createAutreAdapter();
-      }
-      @Override
-      public Adapter caseVariable(Variable object)
-      {
-        return createVariableAdapter();
-      }
-      @Override
-      public Adapter caseVariableDirect(VariableDirect object)
-      {
-        return createVariableDirectAdapter();
-      }
-      @Override
-      public Adapter caseVariableCalcule(VariableCalcule object)
-      {
-        return createVariableCalculeAdapter();
-      }
-      @Override
-      public Adapter caseExpression(Expression object)
-      {
-        return createExpressionAdapter();
-      }
-      @Override
-      public Adapter casePlus(Plus object)
-      {
-        return createPlusAdapter();
-      }
-      @Override
-      public Adapter caseMinus(Minus object)
-      {
-        return createMinusAdapter();
-      }
-      @Override
-      public Adapter caseMulti(Multi object)
-      {
-        return createMultiAdapter();
-      }
-      @Override
-      public Adapter caseDiv(Div object)
-      {
-        return createDivAdapter();
-      }
-      @Override
-      public Adapter caseNumberLiteral(NumberLiteral object)
-      {
-        return createNumberLiteralAdapter();
-      }
-      @Override
-      public Adapter caseVariableExpression(VariableExpression object)
-      {
-        return createVariableExpressionAdapter();
-      }
-      @Override
-      public Adapter defaultCase(EObject object)
-      {
-        return createEObjectAdapter();
-      }
-    };
+    new DslSwitch<Adapter>() {
+			@Override
+			public Adapter caseModel(Model object) {
+				return createModelAdapter();
+			}
+			@Override
+			public Adapter caseTruc(Truc object) {
+				return createTrucAdapter();
+			}
+			@Override
+			public Adapter caseAutre(Autre object) {
+				return createAutreAdapter();
+			}
+			@Override
+			public Adapter caseVariable(Variable object) {
+				return createVariableAdapter();
+			}
+			@Override
+			public Adapter caseVariableDirect(VariableDirect object) {
+				return createVariableDirectAdapter();
+			}
+			@Override
+			public Adapter caseVariableCalcule(VariableCalcule object) {
+				return createVariableCalculeAdapter();
+			}
+			@Override
+			public Adapter caseExpression(Expression object) {
+				return createExpressionAdapter();
+			}
+			@Override
+			public Adapter casePlus(Plus object) {
+				return createPlusAdapter();
+			}
+			@Override
+			public Adapter caseMinus(Minus object) {
+				return createMinusAdapter();
+			}
+			@Override
+			public Adapter caseMulti(Multi object) {
+				return createMultiAdapter();
+			}
+			@Override
+			public Adapter caseDiv(Div object) {
+				return createDivAdapter();
+			}
+			@Override
+			public Adapter caseNumberLiteral(NumberLiteral object) {
+				return createNumberLiteralAdapter();
+			}
+			@Override
+			public Adapter caseVariableExpression(VariableExpression object) {
+				return createVariableExpressionAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
 
   /**
-   * Creates an adapter for the <code>target</code>.
-   * <!-- begin-user-doc -->
+	 * Creates an adapter for the <code>target</code>.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param target the object to adapt.
-   * @return the adapter for the <code>target</code>.
-   * @generated
-   */
+	 * @param target the object to adapt.
+	 * @return the adapter for the <code>target</code>.
+	 * @generated
+	 */
   @Override
   public Adapter createAdapter(Notifier target)
   {
-    return modelSwitch.doSwitch((EObject)target);
-  }
+		return modelSwitch.doSwitch((EObject)target);
+	}
 
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.Model <em>Model</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MModel <em>Model</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.Model
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MModel
+	 * @generated
+	 */
   public Adapter createModelAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.Truc <em>Truc</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MTruc <em>Truc</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.Truc
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MTruc
+	 * @generated
+	 */
   public Adapter createTrucAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.Autre <em>Autre</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MAutre <em>Autre</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.Autre
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MAutre
+	 * @generated
+	 */
   public Adapter createAutreAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.Variable <em>Variable</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.Variable
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MVariable
+	 * @generated
+	 */
   public Adapter createVariableAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.VariableDirect <em>Variable Direct</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MVariableDirect <em>Variable Direct</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.VariableDirect
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MVariableDirect
+	 * @generated
+	 */
   public Adapter createVariableDirectAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.VariableCalcule <em>Variable Calcule</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MVariableCalcule <em>Variable Calcule</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.VariableCalcule
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MVariableCalcule
+	 * @generated
+	 */
   public Adapter createVariableCalculeAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.Expression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MExpression <em>Expression</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.Expression
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MExpression
+	 * @generated
+	 */
   public Adapter createExpressionAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.Plus <em>Plus</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MPlus <em>Plus</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.Plus
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MPlus
+	 * @generated
+	 */
   public Adapter createPlusAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.Minus <em>Minus</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MMinus <em>Minus</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.Minus
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MMinus
+	 * @generated
+	 */
   public Adapter createMinusAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.Multi <em>Multi</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MMulti <em>Multi</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.Multi
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MMulti
+	 * @generated
+	 */
   public Adapter createMultiAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.Div <em>Div</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MDiv <em>Div</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.Div
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MDiv
+	 * @generated
+	 */
   public Adapter createDivAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.NumberLiteral <em>Number Literal</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MNumberLiteral <em>Number Literal</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.NumberLiteral
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MNumberLiteral
+	 * @generated
+	 */
   public Adapter createNumberLiteralAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.VariableExpression <em>Variable Expression</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MVariableExpression <em>Variable Expression</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see oliv.form.xtext.dsl.VariableExpression
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MVariableExpression
+	 * @generated
+	 */
   public Adapter createVariableExpressionAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for the default case.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for the default case.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @generated
+	 */
   public Adapter createEObjectAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
 } //DslAdapterFactory
