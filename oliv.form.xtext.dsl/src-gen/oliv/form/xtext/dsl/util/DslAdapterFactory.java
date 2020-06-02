@@ -76,6 +76,14 @@ public class DslAdapterFactory extends AdapterFactoryImpl
 				return createModelAdapter();
 			}
 			@Override
+			public Adapter casePackageDeclaration(PackageDeclaration object) {
+				return createPackageDeclarationAdapter();
+			}
+			@Override
+			public Adapter caseImport(Import object) {
+				return createImportAdapter();
+			}
+			@Override
 			public Adapter caseTruc(Truc object) {
 				return createTrucAdapter();
 			}
@@ -155,6 +163,36 @@ public class DslAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
   public Adapter createModelAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MPackageDeclaration <em>Package Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MPackageDeclaration
+	 * @generated
+	 */
+  public Adapter createPackageDeclarationAdapter()
+  {
+		return null;
+	}
+
+  /**
+	 * Creates a new adapter for an object of class '{@link oliv.form.xtext.dsl.MImport <em>Import</em>}'.
+	 * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see oliv.form.xtext.dsl.MImport
+	 * @generated
+	 */
+  public Adapter createImportAdapter()
   {
 		return null;
 	}

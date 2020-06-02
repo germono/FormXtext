@@ -8,8 +8,12 @@ import oliv.form.xtext.dsl.VariableDirect;
 // This class overrides the generated class and will be instantiated by factory
 public class VariableDirectImpl extends MVariableDirectImpl implements VariableDirect
 {
-	public VariableDirectImpl() {
-		super();
-		System.out.println("VariableDirectImpl surcharge");
+	@Override
+	public String getNom() {		
+		return getName();
+	}
+	@Override
+	public double getValeur() {
+		return getAlpha();
 	}
 }

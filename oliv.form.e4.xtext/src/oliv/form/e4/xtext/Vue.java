@@ -17,11 +17,13 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 
+import oliv.form.xtext.dsl.Variable;
+
 
 public class Vue implements ConstantesUI{
 
 	private TableViewer viewer;
-	private List<VariableContext> tableau;
+	private List<Variable> tableau;
 
 	@PostConstruct
 	public void postConstruct(Composite parent,IEclipseContext context) {
@@ -41,7 +43,7 @@ public class Vue implements ConstantesUI{
 		col.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				VariableContext p = (VariableContext) element;
+				Variable p = (Variable) element;
 				return p.getNom();
 			}
 		});
@@ -51,7 +53,7 @@ public class Vue implements ConstantesUI{
 		col.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				VariableContext p = (VariableContext) element;
+				Variable p = (Variable) element;
 				return ""+p.getValeur();
 			}
 		});
@@ -61,9 +63,8 @@ public class Vue implements ConstantesUI{
 
 
 	@Inject
-	public void enregistre(@Optional @Named(VARIABLES) List<VariableContext> tableau) {
+	public void enregistre(@Optional @Named(VARIABLES) List<Variable> tableau) {
 		if (tableau != null) {
-			System.out.println("wf non null");
 			this.tableau = tableau;
 			cree();
 			

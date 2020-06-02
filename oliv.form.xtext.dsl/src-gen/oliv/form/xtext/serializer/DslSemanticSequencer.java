@@ -8,10 +8,12 @@ import java.util.Set;
 import oliv.form.xtext.dsl.Autre;
 import oliv.form.xtext.dsl.Div;
 import oliv.form.xtext.dsl.DslPackage;
+import oliv.form.xtext.dsl.Import;
 import oliv.form.xtext.dsl.Minus;
 import oliv.form.xtext.dsl.Model;
 import oliv.form.xtext.dsl.Multi;
 import oliv.form.xtext.dsl.NumberLiteral;
+import oliv.form.xtext.dsl.PackageDeclaration;
 import oliv.form.xtext.dsl.Plus;
 import oliv.form.xtext.dsl.VariableCalcule;
 import oliv.form.xtext.dsl.VariableDirect;
@@ -47,6 +49,9 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DslPackage.DIV:
 				sequence_Multiplication(context, (Div) semanticObject); 
 				return; 
+			case DslPackage.IMPORT:
+				sequence_Import(context, (Import) semanticObject); 
+				return; 
 			case DslPackage.MINUS:
 				sequence_Addition(context, (Minus) semanticObject); 
 				return; 
@@ -58,6 +63,9 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case DslPackage.NUMBER_LITERAL:
 				sequence_PrimaryExpression(context, (NumberLiteral) semanticObject); 
+				return; 
+			case DslPackage.PACKAGE_DECLARATION:
+				sequence_PackageDeclaration(context, (PackageDeclaration) semanticObject); 
 				return; 
 			case DslPackage.PLUS:
 				sequence_Addition(context, (Plus) semanticObject); 
@@ -153,10 +161,28 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     Import returns Import
+	 *
+	 * Constraint:
+	 *     importedNamespace=QualifiedNameWithWildcard
+	 */
+	protected void sequence_Import(ISerializationContext context, Import semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.IMPORT__IMPORTED_NAMESPACE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.IMPORT__IMPORTED_NAMESPACE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getImportAccess().getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0(), semanticObject.getImportedNamespace());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     variables+=Truc+
+	 *     ((package=PackageDeclaration? imports+=Import+ variables+=Truc+) | (package=PackageDeclaration? variables+=Truc+) | variables+=Truc+)?
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -215,6 +241,24 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMultiplicationAccess().getMultiLeftAction_1_0_0_0(), semanticObject.getLeft());
 		feeder.accept(grammarAccess.getMultiplicationAccess().getRightPrimaryExpressionParserRuleCall_1_1_0(), semanticObject.getRight());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     PackageDeclaration returns PackageDeclaration
+	 *
+	 * Constraint:
+	 *     name=QualifiedName
+	 */
+	protected void sequence_PackageDeclaration(ISerializationContext context, PackageDeclaration semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.PACKAGE_DECLARATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.PACKAGE_DECLARATION__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPackageDeclarationAccess().getNameQualifiedNameParserRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

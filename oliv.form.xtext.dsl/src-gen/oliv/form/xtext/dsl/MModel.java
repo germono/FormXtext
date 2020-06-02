@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link oliv.form.xtext.dsl.MModel#getPackage <em>Package</em>}</li>
+ *   <li>{@link oliv.form.xtext.dsl.MModel#getImports <em>Imports</em>}</li>
  *   <li>{@link oliv.form.xtext.dsl.MModel#getVariables <em>Variables</em>}</li>
  * </ul>
  *
@@ -24,6 +26,40 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface MModel extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Package</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Package</em>' containment reference.
+	 * @see #setPackage(PackageDeclaration)
+	 * @see oliv.form.xtext.dsl.MDslPackage#getModel_Package()
+	 * @model containment="true"
+	 * @generated
+	 */
+	PackageDeclaration getPackage();
+
+	/**
+	 * Sets the value of the '{@link oliv.form.xtext.dsl.MModel#getPackage <em>Package</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Package</em>' containment reference.
+	 * @see #getPackage()
+	 * @generated
+	 */
+	void setPackage(PackageDeclaration value);
+
+	/**
+	 * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
+	 * The list contents are of type {@link oliv.form.xtext.dsl.Import}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Imports</em>' containment reference list.
+	 * @see oliv.form.xtext.dsl.MDslPackage#getModel_Imports()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Import> getImports();
+
 	/**
 	 * Returns the value of the '<em><b>Variables</b></em>' containment reference list.
 	 * The list contents are of type {@link oliv.form.xtext.dsl.Truc}.

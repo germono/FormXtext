@@ -11,7 +11,10 @@ public interface Variable extends MVariable
 	//
 	// For instance : 
 	// default public void addSomething(Something foo) {} ;
-	default String  getNom() {
+	public default String  getNom() {
 		return "Salut";
+	}
+	public default double getValeur() {
+		return 0.0;
 	}
 }

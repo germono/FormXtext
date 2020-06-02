@@ -58,6 +58,8 @@ public class MDslFactoryImpl extends EFactoryImpl implements MDslFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case MDslPackage.MODEL: return createModel();
+			case MDslPackage.PACKAGE_DECLARATION: return createPackageDeclaration();
+			case MDslPackage.IMPORT: return createImport();
 			case MDslPackage.TRUC: return createTruc();
 			case MDslPackage.AUTRE: return createAutre();
 			case MDslPackage.VARIABLE: return createVariable();
@@ -84,6 +86,28 @@ public class MDslFactoryImpl extends EFactoryImpl implements MDslFactory {
 	public Model createModel() {
 		ModelImpl model = new ModelImpl();
 		return model;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PackageDeclaration createPackageDeclaration() {
+		PackageDeclarationImpl packageDeclaration = new PackageDeclarationImpl();
+		return packageDeclaration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Import createImport() {
+		ImportImpl import_ = new ImportImpl();
+		return import_;
 	}
 
 	/**

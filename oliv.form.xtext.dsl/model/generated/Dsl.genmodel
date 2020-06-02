@@ -9,7 +9,15 @@
   <genPackages prefix="Dsl" basePackage="oliv.form.xtext" disposableProviderFactory="true"
       fileExtensions="dsl" ecorePackage="Dsl.ecore#/">
     <genClasses ecoreClass="Dsl.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Model/package"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Model/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//Model/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//PackageDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//PackageDeclaration/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Dsl.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//Import/importedNamespace"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Truc"/>
     <genClasses ecoreClass="Dsl.ecore#//Autre">

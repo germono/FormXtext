@@ -33,7 +33,9 @@ Workflow {
 		language = StandardLanguage {
 			name = "oliv.form.xtext.Dsl"
 			fileExtensions = "dsl"
-
+			fragment = formatting.Formatter2Fragment2 {
+				generateXtendStub = true
+			}
 			serializer = {
 				generateStub = false
 			}

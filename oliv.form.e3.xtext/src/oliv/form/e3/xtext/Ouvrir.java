@@ -24,8 +24,10 @@ public class Ouvrir extends AbstractHandler {
 		IWorkspaceRoot root = workspace.getRoot();
 		IProject project = root.getProject("Projet");
 		IFolder folder = project.getFolder("Dossier");
-		IFile fichier = folder.getFile("super.dsl");
 		try {
+			IFile fichier = folder.getFile("super.dsl");
+			IDE.openEditor(page, fichier);
+			fichier = folder.getFile("superImport.dsl");
 			IDE.openEditor(page, fichier);
 		} catch (PartInitException e) {
 			// TODO Auto-generated catch block

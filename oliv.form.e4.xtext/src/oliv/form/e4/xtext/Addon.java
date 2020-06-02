@@ -1,7 +1,7 @@
 package oliv.form.e4.xtext;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -10,25 +10,19 @@ import javax.inject.Named;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.services.IServiceConstants;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jface.text.DocumentEvent;
 import org.eclipse.jface.text.IDocumentListener;
+import org.eclipse.jface.text.TextSelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.xtext.ui.editor.model.IXtextDocument;
 import org.eclipse.xtext.ui.editor.outline.impl.EObjectNode;
 
 import oliv.form.xtext.dsl.Model;
-import oliv.form.xtext.dsl.Truc;
-import oliv.form.xtext.dsl.VariableCalcule;
-import oliv.form.xtext.dsl.VariableDirect;
-import oliv.form.xtext.interpreter.CalculatorDirect;
+import oliv.form.xtext.dsl.Variable;
 import oliv.form.xtext.ui.EditeurContexte;
 
 public class Addon implements ConstantesUI {
 	private IEclipseContext context;
-	private CalculatorDirect calculator = new CalculatorDirect();
 	private IXtextDocument doc;
 
 	@PostConstruct
@@ -58,36 +52,32 @@ public class Addon implements ConstantesUI {
 	public void select(@Optional @Named(IServiceConstants.ACTIVE_SELECTION) Object o) {
 		if (o == null)
 			return;
-
-		System.out.println(o.getClass().toString());
 		if (o instanceof IStructuredSelection) {
-			EObjectNode ob=((EObjectNode)((IStructuredSelection) o).getFirstElement());
-			System.out.println(ob.getEClass());
-			System.out.println(ob.getEObjectURI());
+			IStructuredSelection s = (IStructuredSelection) o;
+			if (s.size() != 0) {
+				EObjectNode ob = (EObjectNode) s.getFirstElement();
+				Object objet = doc.readOnly(res->res.getEObject(ob.getEObjectURI().fragment()));
+				context.set(ECORE_OBJET_SELECTION,objet);
+			}
 		}
+		if (o instanceof TextSelection) {
+			TextSelection t = (TextSelection) o;
+			//TODO relier le t au modele?
+		}
+		
 
 	}
 
 	private void maj() {
 
-		Model nouveauModel = doc.readOnly(
-				res -> EcoreUtil.copy(res.getContents().size() != 0 ? (Model) res.getContents().get(0) : null));
-		if (nouveauModel == null)
+		Model nouveauModel = doc
+				.readOnly(res -> res.getContents().size() != 0 ? (Model) res.getContents().get(0) : null);
+		
+		if (nouveauModel == null) {
+			context.set(VARIABLES,new ArrayList<Variable>());					
 			return;
-		List<VariableContext> variables = new ArrayList<>();
-		for (Truc v : nouveauModel.getVariables()) {
-			if (v instanceof VariableDirect)
-				variables.add(new VariableContext(((VariableDirect) v).getName(), ((VariableDirect) v).getAlpha()));
-			if (v instanceof VariableCalcule) {
-				double valeur;
-				try {
-					valeur = calculator.evaluate(((VariableCalcule) v).getExpression());
-				} catch (IllegalArgumentException e) {
-					valeur = 0.0;
-				}
-				variables.add(new VariableContext(((VariableCalcule) v).getName(), valeur));
-			}
 		}
-		context.set(VARIABLES, variables);
+		context.set(VARIABLES,
+				nouveauModel.getVariables().stream().filter(v -> (v instanceof Variable)).collect(Collectors.toList()));
 	}
 }

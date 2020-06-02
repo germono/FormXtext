@@ -5,8 +5,20 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate dsl "http://www.form.oliv/xtext/Dsl"
 
 Model:
+	(package=PackageDeclaration)?
+	imports+=Import*
 	variables+=Truc*;
 	
+PackageDeclaration:
+	'nomImport' name=QualifiedName ;
+Import:
+    'import' importedNamespace=QualifiedNameWithWildcard;
+ 
+QualifiedNameWithWildcard:
+    QualifiedName '.*'?;
+QualifiedName:
+    ID ('.' ID)*;
+        
 Truc : 
 	VariableDirect|VariableCalcule|Autre
 ;
@@ -20,6 +32,7 @@ Autre :
 Variable :
 	VariableDirect|VariableCalcule
 ;
+
 VariableDirect:
 	'Variable' name=ID '{'
 	"Alpha" ":" alpha=Reel

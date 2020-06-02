@@ -37,6 +37,12 @@ public class DslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getMultiplicationAccess().getAlternatives_1_0(), "rule__Multiplication__Alternatives_1_0");
 			builder.put(grammarAccess.getPrimaryExpressionAccess().getAlternatives(), "rule__PrimaryExpression__Alternatives");
 			builder.put(grammarAccess.getReelAccess().getAlternatives_1_1(), "rule__Reel__Alternatives_1_1");
+			builder.put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
+			builder.put(grammarAccess.getPackageDeclarationAccess().getGroup(), "rule__PackageDeclaration__Group__0");
+			builder.put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
+			builder.put(grammarAccess.getQualifiedNameWithWildcardAccess().getGroup(), "rule__QualifiedNameWithWildcard__Group__0");
+			builder.put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
+			builder.put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 			builder.put(grammarAccess.getAutreAccess().getGroup(), "rule__Autre__Group__0");
 			builder.put(grammarAccess.getVariableDirectAccess().getGroup(), "rule__VariableDirect__Group__0");
 			builder.put(grammarAccess.getVariableCalculeAccess().getGroup(), "rule__VariableCalcule__Group__0");
@@ -53,7 +59,11 @@ public class DslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getPrimaryExpressionAccess().getGroup_2(), "rule__PrimaryExpression__Group_2__0");
 			builder.put(grammarAccess.getReelAccess().getGroup(), "rule__Reel__Group__0");
 			builder.put(grammarAccess.getReelAccess().getGroup_1(), "rule__Reel__Group_1__0");
-			builder.put(grammarAccess.getModelAccess().getVariablesAssignment(), "rule__Model__VariablesAssignment");
+			builder.put(grammarAccess.getModelAccess().getPackageAssignment_0(), "rule__Model__PackageAssignment_0");
+			builder.put(grammarAccess.getModelAccess().getImportsAssignment_1(), "rule__Model__ImportsAssignment_1");
+			builder.put(grammarAccess.getModelAccess().getVariablesAssignment_2(), "rule__Model__VariablesAssignment_2");
+			builder.put(grammarAccess.getPackageDeclarationAccess().getNameAssignment_1(), "rule__PackageDeclaration__NameAssignment_1");
+			builder.put(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1(), "rule__Import__ImportedNamespaceAssignment_1");
 			builder.put(grammarAccess.getAutreAccess().getBobAssignment_3(), "rule__Autre__BobAssignment_3");
 			builder.put(grammarAccess.getVariableDirectAccess().getNameAssignment_1(), "rule__VariableDirect__NameAssignment_1");
 			builder.put(grammarAccess.getVariableDirectAccess().getAlphaAssignment_5(), "rule__VariableDirect__AlphaAssignment_5");

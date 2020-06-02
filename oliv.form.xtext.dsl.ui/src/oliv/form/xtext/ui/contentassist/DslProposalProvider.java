@@ -3,10 +3,23 @@
  */
 package oliv.form.xtext.ui.contentassist;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.RuleCall;
+import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
+import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
 
 /**
  * See https://www.eclipse.org/Xtext/documentation/310_eclipse_support.html#content-assist
  * on how to customize the content assistant.
  */
 public class DslProposalProvider extends AbstractDslProposalProvider {
+	@Override
+	public void complete_VariableDirect(EObject model, RuleCall ruleCall, ContentAssistContext context,
+			ICompletionProposalAcceptor acceptor) {
+		// TODO Auto-generated method stub
+		acceptor.accept(createCompletionProposal("Salut","Variable de type salut",null, context));
+		//super.complete_VariableDirect(model, ruleCall, context, acceptor);
+	}
+	
+	
 }

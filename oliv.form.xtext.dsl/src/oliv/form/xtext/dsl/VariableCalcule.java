@@ -3,6 +3,8 @@
 */
 package oliv.form.xtext.dsl;
 
+import oliv.form.xtext.interpreter.Calculette;
+
 // This interface overrides the generated interface and will be returned by factory
 public interface VariableCalcule extends MVariableCalcule
 {
@@ -11,5 +13,6 @@ public interface VariableCalcule extends MVariableCalcule
 	//
 	// For instance : 
 	// default public void addSomething(Something foo) {} ;
-
+	
+	
 }

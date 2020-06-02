@@ -11,5 +11,5 @@ public interface VariableDirect extends MVariableDirect
 	//
 	// For instance : 
 	// default public void addSomething(Something foo) {} ;
-
+	
 }

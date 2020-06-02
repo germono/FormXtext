@@ -67,13 +67,31 @@ public interface MDslPackage extends EPackage {
 	int MODEL = 0;
 
 	/**
+	 * The feature id for the '<em><b>Package</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__PACKAGE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Imports</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__IMPORTS = 1;
+
+	/**
 	 * The feature id for the '<em><b>Variables</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL__VARIABLES = 0;
+	int MODEL__VARIABLES = 2;
 
 	/**
 	 * The number of structural features of the '<em>Model</em>' class.
@@ -82,7 +100,63 @@ public interface MDslPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_FEATURE_COUNT = 1;
+	int MODEL_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link oliv.form.xtext.dsl.impl.MPackageDeclarationImpl <em>Package Declaration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see oliv.form.xtext.dsl.impl.MPackageDeclarationImpl
+	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getPackageDeclaration()
+	 * @generated
+	 */
+	int PACKAGE_DECLARATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DECLARATION__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Package Declaration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DECLARATION_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link oliv.form.xtext.dsl.impl.MImportImpl <em>Import</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see oliv.form.xtext.dsl.impl.MImportImpl
+	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getImport()
+	 * @generated
+	 */
+	int IMPORT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Imported Namespace</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT__IMPORTED_NAMESPACE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Import</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPORT_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link oliv.form.xtext.dsl.impl.MTrucImpl <em>Truc</em>}' class.
@@ -92,7 +166,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getTruc()
 	 * @generated
 	 */
-	int TRUC = 1;
+	int TRUC = 3;
 
 	/**
 	 * The number of structural features of the '<em>Truc</em>' class.
@@ -111,7 +185,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getAutre()
 	 * @generated
 	 */
-	int AUTRE = 2;
+	int AUTRE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Bob</b></em>' attribute.
@@ -139,7 +213,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getVariable()
 	 * @generated
 	 */
-	int VARIABLE = 3;
+	int VARIABLE = 5;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -158,7 +232,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getVariableDirect()
 	 * @generated
 	 */
-	int VARIABLE_DIRECT = 4;
+	int VARIABLE_DIRECT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -204,7 +278,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getVariableCalcule()
 	 * @generated
 	 */
-	int VARIABLE_CALCULE = 5;
+	int VARIABLE_CALCULE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -241,7 +315,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getExpression()
 	 * @generated
 	 */
-	int EXPRESSION = 6;
+	int EXPRESSION = 8;
 
 	/**
 	 * The number of structural features of the '<em>Expression</em>' class.
@@ -260,7 +334,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getPlus()
 	 * @generated
 	 */
-	int PLUS = 7;
+	int PLUS = 9;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -297,7 +371,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getMinus()
 	 * @generated
 	 */
-	int MINUS = 8;
+	int MINUS = 10;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -334,7 +408,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getMulti()
 	 * @generated
 	 */
-	int MULTI = 9;
+	int MULTI = 11;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -371,7 +445,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getDiv()
 	 * @generated
 	 */
-	int DIV = 10;
+	int DIV = 12;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -408,7 +482,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getNumberLiteral()
 	 * @generated
 	 */
-	int NUMBER_LITERAL = 11;
+	int NUMBER_LITERAL = 13;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -436,7 +510,7 @@ public interface MDslPackage extends EPackage {
 	 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getVariableExpression()
 	 * @generated
 	 */
-	int VARIABLE_EXPRESSION = 12;
+	int VARIABLE_EXPRESSION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' reference.
@@ -468,6 +542,28 @@ public interface MDslPackage extends EPackage {
 	EClass getModel();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link oliv.form.xtext.dsl.MModel#getPackage <em>Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Package</em>'.
+	 * @see oliv.form.xtext.dsl.MModel#getPackage()
+	 * @see #getModel()
+	 * @generated
+	 */
+	EReference getModel_Package();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link oliv.form.xtext.dsl.MModel#getImports <em>Imports</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Imports</em>'.
+	 * @see oliv.form.xtext.dsl.MModel#getImports()
+	 * @see #getModel()
+	 * @generated
+	 */
+	EReference getModel_Imports();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link oliv.form.xtext.dsl.MModel#getVariables <em>Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -477,6 +573,48 @@ public interface MDslPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getModel_Variables();
+
+	/**
+	 * Returns the meta object for class '{@link oliv.form.xtext.dsl.MPackageDeclaration <em>Package Declaration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Package Declaration</em>'.
+	 * @see oliv.form.xtext.dsl.MPackageDeclaration
+	 * @generated
+	 */
+	EClass getPackageDeclaration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link oliv.form.xtext.dsl.MPackageDeclaration#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see oliv.form.xtext.dsl.MPackageDeclaration#getName()
+	 * @see #getPackageDeclaration()
+	 * @generated
+	 */
+	EAttribute getPackageDeclaration_Name();
+
+	/**
+	 * Returns the meta object for class '{@link oliv.form.xtext.dsl.MImport <em>Import</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Import</em>'.
+	 * @see oliv.form.xtext.dsl.MImport
+	 * @generated
+	 */
+	EClass getImport();
+
+	/**
+	 * Returns the meta object for the attribute '{@link oliv.form.xtext.dsl.MImport#getImportedNamespace <em>Imported Namespace</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Imported Namespace</em>'.
+	 * @see oliv.form.xtext.dsl.MImport#getImportedNamespace()
+	 * @see #getImport()
+	 * @generated
+	 */
+	EAttribute getImport_ImportedNamespace();
 
 	/**
 	 * Returns the meta object for class '{@link oliv.form.xtext.dsl.MTruc <em>Truc</em>}'.
@@ -807,12 +945,64 @@ public interface MDslPackage extends EPackage {
 		EClass MODEL = eINSTANCE.getModel();
 
 		/**
+		 * The meta object literal for the '<em><b>Package</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL__PACKAGE = eINSTANCE.getModel_Package();
+
+		/**
+		 * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL__IMPORTS = eINSTANCE.getModel_Imports();
+
+		/**
 		 * The meta object literal for the '<em><b>Variables</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference MODEL__VARIABLES = eINSTANCE.getModel_Variables();
+
+		/**
+		 * The meta object literal for the '{@link oliv.form.xtext.dsl.impl.MPackageDeclarationImpl <em>Package Declaration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see oliv.form.xtext.dsl.impl.MPackageDeclarationImpl
+		 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getPackageDeclaration()
+		 * @generated
+		 */
+		EClass PACKAGE_DECLARATION = eINSTANCE.getPackageDeclaration();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PACKAGE_DECLARATION__NAME = eINSTANCE.getPackageDeclaration_Name();
+
+		/**
+		 * The meta object literal for the '{@link oliv.form.xtext.dsl.impl.MImportImpl <em>Import</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see oliv.form.xtext.dsl.impl.MImportImpl
+		 * @see oliv.form.xtext.dsl.impl.MDslPackageImpl#getImport()
+		 * @generated
+		 */
+		EClass IMPORT = eINSTANCE.getImport();
+
+		/**
+		 * The meta object literal for the '<em><b>Imported Namespace</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMPORT__IMPORTED_NAMESPACE = eINSTANCE.getImport_ImportedNamespace();
 
 		/**
 		 * The meta object literal for the '{@link oliv.form.xtext.dsl.impl.MTrucImpl <em>Truc</em>}' class.

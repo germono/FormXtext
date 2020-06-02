@@ -4,9 +4,17 @@
 package oliv.form.xtext.dsl.impl;
 
 import oliv.form.xtext.dsl.VariableCalcule;
+import oliv.form.xtext.interpreter.Calculette;
 
 // This class overrides the generated class and will be instantiated by factory
 public class VariableCalculeImpl extends MVariableCalculeImpl implements VariableCalcule
 {
-
+	@Override
+	public String getNom() {		
+		return getName();
+	}
+	@Override
+	public double getValeur() {
+		return Calculette.I.calcul.evaluate(getExpression());
+	}
 }

@@ -39,7 +39,27 @@ public class Application implements IApplication {
 				folder.create(true, true, null);
 			 IFile fichier = folder.getFile("super.dsl");
 			 if(!fichier.exists()) 
-				 fichier.create(new ByteArrayInputStream("//Salut".getBytes()), true, null);
+				 fichier.create(new ByteArrayInputStream(("//Salut\n" + 
+				 		"import bobynette\n" + 
+				 		"\n" + 
+				 		"VariableCalcule bobynette{\n" + 
+				 		"	bob + boby\n" + 
+				 		"}\n"+
+				 		"//Pas acces dans le modele aux autres variables").getBytes()), true, null);
+			 fichier = folder.getFile("superImport.dsl");
+			 if(!fichier.exists()) 
+				 fichier.create(new ByteArrayInputStream(("//Salut\n" + 
+				 		"nomImport bobynette\n" + 
+				 		"\n" + 
+				 		"Variable bob {\n" + 
+				 		"	Alpha : 5.0\n" + 
+				 		"	Beta : 5.0\n" + 
+				 		"}\n" + 
+				 		"\n" + 
+				 		"Variable boby{\n" + 
+				 		"	Alpha : 4.0\n" + 
+				 		"	Beta : 4.0	\n" + 
+				 		"}").getBytes()), true, null);
 			 
 		} catch (CoreException e) {
 			// nothing to do
