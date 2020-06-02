@@ -17,6 +17,7 @@ import org.eclipse.xtext.ui.editor.model.IXtextDocument;
 
 import oliv.form.xtext.dsl.Model;
 import oliv.form.xtext.dsl.Truc;
+import oliv.form.xtext.dsl.Variable;
 import oliv.form.xtext.dsl.VariableCalcule;
 import oliv.form.xtext.dsl.VariableDirect;
 import oliv.form.xtext.interpreter.CalculatorDirect;
@@ -59,8 +60,8 @@ public class Addon implements ConstantesUI{
 				return;
 		List<VariableContext> variables = new ArrayList<>();
 		for (Truc v :nouveauModel.getVariables()) {
-			if(v instanceof VariableDirect)
-				variables.add(new VariableContext(((VariableDirect)v).getName(), ((VariableDirect)v).getAlpha()));
+			if(v instanceof Variable)
+				variables.add(new VariableContext(((Variable)v).getNom(), ((Variable)v).getValeurs()));
 			if(v instanceof VariableCalcule) {
 				double valeur;
 				try{

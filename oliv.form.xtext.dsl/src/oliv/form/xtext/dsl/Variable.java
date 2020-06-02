@@ -14,4 +14,7 @@ public interface Variable extends MVariable
 	default String  getNom() {
 		return "Salut";
 	}
+	default double  getValeurs() {
+		return 0.0;
+	}
 }

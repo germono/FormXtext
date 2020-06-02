@@ -8,5 +8,19 @@ import oliv.form.xtext.dsl.VariableCalcule;
 // This class overrides the generated class and will be instantiated by factory
 public class VariableCalculeImpl extends MVariableCalculeImpl implements VariableCalcule
 {
-
+	@Override
+	public String getNom() {
+		return super.getName();
+	}
+	@Override
+	public double getValeurs() {
+		double valeur;
+		try{
+			 valeur =calculator.evaluate(((VariableCalcule)v).getExpression());
+		}
+		catch (IllegalArgumentException e) {
+			 valeur =0.0;
+		}
+		return valeur;
+	}
 }

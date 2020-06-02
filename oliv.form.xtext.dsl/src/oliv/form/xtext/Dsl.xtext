@@ -6,7 +6,7 @@ generate dsl "http://www.form.oliv/xtext/Dsl"
 
 Model:
 	variables+=Truc*;
-	
+
 Truc : 
 	VariableDirect|VariableCalcule|Autre
 ;

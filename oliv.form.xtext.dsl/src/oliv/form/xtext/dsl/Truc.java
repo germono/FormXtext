@@ -11,5 +11,5 @@ public interface Truc extends MTruc
 	//
 	// For instance : 
 	// default public void addSomething(Something foo) {} ;
-
+	
 }
