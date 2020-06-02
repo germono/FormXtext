@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: oliv.form.xtext.dsl
+Bundle-ManifestVersion: 2
+Bundle-Name: oliv.form.xtext.dsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: oliv.form.xtext.dsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: oliv.form.xtext,
+ oliv.form.xtext.dsl,
+ oliv.form.xtext.dsl.impl,
+ oliv.form.xtext.dsl.util,
+ oliv.form.xtext.generator,
+ oliv.form.xtext.interpreter,
+ oliv.form.xtext.parser.antlr,
+ oliv.form.xtext.parser.antlr.internal,
+ oliv.form.xtext.scoping,
+ oliv.form.xtext.serializer,
+ oliv.form.xtext.services,
+ oliv.form.xtext.validation
+Import-Package: org.apache.log4j

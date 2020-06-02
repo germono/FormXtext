@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:basic_1="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_0nXNEKK0Eeq-1Jue_kMnjw">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_4eeokKK0Eeq-1Jue_kMnjw" featurename="snippets" parentElementId="xpath:/">
+    <elements xsi:type="advanced:Perspective" xmi:id="_4efPoKK0Eeq-1Jue_kMnjw" elementId="oliv.form.e3.xtext.perspective" selectedElement="_CYfwMKSuEeqk_OBgiMZthg">
+      <children xsi:type="basic:PartSashContainer" xmi:id="_CYfwMKSuEeqk_OBgiMZthg" elementId="oliv.form.e4.xtext.partsashcontainer.0" selectedElement="_4efPqqK0Eeq-1Jue_kMnjw" horizontal="true">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_4efPoaK0Eeq-1Jue_kMnjw" elementId="oliv.rcp.e4.xtext.partsashcontainer.0" containerData="1000" selectedElement="_4efPo6K0Eeq-1Jue_kMnjw" horizontal="true">
+          <children xsi:type="advanced:Placeholder" xmi:id="_4efPo6K0Eeq-1Jue_kMnjw" elementId="org.eclipse.ui.views.ContentOutline" containerData="1000"/>
+          <children xsi:type="advanced:Placeholder" xmi:id="_4efPpKK0Eeq-1Jue_kMnjw" elementId="oliv.form.e4.xtext.vue" containerData="1000"/>
+        </children>
+        <children xsi:type="advanced:Placeholder" xmi:id="_4efPqqK0Eeq-1Jue_kMnjw" elementId="org.eclipse.ui.editorss" containerData="5000"/>
+      </children>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_4ekIIKK0Eeq-1Jue_kMnjw" featurename="descriptors" parentElementId="xpath:/">
+    <elements xsi:type="basic_1:PartDescriptor" xmi:id="_4ekIIaK0Eeq-1Jue_kMnjw" elementId="oliv.form.e4.xtext.vue" label="VueE4" contributionURI="bundleclass://oliv.form.e4.xtext/oliv.form.e4.xtext.Vue"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_4ekvMKK0Eeq-1Jue_kMnjw" featurename="addons" parentElementId="xpath:/">
+    <elements xsi:type="application:Addon" xmi:id="_4ekvMaK0Eeq-1Jue_kMnjw" elementId="oliv.rcp.e4.xtext.addon.0" contributionURI="bundleclass://oliv.form.e4.xtext/oliv.form.e4.xtext.Addon"/>
+  </fragments>
+</fragment:ModelFragments>

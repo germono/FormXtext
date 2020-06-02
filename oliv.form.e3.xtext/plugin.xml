@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="oliv.form.e3.xtext.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="oliv.form.e3.xtext.Perspective"
+            name="RCP Perspective"
+            id="oliv.form.e3.xtext.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="oliv.form.e3.xtext.Ouvrir"
+            id="oliv.form.e3.xtext.ouvrir"
+            name="Ouvrir">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="Fichier"
+               label="Fichier">
+            <command
+                  commandId="oliv.form.e3.xtext.ouvrir"
+                  label="Ouvrir"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.save"
+                  icon="platform:/plugin/org.eclipse.ui/icons/full/etool16/save_edit.png"
+                  label="Enregistrer"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.saveAs"
+                  icon="platform:/plugin/org.eclipse.ui/icons/full/etool16/saveas_edit_floppy.png"
+                  label="Enregistre sous"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.saveAll"
+                  icon="platform:/plugin/org.eclipse.ui/icons/full/etool16/saveall_edit_sdcard.png"
+                  label="Enregistrer Tout"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Quitter">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>

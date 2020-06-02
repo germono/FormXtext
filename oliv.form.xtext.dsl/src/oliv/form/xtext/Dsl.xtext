@@ -1,0 +1,49 @@
+grammar oliv.form.xtext.Dsl with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate dsl "http://www.form.oliv/xtext/Dsl"
+
+Model:
+	variables+=Truc*;
+	
+Truc : 
+	VariableDirect|VariableCalcule|Autre
+;
+
+Autre : 
+	'Autre' "{"
+		'Bob' bob=Reel
+	"}"
+;	
+
+Variable :
+	VariableDirect|VariableCalcule
+;
+VariableDirect:
+	'Variable' name=ID '{'
+	"Alpha" ":" alpha=Reel
+	"Beta" ":" beta=Reel
+	"}";
+VariableCalcule :
+	"VariableCalcule" name=ID '{'
+	expression=Expression
+	"}"
+;
+Expression:
+	Addition;
+	
+Addition returns Expression:
+	Multiplication (({Plus.left=current} '+' | {Minus.left=current} '-') right=Multiplication)*;
+
+Multiplication returns Expression:
+	PrimaryExpression (({Multi.left=current} '*' | {Div.left=current} '/') right=PrimaryExpression)*;
+
+PrimaryExpression returns Expression:
+	'(' Expression ')' |
+	{NumberLiteral} value=Reel|
+	{VariableExpression} value=[Variable];
+	
+Reel returns ecore::EDouble: INT ('.'(EXT_INT|INT))? ;
+terminal EXT_INT :INT ('e'|'E')('-'|'+')?INT;
+		
