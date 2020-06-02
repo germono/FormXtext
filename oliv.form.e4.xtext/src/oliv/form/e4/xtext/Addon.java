@@ -8,11 +8,10 @@ import javax.inject.Inject;
 
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.annotations.Optional;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jface.text.DocumentEvent;
 import org.eclipse.jface.text.IDocumentListener;
+import org.eclipse.swt.events.VerifyEvent;
+import org.eclipse.swt.events.VerifyListener;
 import org.eclipse.xtext.ui.editor.model.IXtextDocument;
 
 import oliv.form.xtext.dsl.Model;
@@ -51,10 +50,9 @@ public class Addon implements ConstantesUI{
 	private void maj() {
 		
 		Model nouveauModel =doc.readOnly(res -> 
-		EcoreUtil.copy(
 				res.getContents().size()!=0?
 					(Model)res.getContents().get(0):
-					null));
+					null);
 		if (nouveauModel==null)
 				return;
 		List<VariableContext> variables = new ArrayList<>();
