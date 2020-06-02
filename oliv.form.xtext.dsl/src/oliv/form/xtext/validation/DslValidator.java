@@ -3,6 +3,10 @@
  */
 package oliv.form.xtext.validation;
 
+import org.eclipse.xtext.validation.Check;
+
+import oliv.form.xtext.dsl.DslPackage;
+import oliv.form.xtext.dsl.VariableDirect;
 
 /**
  * This class contains custom validation rules. 
@@ -21,5 +25,13 @@ public class DslValidator extends AbstractDslValidator {
 //					INVALID_NAME);
 //		}
 //	}
-	
+	public static final String MIN_SUP_MAX = "minSuperieurAuMax";
+	@Check
+	public void checkMaxSupMin(VariableDirect greeting) {
+		if (greeting.getAlpha()<greeting.getBeta()) {
+			warning("Le maximum doit être plus grand que le minimum",
+					DslPackage.Literals.VARIABLE_DIRECT__ALPHA,
+					MIN_SUP_MAX,greeting.getAlpha()+"",greeting.getBeta()+"");
+		}
+	}
 }
