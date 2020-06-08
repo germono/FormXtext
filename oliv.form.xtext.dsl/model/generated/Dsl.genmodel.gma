@@ -1,7 +1,7 @@
 # This file contains the parameters for genModelAddon generation (gma) 
 # It is automaticaly generated when gma is used
 # Store this file in your scm repository (git, svn ...)
-#Tue Jun 02 22:29:24 CEST 2020
+#Mon Jun 08 14:14:49 CEST 2020
 interfacePattern={0}
 classPattern={0}Impl
 generateEMFCodeAfter=true

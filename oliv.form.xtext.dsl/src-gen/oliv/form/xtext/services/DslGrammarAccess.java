@@ -180,26 +180,27 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.Dsl.Autre");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAutreKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cBEGINTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final Keyword cBobKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cBobAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cBobReelParserRuleCall_3_0 = (RuleCall)cBobAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final RuleCall cENDTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		
 		//Autre:
-		//	'Autre' "{"
+		//	'Autre'
+		//	BEGIN
 		//	'Bob' bob=Reel
-		//	"}";
+		//	END;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Autre' "{" 'Bob' bob=Reel "}"
+		//'Autre' BEGIN 'Bob' bob=Reel END
 		public Group getGroup() { return cGroup; }
 		
 		//'Autre'
 		public Keyword getAutreKeyword_0() { return cAutreKeyword_0; }
 		
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		//BEGIN
+		public RuleCall getBEGINTerminalRuleCall_1() { return cBEGINTerminalRuleCall_1; }
 		
 		//'Bob'
 		public Keyword getBobKeyword_2() { return cBobKeyword_2; }
@@ -210,8 +211,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//Reel
 		public RuleCall getBobReelParserRuleCall_3_0() { return cBobReelParserRuleCall_3_0; }
 		
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		//END
+		public RuleCall getENDTerminalRuleCall_4() { return cENDTerminalRuleCall_4; }
 	}
 	public class VariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.Dsl.Variable");
@@ -238,7 +239,7 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVariableKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final RuleCall cBEGINTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final Keyword cAlphaKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cColonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cAlphaAssignment_5 = (Assignment)cGroup.eContents().get(5);
@@ -247,16 +248,17 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColonKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cBetaAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cBetaReelParserRuleCall_8_0 = (RuleCall)cBetaAssignment_8.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final RuleCall cENDTerminalRuleCall_9 = (RuleCall)cGroup.eContents().get(9);
 		
 		//VariableDirect:
-		//	'Variable' name=ID '{'
+		//	'Variable' name=ID
+		//	BEGIN
 		//	"Alpha" ":" alpha=Reel
 		//	"Beta" ":" beta=Reel
-		//	"}";
+		//	END;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Variable' name=ID '{' "Alpha" ":" alpha=Reel "Beta" ":" beta=Reel "}"
+		//'Variable' name=ID BEGIN "Alpha" ":" alpha=Reel "Beta" ":" beta=Reel END
 		public Group getGroup() { return cGroup; }
 		
 		//'Variable'
@@ -268,8 +270,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		//BEGIN
+		public RuleCall getBEGINTerminalRuleCall_2() { return cBEGINTerminalRuleCall_2; }
 		
 		//"Alpha"
 		public Keyword getAlphaKeyword_3() { return cAlphaKeyword_3; }
@@ -295,8 +297,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//Reel
 		public RuleCall getBetaReelParserRuleCall_8_0() { return cBetaReelParserRuleCall_8_0; }
 		
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		//END
+		public RuleCall getENDTerminalRuleCall_9() { return cENDTerminalRuleCall_9; }
 	}
 	public class VariableCalculeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.Dsl.VariableCalcule");
@@ -304,18 +306,19 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVariableCalculeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final RuleCall cBEGINTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final Assignment cExpressionAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cExpressionExpressionParserRuleCall_3_0 = (RuleCall)cExpressionAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final RuleCall cENDTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		
 		//VariableCalcule:
-		//	"VariableCalcule" name=ID '{'
+		//	"VariableCalcule" name=ID
+		//	BEGIN
 		//	expression=Expression
-		//	"}";
+		//	END;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//"VariableCalcule" name=ID '{' expression=Expression "}"
+		//"VariableCalcule" name=ID BEGIN expression=Expression END
 		public Group getGroup() { return cGroup; }
 		
 		//"VariableCalcule"
@@ -327,8 +330,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		//BEGIN
+		public RuleCall getBEGINTerminalRuleCall_2() { return cBEGINTerminalRuleCall_2; }
 		
 		//expression=Expression
 		public Assignment getExpressionAssignment_3() { return cExpressionAssignment_3; }
@@ -336,8 +339,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		//Expression
 		public RuleCall getExpressionExpressionParserRuleCall_3_0() { return cExpressionExpressionParserRuleCall_3_0; }
 		
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		//END
+		public RuleCall getENDTerminalRuleCall_4() { return cENDTerminalRuleCall_4; }
 	}
 	public class ExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.Dsl.Expression");
@@ -576,6 +579,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	private final PrimaryExpressionElements pPrimaryExpression;
 	private final ReelElements pReel;
 	private final TerminalRule tEXT_INT;
+	private final TerminalRule tBEGIN;
+	private final TerminalRule tEND;
 	
 	private final Grammar grammar;
 	
@@ -602,6 +607,8 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pPrimaryExpression = new PrimaryExpressionElements();
 		this.pReel = new ReelElements();
 		this.tEXT_INT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.Dsl.EXT_INT");
+		this.tBEGIN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.Dsl.BEGIN");
+		this.tEND = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.Dsl.END");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -694,9 +701,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Autre:
-	//	'Autre' "{"
+	//	'Autre'
+	//	BEGIN
 	//	'Bob' bob=Reel
-	//	"}";
+	//	END;
 	public AutreElements getAutreAccess() {
 		return pAutre;
 	}
@@ -716,10 +724,11 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VariableDirect:
-	//	'Variable' name=ID '{'
+	//	'Variable' name=ID
+	//	BEGIN
 	//	"Alpha" ":" alpha=Reel
 	//	"Beta" ":" beta=Reel
-	//	"}";
+	//	END;
 	public VariableDirectElements getVariableDirectAccess() {
 		return pVariableDirect;
 	}
@@ -729,9 +738,10 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VariableCalcule:
-	//	"VariableCalcule" name=ID '{'
+	//	"VariableCalcule" name=ID
+	//	BEGIN
 	//	expression=Expression
-	//	"}";
+	//	END;
 	public VariableCalculeElements getVariableCalculeAccess() {
 		return pVariableCalcule;
 	}
@@ -794,6 +804,18 @@ public class DslGrammarAccess extends AbstractGrammarElementFinder {
 	//	INT ('e' | 'E') ('-' | '+')? INT;
 	public TerminalRule getEXT_INTRule() {
 		return tEXT_INT;
+	}
+	
+	//terminal BEGIN:
+	//	'synthetic:BEGIN';
+	public TerminalRule getBEGINRule() {
+		return tBEGIN;
+	}
+	
+	//terminal END:
+	//	'synthetic:END';
+	public TerminalRule getENDRule() {
+		return tEND;
 	}
 	
 	//terminal ID:

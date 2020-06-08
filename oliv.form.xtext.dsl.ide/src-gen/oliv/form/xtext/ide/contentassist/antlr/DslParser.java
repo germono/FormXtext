@@ -9,6 +9,8 @@ import com.google.inject.Singleton;
 import java.util.Map;
 import oliv.form.xtext.ide.contentassist.antlr.internal.InternalDslParser;
 import oliv.form.xtext.services.DslGrammarAccess;
+import org.antlr.runtime.CharStream;
+import org.antlr.runtime.TokenSource;
 import org.eclipse.xtext.AbstractElement;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.AbstractContentAssistParser;
 
@@ -90,6 +92,11 @@ public class DslParser extends AbstractContentAssistParser {
 		return result;
 	}
 
+	@Override
+	protected TokenSource createLexer(CharStream stream) {
+		return new DslTokenSource(super.createLexer(stream));
+	}
+	
 	@Override
 	protected String getRuleName(AbstractElement element) {
 		return nameMappings.getRuleName(element);

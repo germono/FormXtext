@@ -3,7 +3,7 @@
 <booleanAttribute key="append.args" value="true"/>
 <stringAttribute key="application" value="oliv.form.e3.xtext.application"/>
 <booleanAttribute key="askclear" value="true"/>
-<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticAdd" value="false"/>
 <booleanAttribute key="automaticValidate" value="true"/>
 <stringAttribute key="bootstrap" value=""/>
 <stringAttribute key="checked" value="[NONE]"/>
@@ -12,36 +12,7 @@
 <booleanAttribute key="clearwslog" value="false"/>
 <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/oliv.form.e3.xtext.application"/>
 <booleanAttribute key="default" value="false"/>
-<setAttribute key="deselected_workspace_bundles">
-<setEntry value="oliv.eclipse.com.dsl"/>
-<setEntry value="oliv.eclipse.com.dsl.ide"/>
-<setEntry value="oliv.eclipse.com.dsl.tests"/>
-<setEntry value="oliv.eclipse.com.dsl.ui"/>
-<setEntry value="oliv.eclipse.com.dsl.ui.tests"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna.ide"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna.tests"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna.ui"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna.ui.tests"/>
-<setEntry value="oliv.eclipse.editor.multi"/>
-<setEntry value="oliv.eclipse.sourceViewer"/>
-<setEntry value="oliv.eclipse.xtextextends"/>
-<setEntry value="oliv.form.xtext.dsl.tests"/>
-<setEntry value="oliv.form.xtext.dsl.ui.tests"/>
-<setEntry value="oliv.form.xtext.fix"/>
-<setEntry value="oliv.form.xtext.fix.e3.xtext"/>
-<setEntry value="oliv.form.xtext.fix.ide"/>
-<setEntry value="oliv.form.xtext.fix.tests"/>
-<setEntry value="oliv.form.xtext.fix.ui"/>
-<setEntry value="oliv.form.xtext.fix.ui.tests"/>
-<setEntry value="oliv.swt.editeur"/>
-<setEntry value="oliv.swt.editeur.test"/>
-<setEntry value="oliv.xtext.analyse"/>
-<setEntry value="org.example.domainmodel"/>
-<setEntry value="org.example.domainmodel.ide"/>
-<setEntry value="org.example.domainmodel.ui"/>
-<setEntry value="xtend-examples"/>
-</setAttribute>
+<setAttribute key="deselected_workspace_bundles"/>
 <booleanAttribute key="includeOptional" value="false"/>
 <stringAttribute key="location" value="${workspace_loc}/../runtime-oliv.form.e3.xtext.application"/>
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
