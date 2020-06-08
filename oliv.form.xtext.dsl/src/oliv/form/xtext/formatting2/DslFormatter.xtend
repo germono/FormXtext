@@ -9,6 +9,7 @@ import oliv.form.xtext.dsl.VariableCalcule
 import oliv.form.xtext.services.DslGrammarAccess
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
+import oliv.form.xtext.dsl.VariableDirect
 
 class DslFormatter extends AbstractFormatter2 {
 	
@@ -30,6 +31,12 @@ class DslFormatter extends AbstractFormatter2 {
 		variableCalcule.prepend[newLine]
 		variableCalcule.expression.format
 		variableCalcule.surround[newLine]
+	}
+	def dispatch void format(VariableDirect variableDirect, extension IFormattableDocument document) {
+		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
+		variableDirect.prepend[newLine]
+		//variableDirect.
+		variableDirect.surround[newLine]
 	}
 	
 	// TODO: implement for Plus, Minus, Multi, Div

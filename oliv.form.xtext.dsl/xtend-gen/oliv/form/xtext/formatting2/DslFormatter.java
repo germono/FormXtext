@@ -11,6 +11,7 @@ import oliv.form.xtext.dsl.Model;
 import oliv.form.xtext.dsl.PackageDeclaration;
 import oliv.form.xtext.dsl.Truc;
 import oliv.form.xtext.dsl.VariableCalcule;
+import oliv.form.xtext.dsl.VariableDirect;
 import oliv.form.xtext.services.DslGrammarAccess;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -51,9 +52,23 @@ public class DslFormatter extends AbstractFormatter2 {
     document.<VariableCalcule>surround(variableCalcule, _function_1);
   }
   
+  protected void _format(final VariableDirect variableDirect, @Extension final IFormattableDocument document) {
+    final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
+      it.newLine();
+    };
+    document.<VariableDirect>prepend(variableDirect, _function);
+    final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
+      it.newLine();
+    };
+    document.<VariableDirect>surround(variableDirect, _function_1);
+  }
+  
   public void format(final Object variableCalcule, final IFormattableDocument document) {
     if (variableCalcule instanceof VariableCalcule) {
       _format((VariableCalcule)variableCalcule, document);
+      return;
+    } else if (variableCalcule instanceof VariableDirect) {
+      _format((VariableDirect)variableCalcule, document);
       return;
     } else if (variableCalcule instanceof XtextResource) {
       _format((XtextResource)variableCalcule, document);
