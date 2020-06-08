@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
+<target name="Oliv Form target " sequenceNumber="1591625535">
+  <locations>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.platform.feature.group" version="4.15.0.v20200305-0155"/>
+      <unit id="org.eclipse.e4.rcp.feature.group" version="4.15.0.v20200304-0601"/>
+      <unit id="org.eclipse.jdt.feature.group" version="3.18.300.v20200305-0155"/>
+      <unit id="org.eclipse.pde.feature.group" version="3.14.300.v20200305-0155"/>
+      <unit id="org.eclipse.draw2d.feature.group" version="3.10.100.201606061308"/>
+      <unit id="org.eclipse.emf.sdk.feature.group" version="2.21.0.v20200205-0529"/>
+      <unit id="org.eclipse.xtend.feature.group" version="2.2.0.v201605260315"/>
+      <unit id="org.eclipse.xtend.typesystem.emf" version="2.2.0.v201605260315"/>
+      <unit id="org.eclipse.xtext.sdk.feature.group" version="2.21.0.v20200302-1509"/>
+      <unit id="org.eclipse.emf.mwe2.launcher.feature.group" version="2.11.2.v20200224-0816"/>
+      <unit id="org.apache.commons.logging" version="1.2.0.v20180409-1502"/>
+      <unit id="org.objectweb.asm" version="7.2.0.v20191010-1910"/>
+      <unit id="org.apache.log4j" version="1.2.15.v201012070815"/>
+      <unit id="org.eclipse.pde.junit.runtime" version="3.5.700.v20200116-1804"/>
+      <unit id="org.eclipse.jdt.junit5.runtime" version="1.0.800.v20200214-0716"/>
+      <unit id="org.junit.jupiter.api" version="5.6.0.v20200203-2009"/>
+      <unit id="org.junit.jupiter.engine" version="5.6.0.v20200203-2009"/>
+      <unit id="org.junit.jupiter.migrationsupport" version="5.6.0.v20200203-2009"/>
+      <unit id="org.junit.jupiter.params" version="5.6.0.v20200203-2009"/>
+      <unit id="org.junit.platform.commons" version="1.6.0.v20200203-2009"/>
+      <repository location="http://download.eclipse.org/releases/2020-03"/>
+    </location>
+  </locations>
+</target>

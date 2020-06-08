@@ -1,0 +1,38 @@
+target "Oliv Form target " with source requirements
+
+location "http://download.eclipse.org/releases/2020-03" {
+
+	org.eclipse.platform.feature.group
+	org.eclipse.e4.rcp.feature.group
+	
+	org.eclipse.jdt.feature.group
+	org.eclipse.pde.feature.group
+	org.eclipse.draw2d.feature.group
+	org.eclipse.emf.sdk.feature.group
+	org.eclipse.xtend.feature.group
+	org.eclipse.xtend.typesystem.emf
+	org.eclipse.xtext.sdk.feature.group
+	org.eclipse.emf.mwe2.launcher.feature.group 
+	org.apache.commons.logging
+	org.objectweb.asm
+	org.apache.log4j
+	
+	// Used for tests
+	org.eclipse.pde.junit.runtime
+	
+    // Add the junit 5 support	
+   	org.eclipse.jdt.junit5.runtime
+	org.junit.jupiter.api
+	org.junit.jupiter.engine
+	org.junit.jupiter.migrationsupport
+	org.junit.jupiter.params
+	org.junit.platform.commons
+	
+}
+
+// Add the new E4 test platform from opcoach website
+//location "https://dl.bintray.com/opcoach/E4Tester/" {
+//location "https://www.opcoach.com/repository/2020-03" {
+//   com.opcoach.e4tester.feature.feature.group
+//   com.opcoach.e4.preferences.feature.feature.group
+//} 
