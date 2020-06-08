@@ -32,6 +32,7 @@
     <genClasses ecoreClass="Dsl.ecore#//VariableCalcule">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Dsl.ecore#//VariableCalcule/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//VariableCalcule/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Dsl.ecore#//VariableCalcule/expression2"/>
     </genClasses>
     <genClasses ecoreClass="Dsl.ecore#//Expression"/>
     <genClasses ecoreClass="Dsl.ecore#//Plus">

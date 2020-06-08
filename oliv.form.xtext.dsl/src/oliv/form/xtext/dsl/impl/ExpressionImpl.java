@@ -8,5 +8,15 @@ import oliv.form.xtext.dsl.Expression;
 // This class overrides the generated class and will be instantiated by factory
 public class ExpressionImpl extends MExpressionImpl implements Expression
 {
-
+	@Override
+	public boolean equals(Object obj) {
+		if(obj==this)
+			return true;
+		if (!(obj  instanceof Expression))
+			return false;
+		if(obj.getClass()!=getClass())
+			return false;
+		return this.getLeft().equals(((Expression)obj).getLeft())&&
+				this.getRight().equals(((Expression)obj).getRight());
+	}
 }

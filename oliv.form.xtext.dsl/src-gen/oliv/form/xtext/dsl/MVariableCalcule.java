@@ -15,6 +15,7 @@ package oliv.form.xtext.dsl;
  * <ul>
  *   <li>{@link oliv.form.xtext.dsl.MVariableCalcule#getName <em>Name</em>}</li>
  *   <li>{@link oliv.form.xtext.dsl.MVariableCalcule#getExpression <em>Expression</em>}</li>
+ *   <li>{@link oliv.form.xtext.dsl.MVariableCalcule#getExpression2 <em>Expression2</em>}</li>
  * </ul>
  *
  * @see oliv.form.xtext.dsl.MDslPackage#getVariableCalcule()
@@ -65,5 +66,27 @@ public interface MVariableCalcule extends Truc, Variable {
 	 * @generated
 	 */
 	void setExpression(Expression value);
+
+	/**
+	 * Returns the value of the '<em><b>Expression2</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expression2</em>' containment reference.
+	 * @see #setExpression2(Expression)
+	 * @see oliv.form.xtext.dsl.MDslPackage#getVariableCalcule_Expression2()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Expression getExpression2();
+
+	/**
+	 * Sets the value of the '{@link oliv.form.xtext.dsl.MVariableCalcule#getExpression2 <em>Expression2</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Expression2</em>' containment reference.
+	 * @see #getExpression2()
+	 * @generated
+	 */
+	void setExpression2(Expression value);
 
 } // MVariableCalcule

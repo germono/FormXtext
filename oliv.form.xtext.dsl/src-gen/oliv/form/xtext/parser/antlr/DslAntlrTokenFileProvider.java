@@ -11,6 +11,6 @@ public class DslAntlrTokenFileProvider implements IAntlrTokenFileProvider {
 	@Override
 	public InputStream getAntlrTokenFile() {
 		ClassLoader classLoader = getClass().getClassLoader();
-		return classLoader.getResourceAsStream("oliv/form/xtext/parser/antlr/internal/InternalDslParser.tokens");
+		return classLoader.getResourceAsStream("oliv/form/xtext/parser/antlr/internal/InternalDsl.tokens");
 	}
 }

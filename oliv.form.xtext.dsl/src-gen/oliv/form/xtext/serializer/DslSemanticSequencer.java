@@ -154,7 +154,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.AUTRE__BOB));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAutreAccess().getBobReelParserRuleCall_3_0(), semanticObject.getBob());
+		feeder.accept(grammarAccess.getAutreAccess().getBobReelParserRuleCall_2_0(), semanticObject.getBob());
 		feeder.finish();
 	}
 	
@@ -320,7 +320,7 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VariableCalcule returns VariableCalcule
 	 *
 	 * Constraint:
-	 *     (name=ID expression=Expression)
+	 *     (name=ID expression=Expression expression2=Expression)
 	 */
 	protected void sequence_VariableCalcule(ISerializationContext context, VariableCalcule semanticObject) {
 		if (errorAcceptor != null) {
@@ -328,10 +328,13 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.VARIABLE_CALCULE__NAME));
 			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.VARIABLE_CALCULE__EXPRESSION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.VARIABLE_CALCULE__EXPRESSION));
+			if (transientValues.isValueTransient(semanticObject, DslPackage.Literals.VARIABLE_CALCULE__EXPRESSION2) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DslPackage.Literals.VARIABLE_CALCULE__EXPRESSION2));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVariableCalculeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVariableCalculeAccess().getExpressionExpressionParserRuleCall_3_0(), semanticObject.getExpression());
+		feeder.accept(grammarAccess.getVariableCalculeAccess().getExpressionExpressionParserRuleCall_2_0(), semanticObject.getExpression());
+		feeder.accept(grammarAccess.getVariableCalculeAccess().getExpression2ExpressionParserRuleCall_3_0(), semanticObject.getExpression2());
 		feeder.finish();
 	}
 	
@@ -356,8 +359,8 @@ public class DslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVariableDirectAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVariableDirectAccess().getAlphaReelParserRuleCall_5_0(), semanticObject.getAlpha());
-		feeder.accept(grammarAccess.getVariableDirectAccess().getBetaReelParserRuleCall_8_0(), semanticObject.getBeta());
+		feeder.accept(grammarAccess.getVariableDirectAccess().getAlphaReelParserRuleCall_4_0(), semanticObject.getAlpha());
+		feeder.accept(grammarAccess.getVariableDirectAccess().getBetaReelParserRuleCall_7_0(), semanticObject.getBeta());
 		feeder.finish();
 	}
 	

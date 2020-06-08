@@ -12,4 +12,7 @@ public interface Expression extends MExpression
 	// For instance : 
 	// default public void addSomething(Something foo) {} ;
 
+	default Expression getLeft() {return null;}
+	default Expression getRight(){return null;}
+	
 }

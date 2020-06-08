@@ -8,5 +8,10 @@ import oliv.form.xtext.dsl.NumberLiteral;
 // This class overrides the generated class and will be instantiated by factory
 public class NumberLiteralImpl extends MNumberLiteralImpl implements NumberLiteral
 {
-
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof NumberLiteral)
+			return getValue()==((NumberLiteral) obj).getValue();
+		return false;
+	}
 }

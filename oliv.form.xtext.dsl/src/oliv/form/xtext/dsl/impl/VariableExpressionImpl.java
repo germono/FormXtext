@@ -8,5 +8,16 @@ import oliv.form.xtext.dsl.VariableExpression;
 // This class overrides the generated class and will be instantiated by factory
 public class VariableExpressionImpl extends MVariableExpressionImpl implements VariableExpression
 {
-
+	@Override
+	public boolean equals(Object obj) {
+		if (obj==this)
+			return true;
+		if (obj instanceof VariableExpression) {
+			String nom = getValue().toString();
+			String nom2 = ((VariableExpression)obj).getValue().toString();
+			System.out.println(nom);
+			return nom.equals(nom2);
+		}
+		return false;
+	}
 }

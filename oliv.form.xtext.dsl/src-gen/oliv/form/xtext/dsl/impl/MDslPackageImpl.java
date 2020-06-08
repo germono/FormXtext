@@ -397,6 +397,16 @@ public class MDslPackageImpl extends EPackageImpl implements MDslPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getVariableCalcule_Expression2() {
+		return (EReference)variableCalculeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getExpression() {
 		return expressionEClass;
 	}
@@ -616,6 +626,7 @@ public class MDslPackageImpl extends EPackageImpl implements MDslPackage {
 		variableCalculeEClass = createEClass(VARIABLE_CALCULE);
 		createEAttribute(variableCalculeEClass, VARIABLE_CALCULE__NAME);
 		createEReference(variableCalculeEClass, VARIABLE_CALCULE__EXPRESSION);
+		createEReference(variableCalculeEClass, VARIABLE_CALCULE__EXPRESSION2);
 
 		expressionEClass = createEClass(EXPRESSION);
 
@@ -709,6 +720,7 @@ public class MDslPackageImpl extends EPackageImpl implements MDslPackage {
 		initEClass(variableCalculeEClass, VariableCalcule.class, "VariableCalcule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariableCalcule_Name(), ecorePackage.getEString(), "name", null, 0, 1, VariableCalcule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariableCalcule_Expression(), this.getExpression(), null, "expression", null, 0, 1, VariableCalcule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariableCalcule_Expression2(), this.getExpression(), null, "expression2", null, 0, 1, VariableCalcule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

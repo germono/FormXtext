@@ -25,9 +25,9 @@ Truc :
 
 Autre : 
 	'Autre' 
-	BEGIN
+	
 		'Bob' bob=Reel
-	END
+	
 ;	
 
 Variable :
@@ -36,15 +36,16 @@ Variable :
 
 VariableDirect:
 	'Variable' name=ID 
-	BEGIN
+	
 	"Alpha" ":" alpha=Reel
 	"Beta" ":" beta=Reel
-	END;
+	;
 VariableCalcule :
 	"VariableCalcule" name=ID 
-	BEGIN
+	
 	expression=Expression
-	END
+	expression2=Expression
+	
 ;
 Expression:
 	Addition;
@@ -63,6 +64,4 @@ PrimaryExpression returns Expression:
 Reel returns ecore::EDouble: INT ('.'(EXT_INT|INT))? ;
 terminal EXT_INT :INT ('e'|'E')('-'|'+')?INT;
 
-terminal BEGIN: 'synthetic:BEGIN';  // increase indentation
-terminal END: 'synthetic:END';      // decrease indentation
 		

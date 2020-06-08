@@ -70,14 +70,14 @@ public class Addon implements ConstantesUI {
 
 	private void maj() {
 
-		Model nouveauModel = doc
-				.readOnly(res -> res.getContents().size() != 0 ? (Model) res.getContents().get(0) : null);
-		
-		if (nouveauModel == null) {
-			context.set(VARIABLES,new ArrayList<Variable>());					
-			return;
-		}
-		context.set(VARIABLES,
-				nouveauModel.getVariables().stream().filter(v -> (v instanceof Variable)).collect(Collectors.toList()));
+//		Model nouveauModel = doc
+//				.readOnly(res -> res.getContents().size() != 0 ? (Model) res.getContents().get(0) : null);
+//		
+//		if (nouveauModel == null) {
+//			context.set(VARIABLES,new ArrayList<Variable>());					
+//			return;
+//		}
+//		context.set(VARIABLES,
+//				nouveauModel.getVariables().stream().filter(v -> (v instanceof Variable)).collect(Collectors.toList()));
 	}
 }

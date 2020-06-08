@@ -8,7 +8,7 @@ import com.google.inject.Provider;
 import com.google.inject.name.Names;
 import oliv.form.xtext.ide.contentassist.antlr.DslParser;
 import oliv.form.xtext.ide.contentassist.antlr.PartialDslContentAssistParser;
-import oliv.form.xtext.ide.contentassist.antlr.lexer.InternalDslLexer;
+import oliv.form.xtext.ide.contentassist.antlr.internal.InternalDslLexer;
 import oliv.form.xtext.ui.contentassist.DslProposalProvider;
 import oliv.form.xtext.ui.labeling.DslDescriptionLabelProvider;
 import oliv.form.xtext.ui.labeling.DslLabelProvider;
@@ -30,8 +30,6 @@ import org.eclipse.xtext.builder.nature.NatureAddingEditorCallback;
 import org.eclipse.xtext.builder.preferences.BuilderPreferenceAccess;
 import org.eclipse.xtext.generator.IContextualOutputConfigurationProvider;
 import org.eclipse.xtext.ide.LexerIdeBindings;
-import org.eclipse.xtext.ide.editor.contentassist.CompletionPrefixProvider;
-import org.eclipse.xtext.ide.editor.contentassist.IndentationAwareCompletionPrefixProvider;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.IContentAssistParser;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.internal.Lexer;
 import org.eclipse.xtext.ide.editor.partialEditing.IPartialEditingContentAssistParser;
@@ -114,7 +112,7 @@ public abstract class AbstractDslUiModule extends DefaultUiModule {
 	public void configureHighlightingLexer(Binder binder) {
 		binder.bind(org.eclipse.xtext.parser.antlr.Lexer.class)
 			.annotatedWith(Names.named(LexerIdeBindings.HIGHLIGHTING))
-			.to(oliv.form.xtext.parser.antlr.lexer.InternalDslLexer.class);
+			.to(oliv.form.xtext.parser.antlr.internal.InternalDslLexer.class);
 	}
 	
 	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
@@ -137,11 +135,6 @@ public abstract class AbstractDslUiModule extends DefaultUiModule {
 	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
 	public void configureContentAssistLexerProvider(Binder binder) {
 		binder.bind(InternalDslLexer.class).toProvider(LexerProvider.create(InternalDslLexer.class));
-	}
-	
-	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
-	public Class<? extends CompletionPrefixProvider> bindCompletionPrefixProvider() {
-		return IndentationAwareCompletionPrefixProvider.class;
 	}
 	
 	// contributed by org.eclipse.xtext.xtext.generator.validation.ValidatorFragment2

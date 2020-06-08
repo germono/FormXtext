@@ -299,13 +299,22 @@ public interface MDslPackage extends EPackage {
 	int VARIABLE_CALCULE__EXPRESSION = TRUC_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Expression2</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_CALCULE__EXPRESSION2 = TRUC_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Variable Calcule</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_CALCULE_FEATURE_COUNT = TRUC_FEATURE_COUNT + 2;
+	int VARIABLE_CALCULE_FEATURE_COUNT = TRUC_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link oliv.form.xtext.dsl.impl.MExpressionImpl <em>Expression</em>}' class.
@@ -733,6 +742,17 @@ public interface MDslPackage extends EPackage {
 	EReference getVariableCalcule_Expression();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link oliv.form.xtext.dsl.MVariableCalcule#getExpression2 <em>Expression2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression2</em>'.
+	 * @see oliv.form.xtext.dsl.MVariableCalcule#getExpression2()
+	 * @see #getVariableCalcule()
+	 * @generated
+	 */
+	EReference getVariableCalcule_Expression2();
+
+	/**
 	 * Returns the meta object for class '{@link oliv.form.xtext.dsl.MExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1101,6 +1121,14 @@ public interface MDslPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VARIABLE_CALCULE__EXPRESSION = eINSTANCE.getVariableCalcule_Expression();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression2</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE_CALCULE__EXPRESSION2 = eINSTANCE.getVariableCalcule_Expression2();
 
 		/**
 		 * The meta object literal for the '{@link oliv.form.xtext.dsl.impl.MExpressionImpl <em>Expression</em>}' class.

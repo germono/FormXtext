@@ -9,8 +9,6 @@ import com.google.inject.Singleton;
 import java.util.Map;
 import oliv.form.xtext.ide.contentassist.antlr.internal.InternalDslParser;
 import oliv.form.xtext.services.DslGrammarAccess;
-import org.antlr.runtime.CharStream;
-import org.antlr.runtime.TokenSource;
 import org.eclipse.xtext.AbstractElement;
 import org.eclipse.xtext.ide.editor.contentassist.antlr.AbstractContentAssistParser;
 
@@ -66,12 +64,13 @@ public class DslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getModelAccess().getVariablesAssignment_2(), "rule__Model__VariablesAssignment_2");
 			builder.put(grammarAccess.getPackageDeclarationAccess().getNameAssignment_1(), "rule__PackageDeclaration__NameAssignment_1");
 			builder.put(grammarAccess.getImportAccess().getImportedNamespaceAssignment_1(), "rule__Import__ImportedNamespaceAssignment_1");
-			builder.put(grammarAccess.getAutreAccess().getBobAssignment_3(), "rule__Autre__BobAssignment_3");
+			builder.put(grammarAccess.getAutreAccess().getBobAssignment_2(), "rule__Autre__BobAssignment_2");
 			builder.put(grammarAccess.getVariableDirectAccess().getNameAssignment_1(), "rule__VariableDirect__NameAssignment_1");
-			builder.put(grammarAccess.getVariableDirectAccess().getAlphaAssignment_5(), "rule__VariableDirect__AlphaAssignment_5");
-			builder.put(grammarAccess.getVariableDirectAccess().getBetaAssignment_8(), "rule__VariableDirect__BetaAssignment_8");
+			builder.put(grammarAccess.getVariableDirectAccess().getAlphaAssignment_4(), "rule__VariableDirect__AlphaAssignment_4");
+			builder.put(grammarAccess.getVariableDirectAccess().getBetaAssignment_7(), "rule__VariableDirect__BetaAssignment_7");
 			builder.put(grammarAccess.getVariableCalculeAccess().getNameAssignment_1(), "rule__VariableCalcule__NameAssignment_1");
-			builder.put(grammarAccess.getVariableCalculeAccess().getExpressionAssignment_3(), "rule__VariableCalcule__ExpressionAssignment_3");
+			builder.put(grammarAccess.getVariableCalculeAccess().getExpressionAssignment_2(), "rule__VariableCalcule__ExpressionAssignment_2");
+			builder.put(grammarAccess.getVariableCalculeAccess().getExpression2Assignment_3(), "rule__VariableCalcule__Expression2Assignment_3");
 			builder.put(grammarAccess.getAdditionAccess().getRightAssignment_1_1(), "rule__Addition__RightAssignment_1_1");
 			builder.put(grammarAccess.getMultiplicationAccess().getRightAssignment_1_1(), "rule__Multiplication__RightAssignment_1_1");
 			builder.put(grammarAccess.getPrimaryExpressionAccess().getValueAssignment_1_1(), "rule__PrimaryExpression__ValueAssignment_1_1");
@@ -92,11 +91,6 @@ public class DslParser extends AbstractContentAssistParser {
 		return result;
 	}
 
-	@Override
-	protected TokenSource createLexer(CharStream stream) {
-		return new DslTokenSource(super.createLexer(stream));
-	}
-	
 	@Override
 	protected String getRuleName(AbstractElement element) {
 		return nameMappings.getRuleName(element);

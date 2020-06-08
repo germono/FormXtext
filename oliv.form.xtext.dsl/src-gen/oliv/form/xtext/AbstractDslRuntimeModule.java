@@ -11,7 +11,7 @@ import oliv.form.xtext.formatting2.DslFormatter;
 import oliv.form.xtext.generator.DslGenerator;
 import oliv.form.xtext.parser.antlr.DslAntlrTokenFileProvider;
 import oliv.form.xtext.parser.antlr.DslParser;
-import oliv.form.xtext.parser.antlr.lexer.InternalDslLexer;
+import oliv.form.xtext.parser.antlr.internal.InternalDslLexer;
 import oliv.form.xtext.scoping.DslScopeProvider;
 import oliv.form.xtext.serializer.DslSemanticSequencer;
 import oliv.form.xtext.serializer.DslSyntacticSequencer;
