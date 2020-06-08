@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+	<template id="oliv.form.xtext.Dsl.VariableDirect_salut" autoinsert="true"
+		context="oliv.form.xtext.Dsl.VariableDirect" deleted="false"
+		description="Des Tempps" enabled="true" name="Temp">//SAlut </template>
+</templates>

@@ -196,12 +196,37 @@
 <setEntry value="org.w3c.dom.svg@default:default"/>
 </setAttribute>
 <setAttribute key="selected_workspace_bundles">
-<setEntry value="oliv.form.e3.xtext@default:default"/>
+<setEntry value="oliv.eclipse.com.dsl.ide@default:default"/>
+<setEntry value="oliv.eclipse.com.dsl.tests@default:default"/>
+<setEntry value="oliv.eclipse.com.dsl.ui.tests@default:default"/>
+<setEntry value="oliv.eclipse.com.dsl.ui@default:default"/>
+<setEntry value="oliv.eclipse.com.dsl@default:default"/>
+<setEntry value="oliv.eclipse.dsl.lsdyna.ide@default:default"/>
+<setEntry value="oliv.eclipse.dsl.lsdyna.tests@default:default"/>
+<setEntry value="oliv.eclipse.dsl.lsdyna.ui.tests@default:default"/>
+<setEntry value="oliv.eclipse.dsl.lsdyna.ui@default:default"/>
+<setEntry value="oliv.eclipse.dsl.lsdyna@default:default"/>
+<setEntry value="oliv.eclipse.editor.multi@default:default"/>
+<setEntry value="oliv.eclipse.sourceViewer@default:default"/>
+<setEntry value="oliv.eclipse.xtextextends@default:default"/>
+<setEntry value="oliv.form.e3.xtext*1.0.0.qualifier@default:default"/>
 <setEntry value="oliv.form.e4.xtext@default:default"/>
 <setEntry value="oliv.form.xtext.dsl.ide@default:default"/>
 <setEntry value="oliv.form.xtext.dsl.tests@default:default"/>
 <setEntry value="oliv.form.xtext.dsl.ui@default:default"/>
 <setEntry value="oliv.form.xtext.dsl@default:default"/>
+<setEntry value="oliv.form.xtext.fix.ide@default:default"/>
+<setEntry value="oliv.form.xtext.fix.tests@default:default"/>
+<setEntry value="oliv.form.xtext.fix.ui.tests@default:default"/>
+<setEntry value="oliv.form.xtext.fix.ui@default:default"/>
+<setEntry value="oliv.form.xtext.fix@default:default"/>
+<setEntry value="oliv.swt.editeur.test@default:false"/>
+<setEntry value="oliv.swt.editeur@default:default"/>
+<setEntry value="oliv.xtext.analyse@default:default"/>
+<setEntry value="org.example.domainmodel.ide@default:default"/>
+<setEntry value="org.example.domainmodel.ui@default:default"/>
+<setEntry value="org.example.domainmodel@default:default"/>
+<setEntry value="xtend-examples@default:default"/>
 </setAttribute>
 <booleanAttribute key="show_selected_only" value="false"/>
 <booleanAttribute key="tracing" value="false"/>
