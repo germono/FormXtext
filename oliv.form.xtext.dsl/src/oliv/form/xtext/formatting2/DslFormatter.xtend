@@ -4,14 +4,16 @@
 package oliv.form.xtext.formatting2
 
 import com.google.inject.Inject
+import oliv.form.xtext.dsl.DslPackage
+import oliv.form.xtext.dsl.MDslPackage
 import oliv.form.xtext.dsl.Model
 import oliv.form.xtext.dsl.VariableCalcule
+import oliv.form.xtext.dsl.VariableDirect
 import oliv.form.xtext.services.DslGrammarAccess
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
-import oliv.form.xtext.dsl.VariableDirect
 
-class DslFormatter extends AbstractFormatter2 {
+class DslFormatter extends AbstractFormatter2 implements MDslPackage.Literals {
 	
 	@Inject extension DslGrammarAccess
 
@@ -35,7 +37,13 @@ class DslFormatter extends AbstractFormatter2 {
 	def dispatch void format(VariableDirect variableDirect, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
 		variableDirect.prepend[newLine]
-		//variableDirect.
+		variableDirect.regionFor.keyword("Variable").append[oneSpace]
+		variableDirect.regionFor.keyword("Alpha").prepend[newLines=2]
+		variableDirect.regionFor.keyword("Beta").prepend[newLine]
+		variableDirect.regionFor.keyword("{").prepend[space="  "]
+//		variableDirect.regionFor.feature(DslPackage.Literals.VARIABLE_DIRECT__ALPHA).surround[space="   "]
+		variableDirect.regionFor.feature(VARIABLE_DIRECT__ALPHA).append[space=" //dsjfslk   "]
+//		variableDirect.interior[indent]
 		variableDirect.surround[newLine]
 	}
 	

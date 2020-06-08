@@ -7,6 +7,7 @@ import com.google.inject.Inject;
 import java.util.Arrays;
 import oliv.form.xtext.dsl.Expression;
 import oliv.form.xtext.dsl.Import;
+import oliv.form.xtext.dsl.MDslPackage;
 import oliv.form.xtext.dsl.Model;
 import oliv.form.xtext.dsl.PackageDeclaration;
 import oliv.form.xtext.dsl.Truc;
@@ -23,7 +24,7 @@ import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
 @SuppressWarnings("all")
-public class DslFormatter extends AbstractFormatter2 {
+public class DslFormatter extends AbstractFormatter2 implements MDslPackage.Literals {
   @Inject
   @Extension
   private DslGrammarAccess _dslGrammarAccess;
@@ -58,9 +59,29 @@ public class DslFormatter extends AbstractFormatter2 {
     };
     document.<VariableDirect>prepend(variableDirect, _function);
     final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
+      it.oneSpace();
+    };
+    document.append(this.textRegionExtensions.regionFor(variableDirect).keyword("Variable"), _function_1);
+    final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it) -> {
+      it.setNewLines(2);
+    };
+    document.prepend(this.textRegionExtensions.regionFor(variableDirect).keyword("Alpha"), _function_2);
+    final Procedure1<IHiddenRegionFormatter> _function_3 = (IHiddenRegionFormatter it) -> {
       it.newLine();
     };
-    document.<VariableDirect>surround(variableDirect, _function_1);
+    document.prepend(this.textRegionExtensions.regionFor(variableDirect).keyword("Beta"), _function_3);
+    final Procedure1<IHiddenRegionFormatter> _function_4 = (IHiddenRegionFormatter it) -> {
+      it.setSpace("  ");
+    };
+    document.prepend(this.textRegionExtensions.regionFor(variableDirect).keyword("{"), _function_4);
+    final Procedure1<IHiddenRegionFormatter> _function_5 = (IHiddenRegionFormatter it) -> {
+      it.setSpace(" //dsjfslk   ");
+    };
+    document.append(this.textRegionExtensions.regionFor(variableDirect).feature(MDslPackage.Literals.VARIABLE_DIRECT__ALPHA), _function_5);
+    final Procedure1<IHiddenRegionFormatter> _function_6 = (IHiddenRegionFormatter it) -> {
+      it.newLine();
+    };
+    document.<VariableDirect>surround(variableDirect, _function_6);
   }
   
   public void format(final Object variableCalcule, final IFormattableDocument document) {

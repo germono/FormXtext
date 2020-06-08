@@ -8,5 +8,7 @@ package oliv.form.xtext.dsl;
 */
 public interface DslPackage extends MDslPackage 
 {
+	interface Literals extends MDslPackage.Literals{};
+	
 	
 }
