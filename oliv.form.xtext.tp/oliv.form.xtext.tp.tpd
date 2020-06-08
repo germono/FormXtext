@@ -16,7 +16,7 @@ location "http://download.eclipse.org/releases/2020-03" {
 	org.apache.commons.logging
 	org.objectweb.asm
 	org.apache.log4j
-	
+	org.eclipse.equinox.executable.feature.group
 	// Used for tests
 	org.eclipse.pde.junit.runtime
 	

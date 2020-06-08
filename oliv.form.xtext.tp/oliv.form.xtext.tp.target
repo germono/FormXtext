@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="Oliv Form target " sequenceNumber="1591625535">
+<target name="Oliv Form target " sequenceNumber="1591628093">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.platform.feature.group" version="4.15.0.v20200305-0155"/>
@@ -17,6 +17,7 @@
       <unit id="org.apache.commons.logging" version="1.2.0.v20180409-1502"/>
       <unit id="org.objectweb.asm" version="7.2.0.v20191010-1910"/>
       <unit id="org.apache.log4j" version="1.2.15.v201012070815"/>
+      <unit id="org.eclipse.equinox.executable.feature.group" version="3.8.700.v20200207-2156"/>
       <unit id="org.eclipse.pde.junit.runtime" version="3.5.700.v20200116-1804"/>
       <unit id="org.eclipse.jdt.junit5.runtime" version="1.0.800.v20200214-0716"/>
       <unit id="org.junit.jupiter.api" version="5.6.0.v20200203-2009"/>
