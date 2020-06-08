@@ -10,9 +10,10 @@
 <booleanAttribute key="clearConfig" value="true"/>
 <booleanAttribute key="clearws" value="false"/>
 <booleanAttribute key="clearwslog" value="false"/>
-<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/oliv.form.e3.xtext.application_macosx"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/oliv.form.e3.xtext.application_windows"/>
 <booleanAttribute key="default" value="false"/>
 <setAttribute key="deselected_workspace_bundles">
+<setEntry value="oliv.form.xtext.dsl.tests"/>
 <setEntry value="oliv.form.xtext.dsl.ui.tests"/>
 </setAttribute>
 <booleanAttribute key="includeOptional" value="true"/>
@@ -66,8 +67,10 @@
 <setEntry value="org.eclipse.core.databinding@default:default"/>
 <setEntry value="org.eclipse.core.expressions@default:default"/>
 <setEntry value="org.eclipse.core.filebuffers@default:default"/>
+<setEntry value="org.eclipse.core.filesystem.win32.x86_64@default:default"/>
 <setEntry value="org.eclipse.core.filesystem@default:default"/>
 <setEntry value="org.eclipse.core.jobs@default:default"/>
+<setEntry value="org.eclipse.core.resources.win32.x86_64@default:default"/>
 <setEntry value="org.eclipse.core.resources@default:default"/>
 <setEntry value="org.eclipse.core.runtime@default:true"/>
 <setEntry value="org.eclipse.core.variables@default:default"/>
@@ -121,6 +124,7 @@
 <setEntry value="org.eclipse.equinox.p2.repository@default:default"/>
 <setEntry value="org.eclipse.equinox.preferences@default:default"/>
 <setEntry value="org.eclipse.equinox.registry@default:default"/>
+<setEntry value="org.eclipse.equinox.security.win32.x86_64@default:default"/>
 <setEntry value="org.eclipse.equinox.security@default:default"/>
 <setEntry value="org.eclipse.help@default:default"/>
 <setEntry value="org.eclipse.jdt.annotation*2.2.400.v20191120-1313@default:default"/>
@@ -141,6 +145,7 @@
 <setEntry value="org.eclipse.osgi.util@default:default"/>
 <setEntry value="org.eclipse.osgi@-1:true"/>
 <setEntry value="org.eclipse.search@default:default"/>
+<setEntry value="org.eclipse.swt.win32.win32.x86_64@default:default"/>
 <setEntry value="org.eclipse.swt@default:default"/>
 <setEntry value="org.eclipse.team.core@default:default"/>
 <setEntry value="org.eclipse.team.ui@default:default"/>
@@ -155,6 +160,7 @@
 <setEntry value="org.eclipse.ui.trace@default:default"/>
 <setEntry value="org.eclipse.ui.views.properties.tabbed@default:default"/>
 <setEntry value="org.eclipse.ui.views@default:default"/>
+<setEntry value="org.eclipse.ui.win32@default:default"/>
 <setEntry value="org.eclipse.ui.workbench.texteditor@default:default"/>
 <setEntry value="org.eclipse.ui.workbench@default:default"/>
 <setEntry value="org.eclipse.ui@default:default"/>
@@ -169,7 +175,6 @@
 <setEntry value="org.eclipse.xtext.ide@default:default"/>
 <setEntry value="org.eclipse.xtext.logging@default:false"/>
 <setEntry value="org.eclipse.xtext.smap@default:default"/>
-<setEntry value="org.eclipse.xtext.testing@default:default"/>
 <setEntry value="org.eclipse.xtext.ui.codetemplates.ide@default:default"/>
 <setEntry value="org.eclipse.xtext.ui.codetemplates.ui@default:default"/>
 <setEntry value="org.eclipse.xtext.ui.codetemplates@default:default"/>
@@ -178,11 +183,9 @@
 <setEntry value="org.eclipse.xtext.util@default:default"/>
 <setEntry value="org.eclipse.xtext.xbase.ide@default:default"/>
 <setEntry value="org.eclipse.xtext.xbase.lib@default:default"/>
-<setEntry value="org.eclipse.xtext.xbase.testing@default:default"/>
 <setEntry value="org.eclipse.xtext.xbase@default:default"/>
 <setEntry value="org.eclipse.xtext@default:default"/>
 <setEntry value="org.hamcrest.core@default:default"/>
-<setEntry value="org.junit.jupiter.api@default:default"/>
 <setEntry value="org.junit.platform.commons@default:default"/>
 <setEntry value="org.junit.platform.engine@default:default"/>
 <setEntry value="org.junit.platform.launcher@default:default"/>
@@ -199,7 +202,6 @@
 <setEntry value="oliv.form.e3.xtext@default:default"/>
 <setEntry value="oliv.form.e4.xtext@default:default"/>
 <setEntry value="oliv.form.xtext.dsl.ide@default:default"/>
-<setEntry value="oliv.form.xtext.dsl.tests@default:default"/>
 <setEntry value="oliv.form.xtext.dsl.ui@default:default"/>
 <setEntry value="oliv.form.xtext.dsl@default:default"/>
 </setAttribute>

@@ -13,35 +13,8 @@
 <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/oliv.form.e3.xtext.application"/>
 <booleanAttribute key="default" value="false"/>
 <setAttribute key="deselected_workspace_bundles">
-<setEntry value="oliv.eclipse.com.dsl"/>
-<setEntry value="oliv.eclipse.com.dsl.ide"/>
-<setEntry value="oliv.eclipse.com.dsl.tests"/>
-<setEntry value="oliv.eclipse.com.dsl.ui"/>
-<setEntry value="oliv.eclipse.com.dsl.ui.tests"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna.ide"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna.tests"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna.ui"/>
-<setEntry value="oliv.eclipse.dsl.lsdyna.ui.tests"/>
-<setEntry value="oliv.eclipse.editor.multi"/>
-<setEntry value="oliv.eclipse.sourceViewer"/>
-<setEntry value="oliv.eclipse.xtextextends"/>
 <setEntry value="oliv.form.xtext.dsl.tests"/>
 <setEntry value="oliv.form.xtext.dsl.ui.tests"/>
-<setEntry value="oliv.rcp.e3.navigateur"/>
-<setEntry value="oliv.rcp.e3.navigateur.test"/>
-<setEntry value="oliv.rcp.e3.xtext"/>
-<setEntry value="oliv.rcp.e4.nebula"/>
-<setEntry value="oliv.rcp.e4.xtext"/>
-<setEntry value="oliv.rcp.exemple.editeur"/>
-<setEntry value="oliv.swt.editeur"/>
-<setEntry value="oliv.swt.editeur.test"/>
-<setEntry value="oliv.xtext.analyse"/>
-<setEntry value="oliv.xtext.analyse.ui"/>
-<setEntry value="org.example.domainmodel"/>
-<setEntry value="org.example.domainmodel.ide"/>
-<setEntry value="org.example.domainmodel.ui"/>
-<setEntry value="xtend-examples"/>
 </setAttribute>
 <booleanAttribute key="includeOptional" value="true"/>
 <stringAttribute key="location" value="${workspace_loc}/../runtime-oliv.form.e3.xtext.application"/>
@@ -94,7 +67,6 @@
 <setEntry value="org.eclipse.core.databinding@default:default"/>
 <setEntry value="org.eclipse.core.expressions@default:default"/>
 <setEntry value="org.eclipse.core.filebuffers@default:default"/>
-<setEntry value="org.eclipse.core.filesystem.linux.x86_64@default:false"/>
 <setEntry value="org.eclipse.core.filesystem@default:default"/>
 <setEntry value="org.eclipse.core.jobs@default:default"/>
 <setEntry value="org.eclipse.core.resources@default:default"/>
@@ -110,11 +82,8 @@
 <setEntry value="org.eclipse.e4.core.di@default:default"/>
 <setEntry value="org.eclipse.e4.core.services@default:default"/>
 <setEntry value="org.eclipse.e4.emf.xpath@default:default"/>
-<setEntry value="org.eclipse.e4.tools.context.spy@default:default"/>
 <setEntry value="org.eclipse.e4.tools.emf.ui@default:default"/>
-<setEntry value="org.eclipse.e4.tools.model.spy@default:default"/>
 <setEntry value="org.eclipse.e4.tools.services@default:default"/>
-<setEntry value="org.eclipse.e4.tools.spy@default:default"/>
 <setEntry value="org.eclipse.e4.ui.bindings@default:default"/>
 <setEntry value="org.eclipse.e4.ui.css.core@default:default"/>
 <setEntry value="org.eclipse.e4.ui.css.swt.theme@default:default"/>
@@ -124,7 +93,6 @@
 <setEntry value="org.eclipse.e4.ui.ide@default:default"/>
 <setEntry value="org.eclipse.e4.ui.model.workbench@default:default"/>
 <setEntry value="org.eclipse.e4.ui.services@default:default"/>
-<setEntry value="org.eclipse.e4.ui.swt.gtk@default:false"/>
 <setEntry value="org.eclipse.e4.ui.widgets@default:default"/>
 <setEntry value="org.eclipse.e4.ui.workbench.addons.swt@default:default"/>
 <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt@default:default"/>
@@ -170,7 +138,6 @@
 <setEntry value="org.eclipse.equinox.p2.updatesite@default:default"/>
 <setEntry value="org.eclipse.equinox.preferences@default:default"/>
 <setEntry value="org.eclipse.equinox.registry@default:default"/>
-<setEntry value="org.eclipse.equinox.security.linux.x86_64@default:false"/>
 <setEntry value="org.eclipse.equinox.security@default:default"/>
 <setEntry value="org.eclipse.equinox.simpleconfigurator.manipulator@default:default"/>
 <setEntry value="org.eclipse.equinox.simpleconfigurator@1:true"/>
@@ -188,8 +155,6 @@
 <setEntry value="org.eclipse.jface@default:default"/>
 <setEntry value="org.eclipse.ltk.core.refactoring@default:default"/>
 <setEntry value="org.eclipse.ltk.ui.refactoring@default:default"/>
-<setEntry value="org.eclipse.nebula.cwt@default:default"/>
-<setEntry value="org.eclipse.nebula.widgets.cdatetime@default:default"/>
 <setEntry value="org.eclipse.osgi.compatibility.state@default:false"/>
 <setEntry value="org.eclipse.osgi.services@default:default"/>
 <setEntry value="org.eclipse.osgi.util@default:default"/>
@@ -197,7 +162,6 @@
 <setEntry value="org.eclipse.pde.build@default:default"/>
 <setEntry value="org.eclipse.pde.core@default:default"/>
 <setEntry value="org.eclipse.search@default:default"/>
-<setEntry value="org.eclipse.swt.gtk.linux.x86_64@default:false"/>
 <setEntry value="org.eclipse.swt@default:default"/>
 <setEntry value="org.eclipse.team.core@default:default"/>
 <setEntry value="org.eclipse.team.ui@default:default"/>
