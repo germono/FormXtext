@@ -68,13 +68,13 @@ public interface FixPackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Greetings</b></em>' containment reference list.
+   * The feature id for the '<em><b>Courbes</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__GREETINGS = 0;
+  int MODEL__COURBES = 0;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -86,14 +86,14 @@ public interface FixPackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link oliv.form.xtext.fix.fix.impl.GreetingImpl <em>Greeting</em>}' class.
+   * The meta object id for the '{@link oliv.form.xtext.fix.fix.impl.CourbeImpl <em>Courbe</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see oliv.form.xtext.fix.fix.impl.GreetingImpl
-   * @see oliv.form.xtext.fix.fix.impl.FixPackageImpl#getGreeting()
+   * @see oliv.form.xtext.fix.fix.impl.CourbeImpl
+   * @see oliv.form.xtext.fix.fix.impl.FixPackageImpl#getCourbe()
    * @generated
    */
-  int GREETING = 1;
+  int COURBE = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -102,25 +102,62 @@ public interface FixPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GREETING__NAME = 0;
+  int COURBE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Points</b></em>' attribute list.
+   * The feature id for the '<em><b>Lignes</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING__POINTS = 1;
+  int COURBE__LIGNES = 1;
 
   /**
-   * The number of structural features of the '<em>Greeting</em>' class.
+   * The number of structural features of the '<em>Courbe</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 2;
+  int COURBE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link oliv.form.xtext.fix.fix.impl.LigneImpl <em>Ligne</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see oliv.form.xtext.fix.fix.impl.LigneImpl
+   * @see oliv.form.xtext.fix.fix.impl.FixPackageImpl#getLigne()
+   * @generated
+   */
+  int LIGNE = 2;
+
+  /**
+   * The feature id for the '<em><b>X</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIGNE__X = 0;
+
+  /**
+   * The feature id for the '<em><b>Y</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIGNE__Y = 1;
+
+  /**
+   * The number of structural features of the '<em>Ligne</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIGNE_FEATURE_COUNT = 2;
 
 
   /**
@@ -134,47 +171,79 @@ public interface FixPackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link oliv.form.xtext.fix.fix.Model#getGreetings <em>Greetings</em>}'.
+   * Returns the meta object for the containment reference list '{@link oliv.form.xtext.fix.fix.Model#getCourbes <em>Courbes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Greetings</em>'.
-   * @see oliv.form.xtext.fix.fix.Model#getGreetings()
+   * @return the meta object for the containment reference list '<em>Courbes</em>'.
+   * @see oliv.form.xtext.fix.fix.Model#getCourbes()
    * @see #getModel()
    * @generated
    */
-  EReference getModel_Greetings();
+  EReference getModel_Courbes();
 
   /**
-   * Returns the meta object for class '{@link oliv.form.xtext.fix.fix.Greeting <em>Greeting</em>}'.
+   * Returns the meta object for class '{@link oliv.form.xtext.fix.fix.Courbe <em>Courbe</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Greeting</em>'.
-   * @see oliv.form.xtext.fix.fix.Greeting
+   * @return the meta object for class '<em>Courbe</em>'.
+   * @see oliv.form.xtext.fix.fix.Courbe
    * @generated
    */
-  EClass getGreeting();
+  EClass getCourbe();
 
   /**
-   * Returns the meta object for the attribute '{@link oliv.form.xtext.fix.fix.Greeting#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link oliv.form.xtext.fix.fix.Courbe#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see oliv.form.xtext.fix.fix.Greeting#getName()
-   * @see #getGreeting()
+   * @see oliv.form.xtext.fix.fix.Courbe#getName()
+   * @see #getCourbe()
    * @generated
    */
-  EAttribute getGreeting_Name();
+  EAttribute getCourbe_Name();
 
   /**
-   * Returns the meta object for the attribute list '{@link oliv.form.xtext.fix.fix.Greeting#getPoints <em>Points</em>}'.
+   * Returns the meta object for the containment reference list '{@link oliv.form.xtext.fix.fix.Courbe#getLignes <em>Lignes</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Points</em>'.
-   * @see oliv.form.xtext.fix.fix.Greeting#getPoints()
-   * @see #getGreeting()
+   * @return the meta object for the containment reference list '<em>Lignes</em>'.
+   * @see oliv.form.xtext.fix.fix.Courbe#getLignes()
+   * @see #getCourbe()
    * @generated
    */
-  EAttribute getGreeting_Points();
+  EReference getCourbe_Lignes();
+
+  /**
+   * Returns the meta object for class '{@link oliv.form.xtext.fix.fix.Ligne <em>Ligne</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ligne</em>'.
+   * @see oliv.form.xtext.fix.fix.Ligne
+   * @generated
+   */
+  EClass getLigne();
+
+  /**
+   * Returns the meta object for the attribute '{@link oliv.form.xtext.fix.fix.Ligne#getX <em>X</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>X</em>'.
+   * @see oliv.form.xtext.fix.fix.Ligne#getX()
+   * @see #getLigne()
+   * @generated
+   */
+  EAttribute getLigne_X();
+
+  /**
+   * Returns the meta object for the attribute '{@link oliv.form.xtext.fix.fix.Ligne#getY <em>Y</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Y</em>'.
+   * @see oliv.form.xtext.fix.fix.Ligne#getY()
+   * @see #getLigne()
+   * @generated
+   */
+  EAttribute getLigne_Y();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -210,22 +279,22 @@ public interface FixPackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Courbes</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
+    EReference MODEL__COURBES = eINSTANCE.getModel_Courbes();
 
     /**
-     * The meta object literal for the '{@link oliv.form.xtext.fix.fix.impl.GreetingImpl <em>Greeting</em>}' class.
+     * The meta object literal for the '{@link oliv.form.xtext.fix.fix.impl.CourbeImpl <em>Courbe</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see oliv.form.xtext.fix.fix.impl.GreetingImpl
-     * @see oliv.form.xtext.fix.fix.impl.FixPackageImpl#getGreeting()
+     * @see oliv.form.xtext.fix.fix.impl.CourbeImpl
+     * @see oliv.form.xtext.fix.fix.impl.FixPackageImpl#getCourbe()
      * @generated
      */
-    EClass GREETING = eINSTANCE.getGreeting();
+    EClass COURBE = eINSTANCE.getCourbe();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -233,15 +302,41 @@ public interface FixPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+    EAttribute COURBE__NAME = eINSTANCE.getCourbe_Name();
 
     /**
-     * The meta object literal for the '<em><b>Points</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Lignes</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GREETING__POINTS = eINSTANCE.getGreeting_Points();
+    EReference COURBE__LIGNES = eINSTANCE.getCourbe_Lignes();
+
+    /**
+     * The meta object literal for the '{@link oliv.form.xtext.fix.fix.impl.LigneImpl <em>Ligne</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see oliv.form.xtext.fix.fix.impl.LigneImpl
+     * @see oliv.form.xtext.fix.fix.impl.FixPackageImpl#getLigne()
+     * @generated
+     */
+    EClass LIGNE = eINSTANCE.getLigne();
+
+    /**
+     * The meta object literal for the '<em><b>X</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIGNE__X = eINSTANCE.getLigne_X();
+
+    /**
+     * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LIGNE__Y = eINSTANCE.getLigne_Y();
 
   }
 

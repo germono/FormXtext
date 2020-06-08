@@ -21,17 +21,33 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFixParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'*Courbe'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_SPACE", "RULE_ID", "RULE_FDL", "RULE_NOMBRE", "RULE_NOMBRE1", "RULE_NOMBRE2", "RULE_NOMBRE3", "RULE_NOMBRE4", "RULE_NOMBRE5", "RULE_NOMBRE6", "RULE_NOMBRE7", "RULE_NOMBRE8", "RULE_CHIFF1", "RULE_CHIFF2", "RULE_CHIFF3", "RULE_CHIFF4", "RULE_CHIFF5", "RULE_CHIFF6", "RULE_CHIFF7", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "'*Courbe'"
     };
-    public static final int RULE_ID=4;
-    public static final int RULE_WS=9;
-    public static final int RULE_STRING=6;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_SL_COMMENT=8;
-    public static final int RULE_INT=5;
-    public static final int T__11=11;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_NOMBRE=7;
+    public static final int RULE_STRING=23;
+    public static final int RULE_SL_COMMENT=25;
+    public static final int RULE_CHIFF4=19;
+    public static final int RULE_CHIFF3=18;
+    public static final int RULE_CHIFF2=17;
+    public static final int RULE_CHIFF1=16;
+    public static final int RULE_CHIFF7=22;
+    public static final int RULE_CHIFF6=21;
+    public static final int RULE_CHIFF5=20;
+    public static final int RULE_SPACE=4;
     public static final int EOF=-1;
+    public static final int RULE_ID=5;
+    public static final int RULE_WS=26;
+    public static final int RULE_NOMBRE2=9;
+    public static final int RULE_FDL=6;
+    public static final int RULE_NOMBRE3=10;
+    public static final int RULE_NOMBRE1=8;
+    public static final int T__27=27;
+    public static final int RULE_ML_COMMENT=24;
+    public static final int RULE_NOMBRE8=15;
+    public static final int RULE_NOMBRE6=13;
+    public static final int RULE_NOMBRE7=14;
+    public static final int RULE_NOMBRE4=11;
+    public static final int RULE_NOMBRE5=12;
 
     // delegates
     // delegators
@@ -109,43 +125,43 @@ public class InternalFixParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // InternalFix.g:71:1: ruleModel returns [EObject current=null] : ( (lv_greetings_0_0= ruleGreeting ) )* ;
+    // InternalFix.g:71:1: ruleModel returns [EObject current=null] : ( (lv_Courbes_0_0= ruleCourbe ) )* ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_greetings_0_0 = null;
+        EObject lv_Courbes_0_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalFix.g:77:2: ( ( (lv_greetings_0_0= ruleGreeting ) )* )
-            // InternalFix.g:78:2: ( (lv_greetings_0_0= ruleGreeting ) )*
+            // InternalFix.g:77:2: ( ( (lv_Courbes_0_0= ruleCourbe ) )* )
+            // InternalFix.g:78:2: ( (lv_Courbes_0_0= ruleCourbe ) )*
             {
-            // InternalFix.g:78:2: ( (lv_greetings_0_0= ruleGreeting ) )*
+            // InternalFix.g:78:2: ( (lv_Courbes_0_0= ruleCourbe ) )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==11) ) {
+                if ( (LA1_0==27) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalFix.g:79:3: (lv_greetings_0_0= ruleGreeting )
+            	    // InternalFix.g:79:3: (lv_Courbes_0_0= ruleCourbe )
             	    {
-            	    // InternalFix.g:79:3: (lv_greetings_0_0= ruleGreeting )
-            	    // InternalFix.g:80:4: lv_greetings_0_0= ruleGreeting
+            	    // InternalFix.g:79:3: (lv_Courbes_0_0= ruleCourbe )
+            	    // InternalFix.g:80:4: lv_Courbes_0_0= ruleCourbe
             	    {
 
-            	    				newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0());
+            	    				newCompositeNode(grammarAccess.getModelAccess().getCourbesCourbeParserRuleCall_0());
             	    			
             	    pushFollow(FOLLOW_3);
-            	    lv_greetings_0_0=ruleGreeting();
+            	    lv_Courbes_0_0=ruleCourbe();
 
             	    state._fsp--;
 
@@ -155,9 +171,9 @@ public class InternalFixParser extends AbstractInternalAntlrParser {
             	    				}
             	    				add(
             	    					current,
-            	    					"greetings",
-            	    					lv_greetings_0_0,
-            	    					"oliv.form.xtext.fix.Fix.Greeting");
+            	    					"Courbes",
+            	    					lv_Courbes_0_0,
+            	    					"oliv.form.xtext.fix.Fix.Courbe");
             	    				afterParserOrEnumRuleCall();
             	    			
 
@@ -191,25 +207,25 @@ public class InternalFixParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleModel"
 
 
-    // $ANTLR start "entryRuleGreeting"
-    // InternalFix.g:100:1: entryRuleGreeting returns [EObject current=null] : iv_ruleGreeting= ruleGreeting EOF ;
-    public final EObject entryRuleGreeting() throws RecognitionException {
+    // $ANTLR start "entryRuleCourbe"
+    // InternalFix.g:100:1: entryRuleCourbe returns [EObject current=null] : iv_ruleCourbe= ruleCourbe EOF ;
+    public final EObject entryRuleCourbe() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleGreeting = null;
+        EObject iv_ruleCourbe = null;
 
 
         try {
-            // InternalFix.g:100:49: (iv_ruleGreeting= ruleGreeting EOF )
-            // InternalFix.g:101:2: iv_ruleGreeting= ruleGreeting EOF
+            // InternalFix.g:100:47: (iv_ruleCourbe= ruleCourbe EOF )
+            // InternalFix.g:101:2: iv_ruleCourbe= ruleCourbe EOF
             {
-             newCompositeNode(grammarAccess.getGreetingRule()); 
+             newCompositeNode(grammarAccess.getCourbeRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleGreeting=ruleGreeting();
+            iv_ruleCourbe=ruleCourbe();
 
             state._fsp--;
 
-             current =iv_ruleGreeting; 
+             current =iv_ruleCourbe; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -224,52 +240,58 @@ public class InternalFixParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleGreeting"
+    // $ANTLR end "entryRuleCourbe"
 
 
-    // $ANTLR start "ruleGreeting"
-    // InternalFix.g:107:1: ruleGreeting returns [EObject current=null] : (otherlv_0= '*Courbe' ( (lv_name_1_0= RULE_ID ) ) ( (lv_points_2_0= rulePoint ) ) ) ;
-    public final EObject ruleGreeting() throws RecognitionException {
+    // $ANTLR start "ruleCourbe"
+    // InternalFix.g:107:1: ruleCourbe returns [EObject current=null] : (otherlv_0= '*Courbe' this_SPACE_1= RULE_SPACE ( (lv_name_2_0= RULE_ID ) ) this_FDL_3= RULE_FDL ( (lv_lignes_4_0= ruleLigne ) )* ) ;
+    public final EObject ruleCourbe() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_name_1_0=null;
-        AntlrDatatypeRuleToken lv_points_2_0 = null;
+        Token this_SPACE_1=null;
+        Token lv_name_2_0=null;
+        Token this_FDL_3=null;
+        EObject lv_lignes_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalFix.g:113:2: ( (otherlv_0= '*Courbe' ( (lv_name_1_0= RULE_ID ) ) ( (lv_points_2_0= rulePoint ) ) ) )
-            // InternalFix.g:114:2: (otherlv_0= '*Courbe' ( (lv_name_1_0= RULE_ID ) ) ( (lv_points_2_0= rulePoint ) ) )
+            // InternalFix.g:113:2: ( (otherlv_0= '*Courbe' this_SPACE_1= RULE_SPACE ( (lv_name_2_0= RULE_ID ) ) this_FDL_3= RULE_FDL ( (lv_lignes_4_0= ruleLigne ) )* ) )
+            // InternalFix.g:114:2: (otherlv_0= '*Courbe' this_SPACE_1= RULE_SPACE ( (lv_name_2_0= RULE_ID ) ) this_FDL_3= RULE_FDL ( (lv_lignes_4_0= ruleLigne ) )* )
             {
-            // InternalFix.g:114:2: (otherlv_0= '*Courbe' ( (lv_name_1_0= RULE_ID ) ) ( (lv_points_2_0= rulePoint ) ) )
-            // InternalFix.g:115:3: otherlv_0= '*Courbe' ( (lv_name_1_0= RULE_ID ) ) ( (lv_points_2_0= rulePoint ) )
+            // InternalFix.g:114:2: (otherlv_0= '*Courbe' this_SPACE_1= RULE_SPACE ( (lv_name_2_0= RULE_ID ) ) this_FDL_3= RULE_FDL ( (lv_lignes_4_0= ruleLigne ) )* )
+            // InternalFix.g:115:3: otherlv_0= '*Courbe' this_SPACE_1= RULE_SPACE ( (lv_name_2_0= RULE_ID ) ) this_FDL_3= RULE_FDL ( (lv_lignes_4_0= ruleLigne ) )*
             {
-            otherlv_0=(Token)match(input,11,FOLLOW_4); 
+            otherlv_0=(Token)match(input,27,FOLLOW_4); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getGreetingAccess().getCourbeKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getCourbeAccess().getCourbeKeyword_0());
             		
-            // InternalFix.g:119:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalFix.g:120:4: (lv_name_1_0= RULE_ID )
-            {
-            // InternalFix.g:120:4: (lv_name_1_0= RULE_ID )
-            // InternalFix.g:121:5: lv_name_1_0= RULE_ID
-            {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_5); 
+            this_SPACE_1=(Token)match(input,RULE_SPACE,FOLLOW_5); 
 
-            					newLeafNode(lv_name_1_0, grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0());
+            			newLeafNode(this_SPACE_1, grammarAccess.getCourbeAccess().getSPACETerminalRuleCall_1());
+            		
+            // InternalFix.g:123:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalFix.g:124:4: (lv_name_2_0= RULE_ID )
+            {
+            // InternalFix.g:124:4: (lv_name_2_0= RULE_ID )
+            // InternalFix.g:125:5: lv_name_2_0= RULE_ID
+            {
+            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_6); 
+
+            					newLeafNode(lv_name_2_0, grammarAccess.getCourbeAccess().getNameIDTerminalRuleCall_2_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getGreetingRule());
+            						current = createModelElement(grammarAccess.getCourbeRule());
             					}
             					setWithLastConsumed(
             						current,
             						"name",
-            						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						lv_name_2_0,
+            						"oliv.form.xtext.fix.Fix.ID");
             				
 
             }
@@ -277,36 +299,58 @@ public class InternalFixParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalFix.g:137:3: ( (lv_points_2_0= rulePoint ) )
-            // InternalFix.g:138:4: (lv_points_2_0= rulePoint )
-            {
-            // InternalFix.g:138:4: (lv_points_2_0= rulePoint )
-            // InternalFix.g:139:5: lv_points_2_0= rulePoint
-            {
+            this_FDL_3=(Token)match(input,RULE_FDL,FOLLOW_7); 
 
-            					newCompositeNode(grammarAccess.getGreetingAccess().getPointsPointParserRuleCall_2_0());
-            				
-            pushFollow(FOLLOW_2);
-            lv_points_2_0=rulePoint();
+            			newLeafNode(this_FDL_3, grammarAccess.getCourbeAccess().getFDLTerminalRuleCall_3());
+            		
+            // InternalFix.g:145:3: ( (lv_lignes_4_0= ruleLigne ) )*
+            loop2:
+            do {
+                int alt2=2;
+                int LA2_0 = input.LA(1);
 
-            state._fsp--;
-
-
-            					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getGreetingRule());
-            					}
-            					add(
-            						current,
-            						"points",
-            						lv_points_2_0,
-            						"oliv.form.xtext.fix.Fix.Point");
-            					afterParserOrEnumRuleCall();
-            				
-
-            }
+                if ( (LA2_0==RULE_NOMBRE) ) {
+                    alt2=1;
+                }
 
 
-            }
+                switch (alt2) {
+            	case 1 :
+            	    // InternalFix.g:146:4: (lv_lignes_4_0= ruleLigne )
+            	    {
+            	    // InternalFix.g:146:4: (lv_lignes_4_0= ruleLigne )
+            	    // InternalFix.g:147:5: lv_lignes_4_0= ruleLigne
+            	    {
+
+            	    					newCompositeNode(grammarAccess.getCourbeAccess().getLignesLigneParserRuleCall_4_0());
+            	    				
+            	    pushFollow(FOLLOW_7);
+            	    lv_lignes_4_0=ruleLigne();
+
+            	    state._fsp--;
+
+
+            	    					if (current==null) {
+            	    						current = createModelElementForParent(grammarAccess.getCourbeRule());
+            	    					}
+            	    					add(
+            	    						current,
+            	    						"lignes",
+            	    						lv_lignes_4_0,
+            	    						"oliv.form.xtext.fix.Fix.Ligne");
+            	    					afterParserOrEnumRuleCall();
+            	    				
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop2;
+                }
+            } while (true);
 
 
             }
@@ -327,28 +371,28 @@ public class InternalFixParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleGreeting"
+    // $ANTLR end "ruleCourbe"
 
 
-    // $ANTLR start "entryRulePoint"
-    // InternalFix.g:160:1: entryRulePoint returns [String current=null] : iv_rulePoint= rulePoint EOF ;
-    public final String entryRulePoint() throws RecognitionException {
-        String current = null;
+    // $ANTLR start "entryRuleLigne"
+    // InternalFix.g:168:1: entryRuleLigne returns [EObject current=null] : iv_ruleLigne= ruleLigne EOF ;
+    public final EObject entryRuleLigne() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_rulePoint = null;
+        EObject iv_ruleLigne = null;
 
 
         try {
-            // InternalFix.g:160:45: (iv_rulePoint= rulePoint EOF )
-            // InternalFix.g:161:2: iv_rulePoint= rulePoint EOF
+            // InternalFix.g:168:46: (iv_ruleLigne= ruleLigne EOF )
+            // InternalFix.g:169:2: iv_ruleLigne= ruleLigne EOF
             {
-             newCompositeNode(grammarAccess.getPointRule()); 
+             newCompositeNode(grammarAccess.getLigneRule()); 
             pushFollow(FOLLOW_1);
-            iv_rulePoint=rulePoint();
+            iv_ruleLigne=ruleLigne();
 
             state._fsp--;
 
-             current =iv_rulePoint.getText(); 
+             current =iv_ruleLigne; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -363,40 +407,83 @@ public class InternalFixParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRulePoint"
+    // $ANTLR end "entryRuleLigne"
 
 
-    // $ANTLR start "rulePoint"
-    // InternalFix.g:167:1: rulePoint returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_INT_0= RULE_INT this_INT_1= RULE_INT ) ;
-    public final AntlrDatatypeRuleToken rulePoint() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // $ANTLR start "ruleLigne"
+    // InternalFix.g:175:1: ruleLigne returns [EObject current=null] : ( ( (lv_x_0_0= RULE_NOMBRE ) ) ( (lv_y_1_0= RULE_NOMBRE ) ) this_FDL_2= RULE_FDL ) ;
+    public final EObject ruleLigne() throws RecognitionException {
+        EObject current = null;
 
-        Token this_INT_0=null;
-        Token this_INT_1=null;
+        Token lv_x_0_0=null;
+        Token lv_y_1_0=null;
+        Token this_FDL_2=null;
 
 
         	enterRule();
 
         try {
-            // InternalFix.g:173:2: ( (this_INT_0= RULE_INT this_INT_1= RULE_INT ) )
-            // InternalFix.g:174:2: (this_INT_0= RULE_INT this_INT_1= RULE_INT )
+            // InternalFix.g:181:2: ( ( ( (lv_x_0_0= RULE_NOMBRE ) ) ( (lv_y_1_0= RULE_NOMBRE ) ) this_FDL_2= RULE_FDL ) )
+            // InternalFix.g:182:2: ( ( (lv_x_0_0= RULE_NOMBRE ) ) ( (lv_y_1_0= RULE_NOMBRE ) ) this_FDL_2= RULE_FDL )
             {
-            // InternalFix.g:174:2: (this_INT_0= RULE_INT this_INT_1= RULE_INT )
-            // InternalFix.g:175:3: this_INT_0= RULE_INT this_INT_1= RULE_INT
+            // InternalFix.g:182:2: ( ( (lv_x_0_0= RULE_NOMBRE ) ) ( (lv_y_1_0= RULE_NOMBRE ) ) this_FDL_2= RULE_FDL )
+            // InternalFix.g:183:3: ( (lv_x_0_0= RULE_NOMBRE ) ) ( (lv_y_1_0= RULE_NOMBRE ) ) this_FDL_2= RULE_FDL
             {
-            this_INT_0=(Token)match(input,RULE_INT,FOLLOW_5); 
+            // InternalFix.g:183:3: ( (lv_x_0_0= RULE_NOMBRE ) )
+            // InternalFix.g:184:4: (lv_x_0_0= RULE_NOMBRE )
+            {
+            // InternalFix.g:184:4: (lv_x_0_0= RULE_NOMBRE )
+            // InternalFix.g:185:5: lv_x_0_0= RULE_NOMBRE
+            {
+            lv_x_0_0=(Token)match(input,RULE_NOMBRE,FOLLOW_8); 
 
-            			current.merge(this_INT_0);
-            		
+            					newLeafNode(lv_x_0_0, grammarAccess.getLigneAccess().getXNOMBRETerminalRuleCall_0_0());
+            				
 
-            			newLeafNode(this_INT_0, grammarAccess.getPointAccess().getINTTerminalRuleCall_0());
-            		
-            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_2); 
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getLigneRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"x",
+            						lv_x_0_0,
+            						"oliv.form.xtext.fix.Fix.NOMBRE");
+            				
 
-            			current.merge(this_INT_1);
-            		
+            }
 
-            			newLeafNode(this_INT_1, grammarAccess.getPointAccess().getINTTerminalRuleCall_1());
+
+            }
+
+            // InternalFix.g:201:3: ( (lv_y_1_0= RULE_NOMBRE ) )
+            // InternalFix.g:202:4: (lv_y_1_0= RULE_NOMBRE )
+            {
+            // InternalFix.g:202:4: (lv_y_1_0= RULE_NOMBRE )
+            // InternalFix.g:203:5: lv_y_1_0= RULE_NOMBRE
+            {
+            lv_y_1_0=(Token)match(input,RULE_NOMBRE,FOLLOW_6); 
+
+            					newLeafNode(lv_y_1_0, grammarAccess.getLigneAccess().getYNOMBRETerminalRuleCall_1_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getLigneRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"y",
+            						lv_y_1_0,
+            						"oliv.form.xtext.fix.Fix.NOMBRE");
+            				
+
+            }
+
+
+            }
+
+            this_FDL_2=(Token)match(input,RULE_FDL,FOLLOW_2); 
+
+            			newLeafNode(this_FDL_2, grammarAccess.getLigneAccess().getFDLTerminalRuleCall_2());
             		
 
             }
@@ -417,7 +504,7 @@ public class InternalFixParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "rulePoint"
+    // $ANTLR end "ruleLigne"
 
     // Delegated rules
 
@@ -426,8 +513,11 @@ public class InternalFixParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000008000002L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000082L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000080L});
 
 }

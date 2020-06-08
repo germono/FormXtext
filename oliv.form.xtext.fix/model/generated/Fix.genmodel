@@ -7,11 +7,15 @@
   <genPackages prefix="Fix" basePackage="oliv.form.xtext.fix" disposableProviderFactory="true"
       fileExtensions="fix" ecorePackage="Fix.ecore#/">
     <genClasses ecoreClass="Fix.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fix.ecore#//Model/greetings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fix.ecore#//Model/Courbes"/>
     </genClasses>
-    <genClasses ecoreClass="Fix.ecore#//Greeting">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fix.ecore#//Greeting/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fix.ecore#//Greeting/points"/>
+    <genClasses ecoreClass="Fix.ecore#//Courbe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fix.ecore#//Courbe/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fix.ecore#//Courbe/lignes"/>
+    </genClasses>
+    <genClasses ecoreClass="Fix.ecore#//Ligne">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fix.ecore#//Ligne/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fix.ecore#//Ligne/y"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

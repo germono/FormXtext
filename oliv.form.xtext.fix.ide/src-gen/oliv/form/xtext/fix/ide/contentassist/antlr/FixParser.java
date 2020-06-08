@@ -31,11 +31,13 @@ public class FixParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, FixGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getGreetingAccess().getGroup(), "rule__Greeting__Group__0");
-			builder.put(grammarAccess.getPointAccess().getGroup(), "rule__Point__Group__0");
-			builder.put(grammarAccess.getModelAccess().getGreetingsAssignment(), "rule__Model__GreetingsAssignment");
-			builder.put(grammarAccess.getGreetingAccess().getNameAssignment_1(), "rule__Greeting__NameAssignment_1");
-			builder.put(grammarAccess.getGreetingAccess().getPointsAssignment_2(), "rule__Greeting__PointsAssignment_2");
+			builder.put(grammarAccess.getCourbeAccess().getGroup(), "rule__Courbe__Group__0");
+			builder.put(grammarAccess.getLigneAccess().getGroup(), "rule__Ligne__Group__0");
+			builder.put(grammarAccess.getModelAccess().getCourbesAssignment(), "rule__Model__CourbesAssignment");
+			builder.put(grammarAccess.getCourbeAccess().getNameAssignment_2(), "rule__Courbe__NameAssignment_2");
+			builder.put(grammarAccess.getCourbeAccess().getLignesAssignment_4(), "rule__Courbe__LignesAssignment_4");
+			builder.put(grammarAccess.getLigneAccess().getXAssignment_0(), "rule__Ligne__XAssignment_0");
+			builder.put(grammarAccess.getLigneAccess().getYAssignment_1(), "rule__Ligne__YAssignment_1");
 		}
 	}
 	
@@ -59,7 +61,7 @@ public class FixParser extends AbstractContentAssistParser {
 
 	@Override
 	protected String[] getInitialHiddenTokens() {
-		return new String[] { "RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT" };
+		return new String[] { "RULE_ML_COMMENT", "RULE_SL_COMMENT" };
 	}
 
 	public FixGrammarAccess getGrammarAccess() {

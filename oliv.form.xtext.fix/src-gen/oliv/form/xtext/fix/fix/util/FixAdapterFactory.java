@@ -81,9 +81,14 @@ public class FixAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseGreeting(Greeting object)
+      public Adapter caseCourbe(Courbe object)
       {
-        return createGreetingAdapter();
+        return createCourbeAdapter();
+      }
+      @Override
+      public Adapter caseLigne(Ligne object)
+      {
+        return createLigneAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -123,16 +128,31 @@ public class FixAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link oliv.form.xtext.fix.fix.Greeting <em>Greeting</em>}'.
+   * Creates a new adapter for an object of class '{@link oliv.form.xtext.fix.fix.Courbe <em>Courbe</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see oliv.form.xtext.fix.fix.Greeting
+   * @see oliv.form.xtext.fix.fix.Courbe
    * @generated
    */
-  public Adapter createGreetingAdapter()
+  public Adapter createCourbeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link oliv.form.xtext.fix.fix.Ligne <em>Ligne</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see oliv.form.xtext.fix.fix.Ligne
+   * @generated
+   */
+  public Adapter createLigneAdapter()
   {
     return null;
   }

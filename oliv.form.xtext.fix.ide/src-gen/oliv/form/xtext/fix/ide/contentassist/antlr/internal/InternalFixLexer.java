@@ -12,15 +12,31 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalFixLexer extends Lexer {
-    public static final int RULE_ID=5;
-    public static final int RULE_WS=9;
-    public static final int RULE_STRING=6;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_SL_COMMENT=8;
-    public static final int RULE_INT=4;
-    public static final int T__11=11;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_NOMBRE=7;
+    public static final int RULE_STRING=23;
+    public static final int RULE_SL_COMMENT=25;
+    public static final int RULE_CHIFF4=19;
+    public static final int RULE_CHIFF3=18;
+    public static final int RULE_CHIFF2=17;
+    public static final int RULE_CHIFF1=16;
+    public static final int RULE_CHIFF7=22;
+    public static final int RULE_CHIFF6=21;
+    public static final int RULE_CHIFF5=20;
+    public static final int RULE_SPACE=4;
     public static final int EOF=-1;
+    public static final int RULE_ID=6;
+    public static final int RULE_WS=26;
+    public static final int RULE_NOMBRE2=9;
+    public static final int RULE_FDL=5;
+    public static final int RULE_NOMBRE3=10;
+    public static final int RULE_NOMBRE1=8;
+    public static final int T__27=27;
+    public static final int RULE_ML_COMMENT=24;
+    public static final int RULE_NOMBRE8=15;
+    public static final int RULE_NOMBRE6=13;
+    public static final int RULE_NOMBRE7=14;
+    public static final int RULE_NOMBRE4=11;
+    public static final int RULE_NOMBRE5=12;
 
     // delegates
     // delegators
@@ -35,10 +51,10 @@ public class InternalFixLexer extends Lexer {
     }
     public String getGrammarFileName() { return "InternalFix.g"; }
 
-    // $ANTLR start "T__11"
-    public final void mT__11() throws RecognitionException {
+    // $ANTLR start "T__27"
+    public final void mT__27() throws RecognitionException {
         try {
-            int _type = T__11;
+            int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // InternalFix.g:11:7: ( '*Courbe' )
             // InternalFix.g:11:9: '*Courbe'
@@ -54,26 +70,479 @@ public class InternalFixLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__11"
+    // $ANTLR end "T__27"
+
+    // $ANTLR start "RULE_NOMBRE"
+    public final void mRULE_NOMBRE() throws RecognitionException {
+        try {
+            int _type = RULE_NOMBRE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalFix.g:418:13: ( ( RULE_NOMBRE1 | RULE_NOMBRE2 | RULE_NOMBRE3 | RULE_NOMBRE4 | RULE_NOMBRE5 | RULE_NOMBRE6 | RULE_NOMBRE7 | RULE_NOMBRE8 ) )
+            // InternalFix.g:418:15: ( RULE_NOMBRE1 | RULE_NOMBRE2 | RULE_NOMBRE3 | RULE_NOMBRE4 | RULE_NOMBRE5 | RULE_NOMBRE6 | RULE_NOMBRE7 | RULE_NOMBRE8 )
+            {
+            // InternalFix.g:418:15: ( RULE_NOMBRE1 | RULE_NOMBRE2 | RULE_NOMBRE3 | RULE_NOMBRE4 | RULE_NOMBRE5 | RULE_NOMBRE6 | RULE_NOMBRE7 | RULE_NOMBRE8 )
+            int alt1=8;
+            alt1 = dfa1.predict(input);
+            switch (alt1) {
+                case 1 :
+                    // InternalFix.g:418:16: RULE_NOMBRE1
+                    {
+                    mRULE_NOMBRE1(); 
+
+                    }
+                    break;
+                case 2 :
+                    // InternalFix.g:418:29: RULE_NOMBRE2
+                    {
+                    mRULE_NOMBRE2(); 
+
+                    }
+                    break;
+                case 3 :
+                    // InternalFix.g:418:42: RULE_NOMBRE3
+                    {
+                    mRULE_NOMBRE3(); 
+
+                    }
+                    break;
+                case 4 :
+                    // InternalFix.g:418:55: RULE_NOMBRE4
+                    {
+                    mRULE_NOMBRE4(); 
+
+                    }
+                    break;
+                case 5 :
+                    // InternalFix.g:418:68: RULE_NOMBRE5
+                    {
+                    mRULE_NOMBRE5(); 
+
+                    }
+                    break;
+                case 6 :
+                    // InternalFix.g:418:81: RULE_NOMBRE6
+                    {
+                    mRULE_NOMBRE6(); 
+
+                    }
+                    break;
+                case 7 :
+                    // InternalFix.g:418:94: RULE_NOMBRE7
+                    {
+                    mRULE_NOMBRE7(); 
+
+                    }
+                    break;
+                case 8 :
+                    // InternalFix.g:418:107: RULE_NOMBRE8
+                    {
+                    mRULE_NOMBRE8(); 
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NOMBRE"
+
+    // $ANTLR start "RULE_NOMBRE1"
+    public final void mRULE_NOMBRE1() throws RecognitionException {
+        try {
+            // InternalFix.g:420:23: ( RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF1 )
+            // InternalFix.g:420:25: RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF1
+            {
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_CHIFF1(); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NOMBRE1"
+
+    // $ANTLR start "RULE_CHIFF1"
+    public final void mRULE_CHIFF1() throws RecognitionException {
+        try {
+            // InternalFix.g:422:22: ( '0' .. '9' )
+            // InternalFix.g:422:24: '0' .. '9'
+            {
+            matchRange('0','9'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_CHIFF1"
+
+    // $ANTLR start "RULE_NOMBRE2"
+    public final void mRULE_NOMBRE2() throws RecognitionException {
+        try {
+            // InternalFix.g:424:23: ( RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF2 )
+            // InternalFix.g:424:25: RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF2
+            {
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_CHIFF2(); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NOMBRE2"
+
+    // $ANTLR start "RULE_CHIFF2"
+    public final void mRULE_CHIFF2() throws RecognitionException {
+        try {
+            // InternalFix.g:426:22: ( '0' .. '9' '0' .. '9' )
+            // InternalFix.g:426:24: '0' .. '9' '0' .. '9'
+            {
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_CHIFF2"
+
+    // $ANTLR start "RULE_NOMBRE3"
+    public final void mRULE_NOMBRE3() throws RecognitionException {
+        try {
+            // InternalFix.g:428:23: ( RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF3 )
+            // InternalFix.g:428:25: RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF3
+            {
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_CHIFF3(); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NOMBRE3"
+
+    // $ANTLR start "RULE_CHIFF3"
+    public final void mRULE_CHIFF3() throws RecognitionException {
+        try {
+            // InternalFix.g:430:22: ( '0' .. '9' '0' .. '9' '0' .. '9' )
+            // InternalFix.g:430:24: '0' .. '9' '0' .. '9' '0' .. '9'
+            {
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_CHIFF3"
+
+    // $ANTLR start "RULE_NOMBRE4"
+    public final void mRULE_NOMBRE4() throws RecognitionException {
+        try {
+            // InternalFix.g:432:23: ( RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF4 )
+            // InternalFix.g:432:25: RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF4
+            {
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_CHIFF4(); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NOMBRE4"
+
+    // $ANTLR start "RULE_CHIFF4"
+    public final void mRULE_CHIFF4() throws RecognitionException {
+        try {
+            // InternalFix.g:434:22: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
+            // InternalFix.g:434:24: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
+            {
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_CHIFF4"
+
+    // $ANTLR start "RULE_NOMBRE5"
+    public final void mRULE_NOMBRE5() throws RecognitionException {
+        try {
+            // InternalFix.g:436:23: ( RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF5 )
+            // InternalFix.g:436:25: RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF5
+            {
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_CHIFF5(); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NOMBRE5"
+
+    // $ANTLR start "RULE_CHIFF5"
+    public final void mRULE_CHIFF5() throws RecognitionException {
+        try {
+            // InternalFix.g:438:22: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
+            // InternalFix.g:438:24: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
+            {
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_CHIFF5"
+
+    // $ANTLR start "RULE_NOMBRE6"
+    public final void mRULE_NOMBRE6() throws RecognitionException {
+        try {
+            // InternalFix.g:440:23: ( RULE_SPACE RULE_SPACE RULE_CHIFF6 )
+            // InternalFix.g:440:25: RULE_SPACE RULE_SPACE RULE_CHIFF6
+            {
+            mRULE_SPACE(); 
+            mRULE_SPACE(); 
+            mRULE_CHIFF6(); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NOMBRE6"
+
+    // $ANTLR start "RULE_CHIFF6"
+    public final void mRULE_CHIFF6() throws RecognitionException {
+        try {
+            // InternalFix.g:442:22: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
+            // InternalFix.g:442:24: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
+            {
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_CHIFF6"
+
+    // $ANTLR start "RULE_NOMBRE7"
+    public final void mRULE_NOMBRE7() throws RecognitionException {
+        try {
+            // InternalFix.g:444:23: ( RULE_SPACE RULE_CHIFF7 )
+            // InternalFix.g:444:25: RULE_SPACE RULE_CHIFF7
+            {
+            mRULE_SPACE(); 
+            mRULE_CHIFF7(); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NOMBRE7"
+
+    // $ANTLR start "RULE_CHIFF7"
+    public final void mRULE_CHIFF7() throws RecognitionException {
+        try {
+            // InternalFix.g:446:22: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
+            // InternalFix.g:446:24: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
+            {
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_CHIFF7"
+
+    // $ANTLR start "RULE_NOMBRE8"
+    public final void mRULE_NOMBRE8() throws RecognitionException {
+        try {
+            // InternalFix.g:448:23: ( '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' )
+            // InternalFix.g:448:25: '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9' '0' .. '9'
+            {
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+            matchRange('0','9'); 
+
+            }
+
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NOMBRE8"
+
+    // $ANTLR start "RULE_FDL"
+    public final void mRULE_FDL() throws RecognitionException {
+        try {
+            int _type = RULE_FDL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalFix.g:450:10: ( ( ( '\\r' )? '\\n' )? )
+            // InternalFix.g:450:12: ( ( '\\r' )? '\\n' )?
+            {
+            // InternalFix.g:450:12: ( ( '\\r' )? '\\n' )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
+
+            if ( (LA3_0=='\n'||LA3_0=='\r') ) {
+                alt3=1;
+            }
+            switch (alt3) {
+                case 1 :
+                    // InternalFix.g:450:13: ( '\\r' )? '\\n'
+                    {
+                    // InternalFix.g:450:13: ( '\\r' )?
+                    int alt2=2;
+                    int LA2_0 = input.LA(1);
+
+                    if ( (LA2_0=='\r') ) {
+                        alt2=1;
+                    }
+                    switch (alt2) {
+                        case 1 :
+                            // InternalFix.g:450:13: '\\r'
+                            {
+                            match('\r'); 
+
+                            }
+                            break;
+
+                    }
+
+                    match('\n'); 
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_FDL"
+
+    // $ANTLR start "RULE_SPACE"
+    public final void mRULE_SPACE() throws RecognitionException {
+        try {
+            int _type = RULE_SPACE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalFix.g:452:12: ( ' ' )
+            // InternalFix.g:452:14: ' '
+            {
+            match(' '); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_SPACE"
 
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalFix.g:307:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalFix.g:307:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalFix.g:454:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalFix.g:454:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalFix.g:307:11: ( '^' )?
-            int alt1=2;
-            int LA1_0 = input.LA(1);
+            // InternalFix.g:454:11: ( '^' )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA1_0=='^') ) {
-                alt1=1;
+            if ( (LA4_0=='^') ) {
+                alt4=1;
             }
-            switch (alt1) {
+            switch (alt4) {
                 case 1 :
-                    // InternalFix.g:307:11: '^'
+                    // InternalFix.g:454:11: '^'
                     {
                     match('^'); 
 
@@ -91,18 +560,18 @@ public class InternalFixLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalFix.g:307:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-            loop2:
+            // InternalFix.g:454:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            loop5:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( ((LA2_0>='0' && LA2_0<='9')||(LA2_0>='A' && LA2_0<='Z')||LA2_0=='_'||(LA2_0>='a' && LA2_0<='z')) ) {
-                    alt2=1;
+                if ( ((LA5_0>='0' && LA5_0<='9')||(LA5_0>='A' && LA5_0<='Z')||LA5_0=='_'||(LA5_0>='a' && LA5_0<='z')) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt5) {
             	case 1 :
             	    // InternalFix.g:
             	    {
@@ -120,7 +589,7 @@ public class InternalFixLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop5;
                 }
             } while (true);
 
@@ -135,101 +604,52 @@ public class InternalFixLexer extends Lexer {
     }
     // $ANTLR end "RULE_ID"
 
-    // $ANTLR start "RULE_INT"
-    public final void mRULE_INT() throws RecognitionException {
-        try {
-            int _type = RULE_INT;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalFix.g:309:10: ( ( '0' .. '9' )+ )
-            // InternalFix.g:309:12: ( '0' .. '9' )+
-            {
-            // InternalFix.g:309:12: ( '0' .. '9' )+
-            int cnt3=0;
-            loop3:
-            do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
-
-                if ( ((LA3_0>='0' && LA3_0<='9')) ) {
-                    alt3=1;
-                }
-
-
-                switch (alt3) {
-            	case 1 :
-            	    // InternalFix.g:309:13: '0' .. '9'
-            	    {
-            	    matchRange('0','9'); 
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt3 >= 1 ) break loop3;
-                        EarlyExitException eee =
-                            new EarlyExitException(3, input);
-                        throw eee;
-                }
-                cnt3++;
-            } while (true);
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_INT"
-
     // $ANTLR start "RULE_STRING"
     public final void mRULE_STRING() throws RecognitionException {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalFix.g:311:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalFix.g:311:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalFix.g:456:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalFix.g:456:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalFix.g:311:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // InternalFix.g:456:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA6_0=='\"') ) {
-                alt6=1;
+            if ( (LA8_0=='\"') ) {
+                alt8=1;
             }
-            else if ( (LA6_0=='\'') ) {
-                alt6=2;
+            else if ( (LA8_0=='\'') ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt8) {
                 case 1 :
-                    // InternalFix.g:311:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalFix.g:456:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalFix.g:311:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
-                    loop4:
+                    // InternalFix.g:456:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    loop6:
                     do {
-                        int alt4=3;
-                        int LA4_0 = input.LA(1);
+                        int alt6=3;
+                        int LA6_0 = input.LA(1);
 
-                        if ( (LA4_0=='\\') ) {
-                            alt4=1;
+                        if ( (LA6_0=='\\') ) {
+                            alt6=1;
                         }
-                        else if ( ((LA4_0>='\u0000' && LA4_0<='!')||(LA4_0>='#' && LA4_0<='[')||(LA4_0>=']' && LA4_0<='\uFFFF')) ) {
-                            alt4=2;
+                        else if ( ((LA6_0>='\u0000' && LA6_0<='!')||(LA6_0>='#' && LA6_0<='[')||(LA6_0>=']' && LA6_0<='\uFFFF')) ) {
+                            alt6=2;
                         }
 
 
-                        switch (alt4) {
+                        switch (alt6) {
                     	case 1 :
-                    	    // InternalFix.g:311:21: '\\\\' .
+                    	    // InternalFix.g:456:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -237,7 +657,7 @@ public class InternalFixLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalFix.g:311:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalFix.g:456:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -253,7 +673,7 @@ public class InternalFixLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop4;
+                    	    break loop6;
                         }
                     } while (true);
 
@@ -262,26 +682,26 @@ public class InternalFixLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalFix.g:311:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalFix.g:456:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalFix.g:311:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
-                    loop5:
+                    // InternalFix.g:456:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    loop7:
                     do {
-                        int alt5=3;
-                        int LA5_0 = input.LA(1);
+                        int alt7=3;
+                        int LA7_0 = input.LA(1);
 
-                        if ( (LA5_0=='\\') ) {
-                            alt5=1;
+                        if ( (LA7_0=='\\') ) {
+                            alt7=1;
                         }
-                        else if ( ((LA5_0>='\u0000' && LA5_0<='&')||(LA5_0>='(' && LA5_0<='[')||(LA5_0>=']' && LA5_0<='\uFFFF')) ) {
-                            alt5=2;
+                        else if ( ((LA7_0>='\u0000' && LA7_0<='&')||(LA7_0>='(' && LA7_0<='[')||(LA7_0>=']' && LA7_0<='\uFFFF')) ) {
+                            alt7=2;
                         }
 
 
-                        switch (alt5) {
+                        switch (alt7) {
                     	case 1 :
-                    	    // InternalFix.g:311:54: '\\\\' .
+                    	    // InternalFix.g:456:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -289,7 +709,7 @@ public class InternalFixLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalFix.g:311:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalFix.g:456:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -305,7 +725,7 @@ public class InternalFixLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop5;
+                    	    break loop7;
                         }
                     } while (true);
 
@@ -332,37 +752,37 @@ public class InternalFixLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalFix.g:313:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalFix.g:313:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalFix.g:458:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalFix.g:458:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalFix.g:313:24: ( options {greedy=false; } : . )*
-            loop7:
+            // InternalFix.g:458:24: ( options {greedy=false; } : . )*
+            loop9:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA7_0=='*') ) {
-                    int LA7_1 = input.LA(2);
+                if ( (LA9_0=='*') ) {
+                    int LA9_1 = input.LA(2);
 
-                    if ( (LA7_1=='/') ) {
-                        alt7=2;
+                    if ( (LA9_1=='/') ) {
+                        alt9=2;
                     }
-                    else if ( ((LA7_1>='\u0000' && LA7_1<='.')||(LA7_1>='0' && LA7_1<='\uFFFF')) ) {
-                        alt7=1;
+                    else if ( ((LA9_1>='\u0000' && LA9_1<='.')||(LA9_1>='0' && LA9_1<='\uFFFF')) ) {
+                        alt9=1;
                     }
 
 
                 }
-                else if ( ((LA7_0>='\u0000' && LA7_0<=')')||(LA7_0>='+' && LA7_0<='\uFFFF')) ) {
-                    alt7=1;
+                else if ( ((LA9_0>='\u0000' && LA9_0<=')')||(LA9_0>='+' && LA9_0<='\uFFFF')) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt9) {
             	case 1 :
-            	    // InternalFix.g:313:52: .
+            	    // InternalFix.g:458:52: .
             	    {
             	    matchAny(); 
 
@@ -370,7 +790,7 @@ public class InternalFixLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop9;
                 }
             } while (true);
 
@@ -392,25 +812,25 @@ public class InternalFixLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalFix.g:315:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalFix.g:315:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalFix.g:460:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalFix.g:460:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalFix.g:315:24: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop8:
+            // InternalFix.g:460:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            loop10:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( ((LA8_0>='\u0000' && LA8_0<='\t')||(LA8_0>='\u000B' && LA8_0<='\f')||(LA8_0>='\u000E' && LA8_0<='\uFFFF')) ) {
-                    alt8=1;
+                if ( ((LA10_0>='\u0000' && LA10_0<='\t')||(LA10_0>='\u000B' && LA10_0<='\f')||(LA10_0>='\u000E' && LA10_0<='\uFFFF')) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt10) {
             	case 1 :
-            	    // InternalFix.g:315:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalFix.g:460:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -426,31 +846,31 @@ public class InternalFixLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop10;
                 }
             } while (true);
 
-            // InternalFix.g:315:40: ( ( '\\r' )? '\\n' )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalFix.g:460:40: ( ( '\\r' )? '\\n' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA10_0=='\n'||LA10_0=='\r') ) {
-                alt10=1;
+            if ( (LA12_0=='\n'||LA12_0=='\r') ) {
+                alt12=1;
             }
-            switch (alt10) {
+            switch (alt12) {
                 case 1 :
-                    // InternalFix.g:315:41: ( '\\r' )? '\\n'
+                    // InternalFix.g:460:41: ( '\\r' )? '\\n'
                     {
-                    // InternalFix.g:315:41: ( '\\r' )?
-                    int alt9=2;
-                    int LA9_0 = input.LA(1);
+                    // InternalFix.g:460:41: ( '\\r' )?
+                    int alt11=2;
+                    int LA11_0 = input.LA(1);
 
-                    if ( (LA9_0=='\r') ) {
-                        alt9=1;
+                    if ( (LA11_0=='\r') ) {
+                        alt11=1;
                     }
-                    switch (alt9) {
+                    switch (alt11) {
                         case 1 :
-                            // InternalFix.g:315:41: '\\r'
+                            // InternalFix.g:460:41: '\\r'
                             {
                             match('\r'); 
 
@@ -482,26 +902,26 @@ public class InternalFixLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalFix.g:317:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalFix.g:317:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalFix.g:462:9: ( ( '\\t' | '\\r' | '\\n' )+ )
+            // InternalFix.g:462:11: ( '\\t' | '\\r' | '\\n' )+
             {
-            // InternalFix.g:317:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            int cnt11=0;
-            loop11:
+            // InternalFix.g:462:11: ( '\\t' | '\\r' | '\\n' )+
+            int cnt13=0;
+            loop13:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {
-                    alt11=1;
+                if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r') ) {
+                    alt13=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt13) {
             	case 1 :
             	    // InternalFix.g:
             	    {
-            	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
+            	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r' ) {
             	        input.consume();
 
             	    }
@@ -515,12 +935,12 @@ public class InternalFixLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt11 >= 1 ) break loop11;
+            	    if ( cnt13 >= 1 ) break loop13;
                         EarlyExitException eee =
-                            new EarlyExitException(11, input);
+                            new EarlyExitException(13, input);
                         throw eee;
                 }
-                cnt11++;
+                cnt13++;
             } while (true);
 
 
@@ -534,84 +954,71 @@ public class InternalFixLexer extends Lexer {
     }
     // $ANTLR end "RULE_WS"
 
-    // $ANTLR start "RULE_ANY_OTHER"
-    public final void mRULE_ANY_OTHER() throws RecognitionException {
-        try {
-            int _type = RULE_ANY_OTHER;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalFix.g:319:16: ( . )
-            // InternalFix.g:319:18: .
-            {
-            matchAny(); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ANY_OTHER"
-
     public void mTokens() throws RecognitionException {
-        // InternalFix.g:1:8: ( T__11 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=8;
-        alt12 = dfa12.predict(input);
-        switch (alt12) {
+        // InternalFix.g:1:8: ( T__27 | RULE_NOMBRE | RULE_FDL | RULE_SPACE | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS )
+        int alt14=9;
+        alt14 = dfa14.predict(input);
+        switch (alt14) {
             case 1 :
-                // InternalFix.g:1:10: T__11
+                // InternalFix.g:1:10: T__27
                 {
-                mT__11(); 
+                mT__27(); 
 
                 }
                 break;
             case 2 :
-                // InternalFix.g:1:16: RULE_ID
+                // InternalFix.g:1:16: RULE_NOMBRE
+                {
+                mRULE_NOMBRE(); 
+
+                }
+                break;
+            case 3 :
+                // InternalFix.g:1:28: RULE_FDL
+                {
+                mRULE_FDL(); 
+
+                }
+                break;
+            case 4 :
+                // InternalFix.g:1:37: RULE_SPACE
+                {
+                mRULE_SPACE(); 
+
+                }
+                break;
+            case 5 :
+                // InternalFix.g:1:48: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 3 :
-                // InternalFix.g:1:24: RULE_INT
-                {
-                mRULE_INT(); 
-
-                }
-                break;
-            case 4 :
-                // InternalFix.g:1:33: RULE_STRING
+            case 6 :
+                // InternalFix.g:1:56: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 5 :
-                // InternalFix.g:1:45: RULE_ML_COMMENT
+            case 7 :
+                // InternalFix.g:1:68: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 6 :
-                // InternalFix.g:1:61: RULE_SL_COMMENT
+            case 8 :
+                // InternalFix.g:1:84: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 7 :
-                // InternalFix.g:1:77: RULE_WS
+            case 9 :
+                // InternalFix.g:1:100: RULE_WS
                 {
                 mRULE_WS(); 
-
-                }
-                break;
-            case 8 :
-                // InternalFix.g:1:85: RULE_ANY_OTHER
-                {
-                mRULE_ANY_OTHER(); 
 
                 }
                 break;
@@ -621,124 +1028,131 @@ public class InternalFixLexer extends Lexer {
     }
 
 
-    protected DFA12 dfa12 = new DFA12(this);
-    static final String DFA12_eotS =
-        "\1\uffff\2\11\2\uffff\3\11\11\uffff";
-    static final String DFA12_eofS =
-        "\21\uffff";
-    static final String DFA12_minS =
-        "\1\0\1\103\1\101\2\uffff\2\0\1\52\11\uffff";
-    static final String DFA12_maxS =
-        "\1\uffff\1\103\1\172\2\uffff\2\uffff\1\57\11\uffff";
-    static final String DFA12_acceptS =
-        "\3\uffff\1\2\1\3\3\uffff\1\7\1\10\1\1\1\2\1\3\1\4\1\5\1\6\1\7";
-    static final String DFA12_specialS =
-        "\1\0\4\uffff\1\1\1\2\12\uffff}>";
-    static final String[] DFA12_transitionS = {
-            "\11\11\2\10\2\11\1\10\22\11\1\10\1\11\1\5\4\11\1\6\2\11\1\1\4\11\1\7\12\4\7\11\32\3\3\11\1\2\1\3\1\11\32\3\uff85\11",
-            "\1\12",
-            "\32\13\4\uffff\1\13\1\uffff\32\13",
+    protected DFA1 dfa1 = new DFA1(this);
+    protected DFA14 dfa14 = new DFA14(this);
+    static final String DFA1_eotS =
+        "\17\uffff";
+    static final String DFA1_eofS =
+        "\17\uffff";
+    static final String DFA1_minS =
+        "\2\40\1\uffff\1\40\1\uffff\1\40\1\uffff\1\40\1\uffff\1\40\2\uffff\1\40\2\uffff";
+    static final String DFA1_maxS =
+        "\2\71\1\uffff\1\71\1\uffff\1\71\1\uffff\1\71\1\uffff\1\71\2\uffff\1\71\2\uffff";
+    static final String DFA1_acceptS =
+        "\2\uffff\1\10\1\uffff\1\7\1\uffff\1\6\1\uffff\1\5\1\uffff\1\4\1\3\1\uffff\1\1\1\2";
+    static final String DFA1_specialS =
+        "\17\uffff}>";
+    static final String[] DFA1_transitionS = {
+            "\1\1\17\uffff\12\2",
+            "\1\3\17\uffff\12\4",
+            "",
+            "\1\5\17\uffff\12\6",
+            "",
+            "\1\7\17\uffff\12\10",
+            "",
+            "\1\11\17\uffff\12\12",
+            "",
+            "\1\14\17\uffff\12\13",
             "",
             "",
-            "\0\15",
-            "\0\15",
-            "\1\16\4\uffff\1\17",
+            "\1\15\17\uffff\12\16",
+            "",
+            ""
+    };
+
+    static final short[] DFA1_eot = DFA.unpackEncodedString(DFA1_eotS);
+    static final short[] DFA1_eof = DFA.unpackEncodedString(DFA1_eofS);
+    static final char[] DFA1_min = DFA.unpackEncodedStringToUnsignedChars(DFA1_minS);
+    static final char[] DFA1_max = DFA.unpackEncodedStringToUnsignedChars(DFA1_maxS);
+    static final short[] DFA1_accept = DFA.unpackEncodedString(DFA1_acceptS);
+    static final short[] DFA1_special = DFA.unpackEncodedString(DFA1_specialS);
+    static final short[][] DFA1_transition;
+
+    static {
+        int numStates = DFA1_transitionS.length;
+        DFA1_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA1_transition[i] = DFA.unpackEncodedString(DFA1_transitionS[i]);
+        }
+    }
+
+    class DFA1 extends DFA {
+
+        public DFA1(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 1;
+            this.eot = DFA1_eot;
+            this.eof = DFA1_eof;
+            this.min = DFA1_min;
+            this.max = DFA1_max;
+            this.accept = DFA1_accept;
+            this.special = DFA1_special;
+            this.transition = DFA1_transition;
+        }
+        public String getDescription() {
+            return "418:15: ( RULE_NOMBRE1 | RULE_NOMBRE2 | RULE_NOMBRE3 | RULE_NOMBRE4 | RULE_NOMBRE5 | RULE_NOMBRE6 | RULE_NOMBRE7 | RULE_NOMBRE8 )";
+        }
+    }
+    static final String DFA14_eotS =
+        "\1\6\1\uffff\1\13\1\uffff\1\12\1\6\10\uffff";
+    static final String DFA14_eofS =
+        "\16\uffff";
+    static final String DFA14_minS =
+        "\1\11\1\uffff\1\40\1\uffff\1\12\1\11\3\uffff\1\52\4\uffff";
+    static final String DFA14_maxS =
+        "\1\172\1\uffff\1\71\1\uffff\1\12\1\15\3\uffff\1\57\4\uffff";
+    static final String DFA14_acceptS =
+        "\1\uffff\1\1\1\uffff\1\2\2\uffff\1\3\1\5\1\6\1\uffff\1\11\1\4\1\7\1\10";
+    static final String DFA14_specialS =
+        "\16\uffff}>";
+    static final String[] DFA14_transitionS = {
+            "\1\12\1\5\2\uffff\1\4\22\uffff\1\2\1\uffff\1\10\4\uffff\1\10\2\uffff\1\1\4\uffff\1\11\12\3\7\uffff\32\7\3\uffff\2\7\1\uffff\32\7",
+            "",
+            "\1\3\17\uffff\12\3",
+            "",
+            "\1\5",
+            "\2\12\2\uffff\1\12",
             "",
             "",
             "",
-            "",
-            "",
+            "\1\14\4\uffff\1\15",
             "",
             "",
             "",
             ""
     };
 
-    static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
-    static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
-    static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
-    static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
-    static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
-    static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
-    static final short[][] DFA12_transition;
+    static final short[] DFA14_eot = DFA.unpackEncodedString(DFA14_eotS);
+    static final short[] DFA14_eof = DFA.unpackEncodedString(DFA14_eofS);
+    static final char[] DFA14_min = DFA.unpackEncodedStringToUnsignedChars(DFA14_minS);
+    static final char[] DFA14_max = DFA.unpackEncodedStringToUnsignedChars(DFA14_maxS);
+    static final short[] DFA14_accept = DFA.unpackEncodedString(DFA14_acceptS);
+    static final short[] DFA14_special = DFA.unpackEncodedString(DFA14_specialS);
+    static final short[][] DFA14_transition;
 
     static {
-        int numStates = DFA12_transitionS.length;
-        DFA12_transition = new short[numStates][];
+        int numStates = DFA14_transitionS.length;
+        DFA14_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
+            DFA14_transition[i] = DFA.unpackEncodedString(DFA14_transitionS[i]);
         }
     }
 
-    class DFA12 extends DFA {
+    class DFA14 extends DFA {
 
-        public DFA12(BaseRecognizer recognizer) {
+        public DFA14(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 12;
-            this.eot = DFA12_eot;
-            this.eof = DFA12_eof;
-            this.min = DFA12_min;
-            this.max = DFA12_max;
-            this.accept = DFA12_accept;
-            this.special = DFA12_special;
-            this.transition = DFA12_transition;
+            this.decisionNumber = 14;
+            this.eot = DFA14_eot;
+            this.eof = DFA14_eof;
+            this.min = DFA14_min;
+            this.max = DFA14_max;
+            this.accept = DFA14_accept;
+            this.special = DFA14_special;
+            this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            IntStream input = _input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA12_0 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA12_0=='*') ) {s = 1;}
-
-                        else if ( (LA12_0=='^') ) {s = 2;}
-
-                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 3;}
-
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 4;}
-
-                        else if ( (LA12_0=='\"') ) {s = 5;}
-
-                        else if ( (LA12_0=='\'') ) {s = 6;}
-
-                        else if ( (LA12_0=='/') ) {s = 7;}
-
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 8;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<=')')||(LA12_0>='+' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 9;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_5 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_5>='\u0000' && LA12_5<='\uFFFF')) ) {s = 13;}
-
-                        else s = 9;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_6 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_6>='\u0000' && LA12_6<='\uFFFF')) ) {s = 13;}
-
-                        else s = 9;
-
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 12, _s, input);
-            error(nvae);
-            throw nvae;
+            return "1:1: Tokens : ( T__27 | RULE_NOMBRE | RULE_FDL | RULE_SPACE | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS );";
         }
     }
  

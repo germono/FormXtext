@@ -9,22 +9,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Greeting</b></em>'.
+ * A representation of the model object '<em><b>Courbe</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link oliv.form.xtext.fix.fix.Greeting#getName <em>Name</em>}</li>
- *   <li>{@link oliv.form.xtext.fix.fix.Greeting#getPoints <em>Points</em>}</li>
+ *   <li>{@link oliv.form.xtext.fix.fix.Courbe#getName <em>Name</em>}</li>
+ *   <li>{@link oliv.form.xtext.fix.fix.Courbe#getLignes <em>Lignes</em>}</li>
  * </ul>
  *
- * @see oliv.form.xtext.fix.fix.FixPackage#getGreeting()
+ * @see oliv.form.xtext.fix.fix.FixPackage#getCourbe()
  * @model
  * @generated
  */
-public interface Greeting extends EObject
+public interface Courbe extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -32,14 +32,14 @@ public interface Greeting extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see oliv.form.xtext.fix.fix.FixPackage#getGreeting_Name()
+   * @see oliv.form.xtext.fix.fix.FixPackage#getCourbe_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link oliv.form.xtext.fix.fix.Greeting#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link oliv.form.xtext.fix.fix.Courbe#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -49,15 +49,15 @@ public interface Greeting extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Points</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Lignes</b></em>' containment reference list.
+   * The list contents are of type {@link oliv.form.xtext.fix.fix.Ligne}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Points</em>' attribute list.
-   * @see oliv.form.xtext.fix.fix.FixPackage#getGreeting_Points()
-   * @model unique="false"
+   * @return the value of the '<em>Lignes</em>' containment reference list.
+   * @see oliv.form.xtext.fix.fix.FixPackage#getCourbe_Lignes()
+   * @model containment="true"
    * @generated
    */
-  EList<String> getPoints();
+  EList<Ligne> getLignes();
 
-} // Greeting
+} // Courbe

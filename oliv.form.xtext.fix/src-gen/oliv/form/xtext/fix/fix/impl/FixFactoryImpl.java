@@ -66,7 +66,8 @@ public class FixFactoryImpl extends EFactoryImpl implements FixFactory
     switch (eClass.getClassifierID())
     {
       case FixPackage.MODEL: return createModel();
-      case FixPackage.GREETING: return createGreeting();
+      case FixPackage.COURBE: return createCourbe();
+      case FixPackage.LIGNE: return createLigne();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -90,10 +91,22 @@ public class FixFactoryImpl extends EFactoryImpl implements FixFactory
    * @generated
    */
   @Override
-  public Greeting createGreeting()
+  public Courbe createCourbe()
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    CourbeImpl courbe = new CourbeImpl();
+    return courbe;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Ligne createLigne()
+  {
+    LigneImpl ligne = new LigneImpl();
+    return ligne;
   }
 
   /**

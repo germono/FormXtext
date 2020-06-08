@@ -3,74 +3,78 @@
  */
 package oliv.form.xtext.fix.fix.impl;
 
-import java.util.Collection;
-
 import oliv.form.xtext.fix.fix.FixPackage;
-import oliv.form.xtext.fix.fix.Greeting;
+import oliv.form.xtext.fix.fix.Ligne;
 
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Greeting</b></em>'.
+ * An implementation of the model object '<em><b>Ligne</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link oliv.form.xtext.fix.fix.impl.GreetingImpl#getName <em>Name</em>}</li>
- *   <li>{@link oliv.form.xtext.fix.fix.impl.GreetingImpl#getPoints <em>Points</em>}</li>
+ *   <li>{@link oliv.form.xtext.fix.fix.impl.LigneImpl#getX <em>X</em>}</li>
+ *   <li>{@link oliv.form.xtext.fix.fix.impl.LigneImpl#getY <em>Y</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeting
+public class LigneImpl extends MinimalEObjectImpl.Container implements Ligne
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getX() <em>X</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getX()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String X_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getX() <em>X</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getX()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String x = X_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getPoints() <em>Points</em>}' attribute list.
+   * The default value of the '{@link #getY() <em>Y</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPoints()
+   * @see #getY()
    * @generated
    * @ordered
    */
-  protected EList<String> points;
+  protected static final String Y_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getY()
+   * @generated
+   * @ordered
+   */
+  protected String y = Y_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GreetingImpl()
+  protected LigneImpl()
   {
     super();
   }
@@ -83,7 +87,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   @Override
   protected EClass eStaticClass()
   {
-    return FixPackage.Literals.GREETING;
+    return FixPackage.Literals.LIGNE;
   }
 
   /**
@@ -92,9 +96,9 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * @generated
    */
   @Override
-  public String getName()
+  public String getX()
   {
-    return name;
+    return x;
   }
 
   /**
@@ -103,12 +107,12 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public void setX(String newX)
   {
-    String oldName = name;
-    name = newName;
+    String oldX = x;
+    x = newX;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, FixPackage.GREETING__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, FixPackage.LIGNE__X, oldX, x));
   }
 
   /**
@@ -117,13 +121,23 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * @generated
    */
   @Override
-  public EList<String> getPoints()
+  public String getY()
   {
-    if (points == null)
-    {
-      points = new EDataTypeEList<String>(String.class, this, FixPackage.GREETING__POINTS);
-    }
-    return points;
+    return y;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setY(String newY)
+  {
+    String oldY = y;
+    y = newY;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FixPackage.LIGNE__Y, oldY, y));
   }
 
   /**
@@ -136,10 +150,10 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case FixPackage.GREETING__NAME:
-        return getName();
-      case FixPackage.GREETING__POINTS:
-        return getPoints();
+      case FixPackage.LIGNE__X:
+        return getX();
+      case FixPackage.LIGNE__Y:
+        return getY();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -149,18 +163,16 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case FixPackage.GREETING__NAME:
-        setName((String)newValue);
+      case FixPackage.LIGNE__X:
+        setX((String)newValue);
         return;
-      case FixPackage.GREETING__POINTS:
-        getPoints().clear();
-        getPoints().addAll((Collection<? extends String>)newValue);
+      case FixPackage.LIGNE__Y:
+        setY((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -176,11 +188,11 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case FixPackage.GREETING__NAME:
-        setName(NAME_EDEFAULT);
+      case FixPackage.LIGNE__X:
+        setX(X_EDEFAULT);
         return;
-      case FixPackage.GREETING__POINTS:
-        getPoints().clear();
+      case FixPackage.LIGNE__Y:
+        setY(Y_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -196,10 +208,10 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case FixPackage.GREETING__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case FixPackage.GREETING__POINTS:
-        return points != null && !points.isEmpty();
+      case FixPackage.LIGNE__X:
+        return X_EDEFAULT == null ? x != null : !X_EDEFAULT.equals(x);
+      case FixPackage.LIGNE__Y:
+        return Y_EDEFAULT == null ? y != null : !Y_EDEFAULT.equals(y);
     }
     return super.eIsSet(featureID);
   }
@@ -215,12 +227,12 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", points: ");
-    result.append(points);
+    result.append(" (x: ");
+    result.append(x);
+    result.append(", y: ");
+    result.append(y);
     result.append(')');
     return result.toString();
   }
 
-} //GreetingImpl
+} //LigneImpl

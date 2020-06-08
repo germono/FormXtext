@@ -26,9 +26,30 @@ public class FixSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (ruleCall.getRule() == grammarAccess.getFDLRule())
+			return getFDLToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getSPACERule())
+			return getSPACEToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * terminal FDL : (('\r')?'\n')?;
+	 */
+	protected String getFDLToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "";
+	}
+	
+	/**
+	 * terminal SPACE : ' ';
+	 */
+	protected String getSPACEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return " ";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

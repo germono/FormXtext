@@ -33,13 +33,22 @@ public interface FixFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Greeting</em>'.
+   * Returns a new object of class '<em>Courbe</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Greeting</em>'.
+   * @return a new object of class '<em>Courbe</em>'.
    * @generated
    */
-  Greeting createGreeting();
+  Courbe createCourbe();
+
+  /**
+   * Returns a new object of class '<em>Ligne</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ligne</em>'.
+   * @generated
+   */
+  Ligne createLigne();
 
   /**
    * Returns the package supported by this factory.

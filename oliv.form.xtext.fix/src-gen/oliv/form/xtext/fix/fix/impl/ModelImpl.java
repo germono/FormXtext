@@ -5,8 +5,8 @@ package oliv.form.xtext.fix.fix.impl;
 
 import java.util.Collection;
 
+import oliv.form.xtext.fix.fix.Courbe;
 import oliv.form.xtext.fix.fix.FixPackage;
-import oliv.form.xtext.fix.fix.Greeting;
 import oliv.form.xtext.fix.fix.Model;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link oliv.form.xtext.fix.fix.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link oliv.form.xtext.fix.fix.impl.ModelImpl#getCourbes <em>Courbes</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,14 +37,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference list.
+   * The cached value of the '{@link #getCourbes() <em>Courbes</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getCourbes()
    * @generated
    * @ordered
    */
-  protected EList<Greeting> greetings;
+  protected EList<Courbe> courbes;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,13 +73,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    */
   @Override
-  public EList<Greeting> getGreetings()
+  public EList<Courbe> getCourbes()
   {
-    if (greetings == null)
+    if (courbes == null)
     {
-      greetings = new EObjectContainmentEList<Greeting>(Greeting.class, this, FixPackage.MODEL__GREETINGS);
+      courbes = new EObjectContainmentEList<Courbe>(Courbe.class, this, FixPackage.MODEL__COURBES);
     }
-    return greetings;
+    return courbes;
   }
 
   /**
@@ -92,8 +92,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case FixPackage.MODEL__GREETINGS:
-        return ((InternalEList<?>)getGreetings()).basicRemove(otherEnd, msgs);
+      case FixPackage.MODEL__COURBES:
+        return ((InternalEList<?>)getCourbes()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -108,8 +108,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case FixPackage.MODEL__GREETINGS:
-        return getGreetings();
+      case FixPackage.MODEL__COURBES:
+        return getCourbes();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,9 +125,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case FixPackage.MODEL__GREETINGS:
-        getGreetings().clear();
-        getGreetings().addAll((Collection<? extends Greeting>)newValue);
+      case FixPackage.MODEL__COURBES:
+        getCourbes().clear();
+        getCourbes().addAll((Collection<? extends Courbe>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -143,8 +143,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case FixPackage.MODEL__GREETINGS:
-        getGreetings().clear();
+      case FixPackage.MODEL__COURBES:
+        getCourbes().clear();
         return;
     }
     super.eUnset(featureID);
@@ -160,8 +160,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case FixPackage.MODEL__GREETINGS:
-        return greetings != null && !greetings.isEmpty();
+      case FixPackage.MODEL__COURBES:
+        return courbes != null && !courbes.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -5,8 +5,9 @@ package oliv.form.xtext.fix.serializer;
 
 import com.google.inject.Inject;
 import java.util.Set;
+import oliv.form.xtext.fix.fix.Courbe;
 import oliv.form.xtext.fix.fix.FixPackage;
-import oliv.form.xtext.fix.fix.Greeting;
+import oliv.form.xtext.fix.fix.Ligne;
 import oliv.form.xtext.fix.fix.Model;
 import oliv.form.xtext.fix.services.FixGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
@@ -15,7 +16,9 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public class FixSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -31,8 +34,11 @@ public class FixSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == FixPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case FixPackage.GREETING:
-				sequence_Greeting(context, (Greeting) semanticObject); 
+			case FixPackage.COURBE:
+				sequence_Courbe(context, (Courbe) semanticObject); 
+				return; 
+			case FixPackage.LIGNE:
+				sequence_Ligne(context, (Ligne) semanticObject); 
 				return; 
 			case FixPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
@@ -44,13 +50,34 @@ public class FixSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     Greeting returns Greeting
+	 *     Courbe returns Courbe
 	 *
 	 * Constraint:
-	 *     (name=ID points+=Point)
+	 *     (name=ID lignes+=Ligne*)
 	 */
-	protected void sequence_Greeting(ISerializationContext context, Greeting semanticObject) {
+	protected void sequence_Courbe(ISerializationContext context, Courbe semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Ligne returns Ligne
+	 *
+	 * Constraint:
+	 *     (x=NOMBRE y=NOMBRE)
+	 */
+	protected void sequence_Ligne(ISerializationContext context, Ligne semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, FixPackage.Literals.LIGNE__X) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FixPackage.Literals.LIGNE__X));
+			if (transientValues.isValueTransient(semanticObject, FixPackage.Literals.LIGNE__Y) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FixPackage.Literals.LIGNE__Y));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLigneAccess().getXNOMBRETerminalRuleCall_0_0(), semanticObject.getX());
+		feeder.accept(grammarAccess.getLigneAccess().getYNOMBRETerminalRuleCall_1_0(), semanticObject.getY());
+		feeder.finish();
 	}
 	
 	
@@ -59,7 +86,7 @@ public class FixSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     greetings+=Greeting+
+	 *     Courbes+=Courbe+
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

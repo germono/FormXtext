@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link oliv.form.xtext.fix.fix.Model#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link oliv.form.xtext.fix.fix.Model#getCourbes <em>Courbes</em>}</li>
  * </ul>
  *
  * @see oliv.form.xtext.fix.fix.FixPackage#getModel()
@@ -26,15 +26,15 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Greetings</b></em>' containment reference list.
-   * The list contents are of type {@link oliv.form.xtext.fix.fix.Greeting}.
+   * Returns the value of the '<em><b>Courbes</b></em>' containment reference list.
+   * The list contents are of type {@link oliv.form.xtext.fix.fix.Courbe}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Greetings</em>' containment reference list.
-   * @see oliv.form.xtext.fix.fix.FixPackage#getModel_Greetings()
+   * @return the value of the '<em>Courbes</em>' containment reference list.
+   * @see oliv.form.xtext.fix.fix.FixPackage#getModel_Courbes()
    * @model containment="true"
    * @generated
    */
-  EList<Greeting> getGreetings();
+  EList<Courbe> getCourbes();
 
 } // Model

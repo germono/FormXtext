@@ -1,13 +1,50 @@
-grammar oliv.form.xtext.fix.Fix with org.eclipse.xtext.common.Terminals
+grammar oliv.form.xtext.fix.Fix hidden( ML_COMMENT, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 generate fix "http://www.form.oliv/xtext/fix/Fix"
 
 Model:
-	greetings+=Greeting*;
+	Courbes+=(Courbe)*;
 	
-Greeting:
-	'*Courbe' name=ID 
-	points+=Point;
-Point :
-	INT INT
+Courbe : '*Courbe' SPACE name=ID FDL
+	lignes+=Ligne*
 ;
+Ligne: 
+	(x=NOMBRE y=NOMBRE FDL)
+;
+terminal NOMBRE  : 
+	NOMBRE1|NOMBRE2|NOMBRE3|NOMBRE4|NOMBRE5|NOMBRE6|NOMBRE7|NOMBRE8
+;
+terminal NOMBRE1 : SPACE SPACE SPACE SPACE SPACE SPACE SPACE CHIFF1 ;
+terminal CHIFF1 returns ecore::EInt : ('0'..'9') ;
+terminal NOMBRE2 : SPACE SPACE SPACE SPACE SPACE SPACE CHIFF2;
+terminal CHIFF2 returns ecore::EInt : ('0'..'9') ('0'..'9') ;
+terminal NOMBRE3 : SPACE SPACE SPACE SPACE SPACE CHIFF3 ;
+terminal CHIFF3 returns ecore::EInt : ('0'..'9') ('0'..'9') ('0'..'9') ;
+terminal NOMBRE4 : SPACE SPACE SPACE SPACE CHIFF4;
+terminal CHIFF4 returns ecore::EInt : ('0'..'9')('0'..'9')('0'..'9')('0'..'9');
+terminal NOMBRE5 : SPACE SPACE SPACE CHIFF5 ;
+terminal CHIFF5 returns ecore::EInt : ('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9');
+terminal NOMBRE6 : SPACE SPACE CHIFF6;
+terminal CHIFF6 returns ecore::EInt : ('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9');
+terminal NOMBRE7 : SPACE CHIFF7;
+terminal CHIFF7 returns ecore::EInt : ('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9');
+terminal NOMBRE8 returns ecore::EInt: ('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9')('0'..'9');
+
+terminal FDL : (('\r')?'\n')?;
+terminal SPACE : ' ';
+terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal STRING:
+			'"' ( '\\' . /* 'b'|'t'|'n'|'f'| 'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |
+			"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'"
+		;
+terminal ML_COMMENT : '/*' -> '*/';
+terminal SL_COMMENT : '//' !('\n'|'\r')* ('\r'? '\n')?;
+
+terminal WS         : ('\t'|'\r'|'\n')+;
+
+
+//terminal chiffre : ('0'..'9');
+//Int8:
+//	chiffre chiffre chiffre chiffre chiffre chiffre chiffre chiffre;

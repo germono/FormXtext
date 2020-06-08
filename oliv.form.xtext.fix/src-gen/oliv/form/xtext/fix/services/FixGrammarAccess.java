@@ -14,7 +14,6 @@ import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
-import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractGrammarElementFinder;
 import org.eclipse.xtext.service.GrammarProvider;
 
@@ -23,88 +22,150 @@ public class FixGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.Model");
-		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
+		private final Assignment cCourbesAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cCourbesCourbeParserRuleCall_0 = (RuleCall)cCourbesAssignment.eContents().get(0);
 		
 		//Model:
-		//	greetings+=Greeting*;
+		//	Courbes+=Courbe*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//greetings+=Greeting*
-		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
+		//Courbes+=Courbe*
+		public Assignment getCourbesAssignment() { return cCourbesAssignment; }
 		
-		//Greeting
-		public RuleCall getGreetingsGreetingParserRuleCall_0() { return cGreetingsGreetingParserRuleCall_0; }
+		//Courbe
+		public RuleCall getCourbesCourbeParserRuleCall_0() { return cCourbesCourbeParserRuleCall_0; }
 	}
-	public class GreetingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.Greeting");
+	public class CourbeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.Courbe");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCourbeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cPointsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPointsPointParserRuleCall_2_0 = (RuleCall)cPointsAssignment_2.eContents().get(0);
+		private final RuleCall cSPACETerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cFDLTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Assignment cLignesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLignesLigneParserRuleCall_4_0 = (RuleCall)cLignesAssignment_4.eContents().get(0);
 		
-		//Greeting:
-		//	'*Courbe' name=ID
-		//	points+=Point;
+		//Courbe:
+		//	'*Courbe' SPACE name=ID FDL
+		//	lignes+=Ligne*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'*Courbe' name=ID points+=Point
+		//'*Courbe' SPACE name=ID FDL lignes+=Ligne*
 		public Group getGroup() { return cGroup; }
 		
 		//'*Courbe'
 		public Keyword getCourbeKeyword_0() { return cCourbeKeyword_0; }
 		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_1() { return cSPACETerminalRuleCall_1; }
+		
 		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 		
-		//points+=Point
-		public Assignment getPointsAssignment_2() { return cPointsAssignment_2; }
+		//FDL
+		public RuleCall getFDLTerminalRuleCall_3() { return cFDLTerminalRuleCall_3; }
 		
-		//Point
-		public RuleCall getPointsPointParserRuleCall_2_0() { return cPointsPointParserRuleCall_2_0; }
+		//lignes+=Ligne*
+		public Assignment getLignesAssignment_4() { return cLignesAssignment_4; }
+		
+		//Ligne
+		public RuleCall getLignesLigneParserRuleCall_4_0() { return cLignesLigneParserRuleCall_4_0; }
 	}
-	public class PointElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.Point");
+	public class LigneElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.Ligne");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cXAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cXNOMBRETerminalRuleCall_0_0 = (RuleCall)cXAssignment_0.eContents().get(0);
+		private final Assignment cYAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cYNOMBRETerminalRuleCall_1_0 = (RuleCall)cYAssignment_1.eContents().get(0);
+		private final RuleCall cFDLTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		
-		//Point:
-		//	INT INT;
+		//Ligne:
+		//	x=NOMBRE y=NOMBRE FDL;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//INT INT
+		//x=NOMBRE y=NOMBRE FDL
 		public Group getGroup() { return cGroup; }
 		
-		//INT
-		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
+		//x=NOMBRE
+		public Assignment getXAssignment_0() { return cXAssignment_0; }
 		
-		//INT
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		//NOMBRE
+		public RuleCall getXNOMBRETerminalRuleCall_0_0() { return cXNOMBRETerminalRuleCall_0_0; }
+		
+		//y=NOMBRE
+		public Assignment getYAssignment_1() { return cYAssignment_1; }
+		
+		//NOMBRE
+		public RuleCall getYNOMBRETerminalRuleCall_1_0() { return cYNOMBRETerminalRuleCall_1_0; }
+		
+		//FDL
+		public RuleCall getFDLTerminalRuleCall_2() { return cFDLTerminalRuleCall_2; }
 	}
 	
 	
 	private final ModelElements pModel;
-	private final GreetingElements pGreeting;
-	private final PointElements pPoint;
+	private final CourbeElements pCourbe;
+	private final LigneElements pLigne;
+	private final TerminalRule tNOMBRE;
+	private final TerminalRule tNOMBRE1;
+	private final TerminalRule tCHIFF1;
+	private final TerminalRule tNOMBRE2;
+	private final TerminalRule tCHIFF2;
+	private final TerminalRule tNOMBRE3;
+	private final TerminalRule tCHIFF3;
+	private final TerminalRule tNOMBRE4;
+	private final TerminalRule tCHIFF4;
+	private final TerminalRule tNOMBRE5;
+	private final TerminalRule tCHIFF5;
+	private final TerminalRule tNOMBRE6;
+	private final TerminalRule tCHIFF6;
+	private final TerminalRule tNOMBRE7;
+	private final TerminalRule tCHIFF7;
+	private final TerminalRule tNOMBRE8;
+	private final TerminalRule tFDL;
+	private final TerminalRule tSPACE;
+	private final TerminalRule tID;
+	private final TerminalRule tSTRING;
+	private final TerminalRule tML_COMMENT;
+	private final TerminalRule tSL_COMMENT;
+	private final TerminalRule tWS;
 	
 	private final Grammar grammar;
-	
-	private final TerminalsGrammarAccess gaTerminals;
 
 	@Inject
-	public FixGrammarAccess(GrammarProvider grammarProvider,
-			TerminalsGrammarAccess gaTerminals) {
+	public FixGrammarAccess(GrammarProvider grammarProvider) {
 		this.grammar = internalFindGrammar(grammarProvider);
-		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.pGreeting = new GreetingElements();
-		this.pPoint = new PointElements();
+		this.pCourbe = new CourbeElements();
+		this.pLigne = new LigneElements();
+		this.tNOMBRE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.NOMBRE");
+		this.tNOMBRE1 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.NOMBRE1");
+		this.tCHIFF1 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.CHIFF1");
+		this.tNOMBRE2 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.NOMBRE2");
+		this.tCHIFF2 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.CHIFF2");
+		this.tNOMBRE3 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.NOMBRE3");
+		this.tCHIFF3 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.CHIFF3");
+		this.tNOMBRE4 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.NOMBRE4");
+		this.tCHIFF4 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.CHIFF4");
+		this.tNOMBRE5 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.NOMBRE5");
+		this.tCHIFF5 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.CHIFF5");
+		this.tNOMBRE6 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.NOMBRE6");
+		this.tCHIFF6 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.CHIFF6");
+		this.tNOMBRE7 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.NOMBRE7");
+		this.tCHIFF7 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.CHIFF7");
+		this.tNOMBRE8 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.NOMBRE8");
+		this.tFDL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.FDL");
+		this.tSPACE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.SPACE");
+		this.tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.ID");
+		this.tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.STRING");
+		this.tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.ML_COMMENT");
+		this.tSL_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.SL_COMMENT");
+		this.tWS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "oliv.form.xtext.fix.Fix.WS");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -128,14 +189,10 @@ public class FixGrammarAccess extends AbstractGrammarElementFinder {
 		return grammar;
 	}
 	
-	
-	public TerminalsGrammarAccess getTerminalsGrammarAccess() {
-		return gaTerminals;
-	}
 
 	
 	//Model:
-	//	greetings+=Greeting*;
+	//	Courbes+=Courbe*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -144,67 +201,163 @@ public class FixGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 	
-	//Greeting:
-	//	'*Courbe' name=ID
-	//	points+=Point;
-	public GreetingElements getGreetingAccess() {
-		return pGreeting;
+	//Courbe:
+	//	'*Courbe' SPACE name=ID FDL
+	//	lignes+=Ligne*;
+	public CourbeElements getCourbeAccess() {
+		return pCourbe;
 	}
 	
-	public ParserRule getGreetingRule() {
-		return getGreetingAccess().getRule();
+	public ParserRule getCourbeRule() {
+		return getCourbeAccess().getRule();
 	}
 	
-	//Point:
-	//	INT INT;
-	public PointElements getPointAccess() {
-		return pPoint;
+	//Ligne:
+	//	x=NOMBRE y=NOMBRE FDL;
+	public LigneElements getLigneAccess() {
+		return pLigne;
 	}
 	
-	public ParserRule getPointRule() {
-		return getPointAccess().getRule();
+	public ParserRule getLigneRule() {
+		return getLigneAccess().getRule();
+	}
+	
+	//terminal NOMBRE:
+	//	NOMBRE1 | NOMBRE2 | NOMBRE3 | NOMBRE4 | NOMBRE5 | NOMBRE6 | NOMBRE7 | NOMBRE8;
+	public TerminalRule getNOMBRERule() {
+		return tNOMBRE;
+	}
+	
+	//terminal NOMBRE1:
+	//	SPACE SPACE SPACE SPACE SPACE SPACE SPACE CHIFF1;
+	public TerminalRule getNOMBRE1Rule() {
+		return tNOMBRE1;
+	}
+	
+	//terminal CHIFF1 returns ecore::EInt:
+	//	'0'..'9';
+	public TerminalRule getCHIFF1Rule() {
+		return tCHIFF1;
+	}
+	
+	//terminal NOMBRE2:
+	//	SPACE SPACE SPACE SPACE SPACE SPACE CHIFF2;
+	public TerminalRule getNOMBRE2Rule() {
+		return tNOMBRE2;
+	}
+	
+	//terminal CHIFF2 returns ecore::EInt:
+	//	'0'..'9' '0'..'9';
+	public TerminalRule getCHIFF2Rule() {
+		return tCHIFF2;
+	}
+	
+	//terminal NOMBRE3:
+	//	SPACE SPACE SPACE SPACE SPACE CHIFF3;
+	public TerminalRule getNOMBRE3Rule() {
+		return tNOMBRE3;
+	}
+	
+	//terminal CHIFF3 returns ecore::EInt:
+	//	'0'..'9' '0'..'9' '0'..'9';
+	public TerminalRule getCHIFF3Rule() {
+		return tCHIFF3;
+	}
+	
+	//terminal NOMBRE4:
+	//	SPACE SPACE SPACE SPACE CHIFF4;
+	public TerminalRule getNOMBRE4Rule() {
+		return tNOMBRE4;
+	}
+	
+	//terminal CHIFF4 returns ecore::EInt:
+	//	'0'..'9' '0'..'9' '0'..'9' '0'..'9';
+	public TerminalRule getCHIFF4Rule() {
+		return tCHIFF4;
+	}
+	
+	//terminal NOMBRE5:
+	//	SPACE SPACE SPACE CHIFF5;
+	public TerminalRule getNOMBRE5Rule() {
+		return tNOMBRE5;
+	}
+	
+	//terminal CHIFF5 returns ecore::EInt:
+	//	'0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9';
+	public TerminalRule getCHIFF5Rule() {
+		return tCHIFF5;
+	}
+	
+	//terminal NOMBRE6:
+	//	SPACE SPACE CHIFF6;
+	public TerminalRule getNOMBRE6Rule() {
+		return tNOMBRE6;
+	}
+	
+	//terminal CHIFF6 returns ecore::EInt:
+	//	'0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9';
+	public TerminalRule getCHIFF6Rule() {
+		return tCHIFF6;
+	}
+	
+	//terminal NOMBRE7:
+	//	SPACE CHIFF7;
+	public TerminalRule getNOMBRE7Rule() {
+		return tNOMBRE7;
+	}
+	
+	//terminal CHIFF7 returns ecore::EInt:
+	//	'0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9';
+	public TerminalRule getCHIFF7Rule() {
+		return tCHIFF7;
+	}
+	
+	//terminal NOMBRE8 returns ecore::EInt:
+	//	'0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9';
+	public TerminalRule getNOMBRE8Rule() {
+		return tNOMBRE8;
+	}
+	
+	//terminal FDL:
+	//	'\r'? '\n'?;
+	public TerminalRule getFDLRule() {
+		return tFDL;
+	}
+	
+	//terminal SPACE:
+	//	' ';
+	public TerminalRule getSPACERule() {
+		return tSPACE;
 	}
 	
 	//terminal ID:
 	//	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
 	public TerminalRule getIDRule() {
-		return gaTerminals.getIDRule();
-	}
-	
-	//terminal INT returns ecore::EInt:
-	//	'0'..'9'+;
-	public TerminalRule getINTRule() {
-		return gaTerminals.getINTRule();
+		return tID;
 	}
 	
 	//terminal STRING:
 	//	'"' ('\\' . | !('\\' | '"'))* '"' |
 	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
-		return gaTerminals.getSTRINGRule();
+		return tSTRING;
 	}
 	
 	//terminal ML_COMMENT:
 	//	'/*'->'*/';
 	public TerminalRule getML_COMMENTRule() {
-		return gaTerminals.getML_COMMENTRule();
+		return tML_COMMENT;
 	}
 	
 	//terminal SL_COMMENT:
 	//	'//' !('\n' | '\r')* ('\r'? '\n')?;
 	public TerminalRule getSL_COMMENTRule() {
-		return gaTerminals.getSL_COMMENTRule();
+		return tSL_COMMENT;
 	}
 	
 	//terminal WS:
-	//	' ' | '\t' | '\r' | '\n'+;
+	//	'\t' | '\r' | '\n'+;
 	public TerminalRule getWSRule() {
-		return gaTerminals.getWSRule();
-	}
-	
-	//terminal ANY_OTHER:
-	//	.;
-	public TerminalRule getANY_OTHERRule() {
-		return gaTerminals.getANY_OTHERRule();
+		return tWS;
 	}
 }

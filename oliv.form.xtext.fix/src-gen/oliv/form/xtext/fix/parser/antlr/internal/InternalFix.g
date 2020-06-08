@@ -78,33 +78,33 @@ ruleModel returns [EObject current=null]
 	(
 		(
 			{
-				newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0());
+				newCompositeNode(grammarAccess.getModelAccess().getCourbesCourbeParserRuleCall_0());
 			}
-			lv_greetings_0_0=ruleGreeting
+			lv_Courbes_0_0=ruleCourbe
 			{
 				if ($current==null) {
 					$current = createModelElementForParent(grammarAccess.getModelRule());
 				}
 				add(
 					$current,
-					"greetings",
-					lv_greetings_0_0,
-					"oliv.form.xtext.fix.Fix.Greeting");
+					"Courbes",
+					lv_Courbes_0_0,
+					"oliv.form.xtext.fix.Fix.Courbe");
 				afterParserOrEnumRuleCall();
 			}
 		)
 	)*
 ;
 
-// Entry rule entryRuleGreeting
-entryRuleGreeting returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGreetingRule()); }
-	iv_ruleGreeting=ruleGreeting
-	{ $current=$iv_ruleGreeting.current; }
+// Entry rule entryRuleCourbe
+entryRuleCourbe returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getCourbeRule()); }
+	iv_ruleCourbe=ruleCourbe
+	{ $current=$iv_ruleCourbe.current; }
 	EOF;
 
-// Rule Greeting
-ruleGreeting returns [EObject current=null]
+// Rule Courbe
+ruleCourbe returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -114,57 +114,65 @@ ruleGreeting returns [EObject current=null]
 	(
 		otherlv_0='*Courbe'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGreetingAccess().getCourbeKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getCourbeAccess().getCourbeKeyword_0());
+		}
+		this_SPACE_1=RULE_SPACE
+		{
+			newLeafNode(this_SPACE_1, grammarAccess.getCourbeAccess().getSPACETerminalRuleCall_1());
 		}
 		(
 			(
-				lv_name_1_0=RULE_ID
+				lv_name_2_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_2_0, grammarAccess.getCourbeAccess().getNameIDTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGreetingRule());
+						$current = createModelElement(grammarAccess.getCourbeRule());
 					}
 					setWithLastConsumed(
 						$current,
 						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						lv_name_2_0,
+						"oliv.form.xtext.fix.Fix.ID");
 				}
 			)
 		)
+		this_FDL_3=RULE_FDL
+		{
+			newLeafNode(this_FDL_3, grammarAccess.getCourbeAccess().getFDLTerminalRuleCall_3());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGreetingAccess().getPointsPointParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getCourbeAccess().getLignesLigneParserRuleCall_4_0());
 				}
-				lv_points_2_0=rulePoint
+				lv_lignes_4_0=ruleLigne
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGreetingRule());
+						$current = createModelElementForParent(grammarAccess.getCourbeRule());
 					}
 					add(
 						$current,
-						"points",
-						lv_points_2_0,
-						"oliv.form.xtext.fix.Fix.Point");
+						"lignes",
+						lv_lignes_4_0,
+						"oliv.form.xtext.fix.Fix.Ligne");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)*
 	)
 ;
 
-// Entry rule entryRulePoint
-entryRulePoint returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getPointRule()); }
-	iv_rulePoint=rulePoint
-	{ $current=$iv_rulePoint.current.getText(); }
+// Entry rule entryRuleLigne
+entryRuleLigne returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getLigneRule()); }
+	iv_ruleLigne=ruleLigne
+	{ $current=$iv_ruleLigne.current; }
 	EOF;
 
-// Rule Point
-rulePoint returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+// Rule Ligne
+ruleLigne returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -172,26 +180,86 @@ rulePoint returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 	leaveRule();
 }:
 	(
-		this_INT_0=RULE_INT
+		(
+			(
+				lv_x_0_0=RULE_NOMBRE
+				{
+					newLeafNode(lv_x_0_0, grammarAccess.getLigneAccess().getXNOMBRETerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getLigneRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"x",
+						lv_x_0_0,
+						"oliv.form.xtext.fix.Fix.NOMBRE");
+				}
+			)
+		)
+		(
+			(
+				lv_y_1_0=RULE_NOMBRE
+				{
+					newLeafNode(lv_y_1_0, grammarAccess.getLigneAccess().getYNOMBRETerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getLigneRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"y",
+						lv_y_1_0,
+						"oliv.form.xtext.fix.Fix.NOMBRE");
+				}
+			)
+		)
+		this_FDL_2=RULE_FDL
 		{
-			$current.merge(this_INT_0);
-		}
-		{
-			newLeafNode(this_INT_0, grammarAccess.getPointAccess().getINTTerminalRuleCall_0());
-		}
-		this_INT_1=RULE_INT
-		{
-			$current.merge(this_INT_1);
-		}
-		{
-			newLeafNode(this_INT_1, grammarAccess.getPointAccess().getINTTerminalRuleCall_1());
+			newLeafNode(this_FDL_2, grammarAccess.getLigneAccess().getFDLTerminalRuleCall_2());
 		}
 	)
 ;
 
-RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+RULE_NOMBRE : (RULE_NOMBRE1|RULE_NOMBRE2|RULE_NOMBRE3|RULE_NOMBRE4|RULE_NOMBRE5|RULE_NOMBRE6|RULE_NOMBRE7|RULE_NOMBRE8);
 
-RULE_INT : ('0'..'9')+;
+fragment RULE_NOMBRE1 : RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF1;
+
+fragment RULE_CHIFF1 : '0'..'9';
+
+fragment RULE_NOMBRE2 : RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF2;
+
+fragment RULE_CHIFF2 : '0'..'9' '0'..'9';
+
+fragment RULE_NOMBRE3 : RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF3;
+
+fragment RULE_CHIFF3 : '0'..'9' '0'..'9' '0'..'9';
+
+fragment RULE_NOMBRE4 : RULE_SPACE RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF4;
+
+fragment RULE_CHIFF4 : '0'..'9' '0'..'9' '0'..'9' '0'..'9';
+
+fragment RULE_NOMBRE5 : RULE_SPACE RULE_SPACE RULE_SPACE RULE_CHIFF5;
+
+fragment RULE_CHIFF5 : '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9';
+
+fragment RULE_NOMBRE6 : RULE_SPACE RULE_SPACE RULE_CHIFF6;
+
+fragment RULE_CHIFF6 : '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9';
+
+fragment RULE_NOMBRE7 : RULE_SPACE RULE_CHIFF7;
+
+fragment RULE_CHIFF7 : '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9';
+
+fragment RULE_NOMBRE8 : '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9' '0'..'9';
+
+RULE_FDL : ('\r'? '\n')?;
+
+RULE_SPACE : ' ';
+
+RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 
@@ -199,6 +267,4 @@ RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-RULE_WS : (' '|'\t'|'\r'|'\n')+;
-
-RULE_ANY_OTHER : .;
+RULE_WS : ('\t'|'\r'|'\n')+;

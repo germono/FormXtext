@@ -3,9 +3,10 @@
  */
 package oliv.form.xtext.fix.fix.impl;
 
+import oliv.form.xtext.fix.fix.Courbe;
 import oliv.form.xtext.fix.fix.FixFactory;
 import oliv.form.xtext.fix.fix.FixPackage;
-import oliv.form.xtext.fix.fix.Greeting;
+import oliv.form.xtext.fix.fix.Ligne;
 import oliv.form.xtext.fix.fix.Model;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -35,7 +36,14 @@ public class FixPackageImpl extends EPackageImpl implements FixPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass greetingEClass = null;
+  private EClass courbeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ligneEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -117,7 +125,7 @@ public class FixPackageImpl extends EPackageImpl implements FixPackage
    * @generated
    */
   @Override
-  public EReference getModel_Greetings()
+  public EReference getModel_Courbes()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
   }
@@ -128,9 +136,9 @@ public class FixPackageImpl extends EPackageImpl implements FixPackage
    * @generated
    */
   @Override
-  public EClass getGreeting()
+  public EClass getCourbe()
   {
-    return greetingEClass;
+    return courbeEClass;
   }
 
   /**
@@ -139,9 +147,9 @@ public class FixPackageImpl extends EPackageImpl implements FixPackage
    * @generated
    */
   @Override
-  public EAttribute getGreeting_Name()
+  public EAttribute getCourbe_Name()
   {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)courbeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -150,9 +158,42 @@ public class FixPackageImpl extends EPackageImpl implements FixPackage
    * @generated
    */
   @Override
-  public EAttribute getGreeting_Points()
+  public EReference getCourbe_Lignes()
   {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(1);
+    return (EReference)courbeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getLigne()
+  {
+    return ligneEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getLigne_X()
+  {
+    return (EAttribute)ligneEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getLigne_Y()
+  {
+    return (EAttribute)ligneEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -187,11 +228,15 @@ public class FixPackageImpl extends EPackageImpl implements FixPackage
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__GREETINGS);
+    createEReference(modelEClass, MODEL__COURBES);
 
-    greetingEClass = createEClass(GREETING);
-    createEAttribute(greetingEClass, GREETING__NAME);
-    createEAttribute(greetingEClass, GREETING__POINTS);
+    courbeEClass = createEClass(COURBE);
+    createEAttribute(courbeEClass, COURBE__NAME);
+    createEReference(courbeEClass, COURBE__LIGNES);
+
+    ligneEClass = createEClass(LIGNE);
+    createEAttribute(ligneEClass, LIGNE__X);
+    createEAttribute(ligneEClass, LIGNE__Y);
   }
 
   /**
@@ -226,11 +271,15 @@ public class FixPackageImpl extends EPackageImpl implements FixPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Greetings(), this.getGreeting(), null, "greetings", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Courbes(), this.getCourbe(), null, "Courbes", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGreeting_Points(), ecorePackage.getEString(), "points", null, 0, -1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(courbeEClass, Courbe.class, "Courbe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCourbe_Name(), ecorePackage.getEString(), "name", null, 0, 1, Courbe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCourbe_Lignes(), this.getLigne(), null, "lignes", null, 0, -1, Courbe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ligneEClass, Ligne.class, "Ligne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLigne_X(), ecorePackage.getEString(), "x", null, 0, 1, Ligne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLigne_Y(), ecorePackage.getEString(), "y", null, 0, 1, Ligne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);
