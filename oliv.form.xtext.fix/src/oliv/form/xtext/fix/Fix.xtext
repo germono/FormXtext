@@ -1,0 +1,13 @@
+grammar oliv.form.xtext.fix.Fix with org.eclipse.xtext.common.Terminals
+
+generate fix "http://www.form.oliv/xtext/fix/Fix"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'*Courbe' name=ID 
+	points+=Point;
+Point :
+	INT INT
+;
