@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>oliv.form.xtext</groupId>
@@ -13,15 +14,53 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+	<profiles>
+		<!-- DO NOT CHANGE THE *ORDER* IN WHICH THESE PROFILES ARE DEFINED! -->
+		<profile>
+			<id>Local</id>
+			<properties>
+				<targetArtifact>oliv.form.xtext.local.tp</targetArtifact>
+				<targetVersion>4.15.0-SNAPSHOT</targetVersion>
+
+			</properties>
+			
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>oliv.form.xtext.local.tp</module>
+			</modules>
+			<repositories>
+				<repository>
+					<id>simrel2020-03</id>
+					<layout>p2</layout>
+					<url>file://home/olivier/p2mirror/simrel2020-03/</url>
+				</repository>
+			</repositories>
+			
+		</profile>
+		<profile>
+			<!-- This profile is for the pure E4 application -->
+			<id>Reseau</id>
+			<properties>
+				<targetArtifact>oliv.form.xtext.tp</targetArtifact>
+				<targetVersion>4.15.0-SNAPSHOT</targetVersion>
+			</properties>
+
+			<modules>
+				<module>oliv.form.xtext.tp</module>
+			</modules>
+		</profile>
+	</profiles>
 	<modules>
-		<module>oliv.form.xtext.tp</module>
-		
-		<module>oliv.form.xtext.dsl</module> 
+
+
+		<module>oliv.form.xtext.dsl</module>
 		<module>oliv.form.xtext.dsl.ide</module>
 		<module>oliv.form.xtext.dsl.ui</module>
 		<module>oliv.form.e4.xtext</module>
 		<module>oliv.form.e3.xtext</module>
-		<module>oliv.form.xtext.feature</module> 
+		<module>oliv.form.xtext.feature</module>
 		<module>oliv.form.xtext.repository</module>
 	</modules>
 	<build>
@@ -40,16 +79,13 @@
 					<target>
 						<artifact>
 							<groupId>oliv.form.xtext</groupId>
-							<artifactId>oliv.form.xtext.tp</artifactId>
-							<version>4.15.0-SNAPSHOT</version>
+							<artifactId>${targetArtifact}</artifactId>
+							<version>${targetVersion}</version>
 						</artifact>
 					</target>
 					<environments>
-						<!-- <environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
-							<arch>x86_64</arch>
-						</environment> -->
+						<!-- <environment> <os>macosx</os> <ws>cocoa</ws> <arch>x86_64</arch> 
+							</environment> -->
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
@@ -176,10 +212,7 @@
 					</configuration>
 				</plugin>
 				<plugin>
-					<!-- 
-						Can be removed after first generator execution
-						https://bugs.eclipse.org/bugs/show_bug.cgi?id=480097
-					-->
+					<!-- Can be removed after first generator execution https://bugs.eclipse.org/bugs/show_bug.cgi?id=480097 -->
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>tycho-compiler-plugin</artifactId>
 					<version>${tycho-version}</version>
@@ -190,32 +223,17 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	<!-- <repositories>
-		<repository>
-			<id>codehaus-snapshots</id>
-			<name>disable dead 'Codehaus Snapshots' repository, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=481478</name>
-			<url>http://nexus.codehaus.org/snapshots/</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>codehaus-snapshots</id>
-			<name>disable dead 'Codehaus Snapshots' repository, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=481478</name>
-			<url>http://nexus.codehaus.org/snapshots/</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories> -->
+
+
+	<!-- <id>codehaus-snapshots</id> <name>disable dead 'Codehaus Snapshots' 
+		repository, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=481478</name> 
+		<url>http://nexus.codehaus.org/snapshots/</url> <releases> <enabled>false</enabled> 
+		</releases> <snapshots> <enabled>false</enabled> </snapshots> </repository> 
+		</repositories> <pluginRepositories> <pluginRepository> <id>codehaus-snapshots</id> 
+		<name>disable dead 'Codehaus Snapshots' repository, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=481478</name> 
+		<url>http://nexus.codehaus.org/snapshots/</url> <releases> <enabled>false</enabled> 
+		</releases> <snapshots> <enabled>false</enabled> </snapshots> </pluginRepository> 
+		</pluginRepositories> -->
 
 	<dependencies>
 	</dependencies>

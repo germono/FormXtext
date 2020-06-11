@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+<target name="oliv.form.xtext.tp.local">
+	<locations>
+		<location path="/home/olivier/p2mirror/simrel2020-03" type="Directory"/>
+		<location path="/home/olivier/p2mirror/xtext" type="Directory"/>
+	</locations>
+</target>

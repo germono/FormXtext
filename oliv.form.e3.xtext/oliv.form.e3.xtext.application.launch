@@ -31,12 +31,10 @@
 <setEntry value="com.google.inject@default:default"/>
 <setEntry value="com.ibm.icu@default:default"/>
 <setEntry value="com.jcraft.jsch@default:default"/>
-<setEntry value="com.jcraft.jzlib@default:default"/>
 <setEntry value="io.github.classgraph@default:default"/>
 <setEntry value="javax.annotation@default:default"/>
 <setEntry value="javax.inject@default:default"/>
 <setEntry value="javax.servlet@default:default"/>
-<setEntry value="javax.xml@default:default"/>
 <setEntry value="org.antlr.runtime@default:default"/>
 <setEntry value="org.apache.ant@default:default"/>
 <setEntry value="org.apache.batik.constants@default:default"/>
@@ -51,7 +49,6 @@
 <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
 <setEntry value="org.apache.felix.scr@1:true"/>
 <setEntry value="org.apache.log4j@default:default"/>
-<setEntry value="org.apache.xml.resolver@default:default"/>
 <setEntry value="org.apache.xmlgraphics@default:default"/>
 <setEntry value="org.apiguardian@default:default"/>
 <setEntry value="org.eclipse.ant.core@default:default"/>
@@ -80,8 +77,6 @@
 <setEntry value="org.eclipse.e4.core.di@default:default"/>
 <setEntry value="org.eclipse.e4.core.services@default:default"/>
 <setEntry value="org.eclipse.e4.emf.xpath@default:default"/>
-<setEntry value="org.eclipse.e4.tools.emf.ui@default:default"/>
-<setEntry value="org.eclipse.e4.tools.services@default:default"/>
 <setEntry value="org.eclipse.e4.ui.bindings@default:default"/>
 <setEntry value="org.eclipse.e4.ui.css.core@default:default"/>
 <setEntry value="org.eclipse.e4.ui.css.swt.theme@default:default"/>
