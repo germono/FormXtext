@@ -3,6 +3,10 @@
 <target name="oliv.form.xtext.tp.local">
 	<locations>
 		<location path="/home/olivier/p2mirror/simrel2020-03" type="Directory"/>
+		<location path="/home/olivier/p2mirror/emf" type="Directory"/>
+		<location path="/home/olivier/p2mirror/mwe" type="Directory"/>
+		<location path="/home/olivier/p2mirror/xpand" type="Directory"/>
 		<location path="/home/olivier/p2mirror/xtext" type="Directory"/>
+		<location path="/home/olivier/p2mirror/nebula" type="Directory"/>
 	</locations>
 </target>

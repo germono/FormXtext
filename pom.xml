@@ -36,6 +36,35 @@
 					<layout>p2</layout>
 					<url>file://home/olivier/p2mirror/simrel2020-03/</url>
 				</repository>
+				
+				<repository>
+					<id>emf</id>
+					<layout>p2</layout>
+					<url>file://home/olivier/p2mirror/emf/</url>
+				</repository>
+				
+				<repository>
+					<id>mwe</id>
+					<layout>p2</layout>
+					<url>file://home/olivier/p2mirror/mwe/</url>
+				</repository>
+				
+				<repository>
+					<id>nebula</id>
+					<layout>p2</layout>
+					<url>file://home/olivier/p2mirror/nebula/</url>
+				</repository>
+				
+				<repository>
+					<id>xpand</id>
+					<layout>p2</layout>
+					<url>file://home/olivier/p2mirror/xpand/</url>
+				</repository>
+				<repository>
+					<id>xtext</id>
+					<layout>p2</layout>
+					<url>file://home/olivier/p2mirror/xtext/</url>
+				</repository>
 			</repositories>
 			
 		</profile>
