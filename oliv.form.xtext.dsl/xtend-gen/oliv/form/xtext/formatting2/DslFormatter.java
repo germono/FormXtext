@@ -3,108 +3,79 @@
  */
 package oliv.form.xtext.formatting2;
 
-import com.google.inject.Inject;
 import java.util.Arrays;
-import oliv.form.xtext.dsl.Expression;
-import oliv.form.xtext.dsl.Import;
 import oliv.form.xtext.dsl.MDslPackage;
 import oliv.form.xtext.dsl.Model;
-import oliv.form.xtext.dsl.PackageDeclaration;
-import oliv.form.xtext.dsl.Truc;
 import oliv.form.xtext.dsl.VariableCalcule;
 import oliv.form.xtext.dsl.VariableDirect;
 import oliv.form.xtext.services.DslGrammarAccess;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.xtext.formatting2.AbstractFormatter2;
-import org.eclipse.xtext.formatting2.IFormattableDocument;
-import org.eclipse.xtext.formatting2.IHiddenRegionFormatter;
-import org.eclipse.xtext.resource.XtextResource;
-import org.eclipse.xtext.xbase.lib.Extension;
-import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
 @SuppressWarnings("all")
-public class DslFormatter extends AbstractFormatter2 implements MDslPackage.Literals {
-  @Inject
-  @Extension
-  private DslGrammarAccess _dslGrammarAccess;
+public class DslFormatter implements /* AbstractFormatter2 */MDslPackage.Literals {
+  /* @Inject
+   */private DslGrammarAccess _dslGrammarAccess;
   
-  protected void _format(final Model model, @Extension final IFormattableDocument document) {
-    document.<PackageDeclaration>format(model.getPackage());
-    EList<Import> _imports = model.getImports();
-    for (final Import _import : _imports) {
-      document.<Import>format(_import);
-    }
-    EList<Truc> _variables = model.getVariables();
-    for (final Truc truc : _variables) {
-      document.<Truc>format(truc);
-    }
+  protected void _format(final Model model, final /* IFormattableDocument */Object document) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nInvalid number of arguments. The method format(EObject, IFormattableDocument) is not applicable for the arguments (PackageDeclaration)"
+      + "\nInvalid number of arguments. The method format(EObject, IFormattableDocument) is not applicable for the arguments (Import)"
+      + "\nInvalid number of arguments. The method format(EObject, IFormattableDocument) is not applicable for the arguments (Truc)"
+      + "\nThe method format(EObject, IFormattableDocument) from the type DslFormatter refers to the missing type IFormattableDocument"
+      + "\nThe method format(EObject, IFormattableDocument) from the type DslFormatter refers to the missing type IFormattableDocument"
+      + "\nThe method format(EObject, IFormattableDocument) from the type DslFormatter refers to the missing type IFormattableDocument");
   }
   
-  protected void _format(final VariableCalcule variableCalcule, @Extension final IFormattableDocument document) {
-    final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
-      it.newLine();
-    };
-    document.<VariableCalcule>prepend(variableCalcule, _function);
-    document.<Expression>format(variableCalcule.getExpression());
-    final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
-      it.newLine();
-    };
-    document.<VariableCalcule>surround(variableCalcule, _function_1);
+  protected void _format(final VariableCalcule variableCalcule, final /* IFormattableDocument */Object document) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method prepend(Object) is undefined for the type VariableCalcule"
+      + "\nThe method or field newLine is undefined"
+      + "\nThe method surround(Object) is undefined for the type VariableCalcule"
+      + "\nThe method or field newLine is undefined"
+      + "\nInvalid number of arguments. The method format(EObject, IFormattableDocument) is not applicable for the arguments (Expression)"
+      + "\nThe method format(EObject, IFormattableDocument) from the type DslFormatter refers to the missing type IFormattableDocument");
   }
   
-  protected void _format(final VariableDirect variableDirect, @Extension final IFormattableDocument document) {
-    final Procedure1<IHiddenRegionFormatter> _function = (IHiddenRegionFormatter it) -> {
-      it.newLine();
-    };
-    document.<VariableDirect>prepend(variableDirect, _function);
-    final Procedure1<IHiddenRegionFormatter> _function_1 = (IHiddenRegionFormatter it) -> {
-      it.oneSpace();
-    };
-    document.append(this.textRegionExtensions.regionFor(variableDirect).keyword("Variable"), _function_1);
-    final Procedure1<IHiddenRegionFormatter> _function_2 = (IHiddenRegionFormatter it) -> {
-      it.setNewLines(2);
-    };
-    document.prepend(this.textRegionExtensions.regionFor(variableDirect).keyword("Alpha"), _function_2);
-    final Procedure1<IHiddenRegionFormatter> _function_3 = (IHiddenRegionFormatter it) -> {
-      it.newLine();
-    };
-    document.prepend(this.textRegionExtensions.regionFor(variableDirect).keyword("Beta"), _function_3);
-    final Procedure1<IHiddenRegionFormatter> _function_4 = (IHiddenRegionFormatter it) -> {
-      it.setSpace("  ");
-    };
-    document.prepend(this.textRegionExtensions.regionFor(variableDirect).keyword("{"), _function_4);
-    final Procedure1<IHiddenRegionFormatter> _function_5 = (IHiddenRegionFormatter it) -> {
-      it.setSpace(" //dsjfslk   ");
-    };
-    document.append(this.textRegionExtensions.regionFor(variableDirect).feature(MDslPackage.Literals.VARIABLE_DIRECT__ALPHA), _function_5);
-    final Procedure1<IHiddenRegionFormatter> _function_6 = (IHiddenRegionFormatter it) -> {
-      it.newLine();
-    };
-    document.<VariableDirect>surround(variableDirect, _function_6);
+  protected void _format(final VariableDirect variableDirect, final /* IFormattableDocument */Object document) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method prepend(Object) is undefined for the type VariableDirect"
+      + "\nThe method or field newLine is undefined"
+      + "\nThe method or field regionFor is undefined for the type VariableDirect"
+      + "\nThe method or field oneSpace is undefined"
+      + "\nThe method or field regionFor is undefined for the type VariableDirect"
+      + "\nThe method newLines(int) is undefined"
+      + "\nThe method or field regionFor is undefined for the type VariableDirect"
+      + "\nThe method or field newLine is undefined"
+      + "\nThe method or field regionFor is undefined for the type VariableDirect"
+      + "\nThe method space(String) is undefined"
+      + "\nThe method or field regionFor is undefined for the type VariableDirect"
+      + "\nThe method space(String) is undefined"
+      + "\nThe method surround(Object) is undefined for the type VariableDirect"
+      + "\nThe method or field newLine is undefined"
+      + "\nkeyword cannot be resolved"
+      + "\nappend cannot be resolved"
+      + "\nkeyword cannot be resolved"
+      + "\nprepend cannot be resolved"
+      + "\nkeyword cannot be resolved"
+      + "\nprepend cannot be resolved"
+      + "\nkeyword cannot be resolved"
+      + "\nprepend cannot be resolved"
+      + "\nfeature cannot be resolved"
+      + "\nappend cannot be resolved");
   }
   
-  public void format(final Object variableCalcule, final IFormattableDocument document) {
-    if (variableCalcule instanceof VariableCalcule) {
+  public void format(final EObject variableCalcule, final IFormattableDocument document) {
+    if (variableCalcule instanceof VariableCalcule
+         && document != null) {
       _format((VariableCalcule)variableCalcule, document);
       return;
-    } else if (variableCalcule instanceof VariableDirect) {
+    } else if (variableCalcule instanceof VariableDirect
+         && document != null) {
       _format((VariableDirect)variableCalcule, document);
       return;
-    } else if (variableCalcule instanceof XtextResource) {
-      _format((XtextResource)variableCalcule, document);
-      return;
-    } else if (variableCalcule instanceof Model) {
+    } else if (variableCalcule instanceof Model
+         && document != null) {
       _format((Model)variableCalcule, document);
-      return;
-    } else if (variableCalcule instanceof EObject) {
-      _format((EObject)variableCalcule, document);
-      return;
-    } else if (variableCalcule == null) {
-      _format((Void)null, document);
-      return;
-    } else if (variableCalcule != null) {
-      _format(variableCalcule, document);
       return;
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
